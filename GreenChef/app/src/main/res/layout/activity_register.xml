@@ -57,7 +57,7 @@
                     android:textColor="@color/white"/>
 
                 <EditText
-                    android:id="@+id/username"
+                    android:id="@+id/Username"
                     android:layout_width="match_parent"
                     android:layout_height="43dp"
                     android:background="@drawable/custom_editext"

@@ -57,13 +57,13 @@
                 android:textColor="@color/white"/>
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/Username"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/custom_editext"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="Correo Electronico"
+                android:hint="Nombre de Usuario"
                 android:textColorHint="@color/white"
                 android:drawablePadding="8dp"
                 android:drawableLeft="@drawable/ic_baseline_person_24"
