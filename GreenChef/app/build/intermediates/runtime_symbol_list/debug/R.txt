@@ -2705,6 +2705,9 @@ int drawable abc_textfield_search_material 0x7f070076
 int drawable abc_vector_test 0x7f070077
 int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
+int drawable bottom_background 0x7f0700e9
+int drawable bottom_background_white 0x7f0700ea
+int drawable bottom_circle 0x7f0700eb
 int drawable btn_checkbox_checked_mtrl 0x7f07007a
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f07007b
 int drawable btn_checkbox_unchecked_mtrl 0x7f07007c
@@ -2719,6 +2722,8 @@ int drawable design_ic_visibility 0x7f070084
 int drawable design_ic_visibility_off 0x7f070085
 int drawable design_password_eye 0x7f070086
 int drawable design_snackbar_background 0x7f070087
+int drawable fondo 0x7f0700ec
+int drawable green_banner_background 0x7f0700ed
 int drawable ic_arrow_back_black_24 0x7f070088
 int drawable ic_baseline_lock_24 0x7f070089
 int drawable ic_baseline_person_24 0x7f07008a
@@ -2830,6 +2835,7 @@ int id SHOW_PROGRESS 0x7f08000a
 int id SYM 0x7f08000b
 int id TOP_END 0x7f08000c
 int id TOP_START 0x7f08000d
+int id Username 0x7f0801f5
 int id accelerate 0x7f08000e
 int id accessibility_action_clickable_span 0x7f08000f
 int id accessibility_custom_action_0 0x7f080010
@@ -3035,6 +3041,13 @@ int id ifRoom 0x7f0800d7
 int id ignore 0x7f0800d8
 int id ignoreRequest 0x7f0800d9
 int id image 0x7f0800da
+int id imageLista01 0x7f0801f6
+int id imageLista02 0x7f0801f7
+int id imageMapa01 0x7f0801f8
+int id imageMapa02 0x7f0801f9
+int id imagePerfil01 0x7f0801fa
+int id imagePrefil02 0x7f0801fb
+int id imageView3 0x7f0801fc
 int id immediateStop 0x7f0800db
 int id included 0x7f0800dc
 int id indeterminate 0x7f0800dd
@@ -3169,6 +3182,8 @@ int id right_side 0x7f08015d
 int id rlHeader 0x7f08015e
 int id rounded 0x7f08015f
 int id row_index_key 0x7f080160
+int id saludo 0x7f0801fd
+int id saludoUsuario 0x7f0801fe
 int id save_non_transition_alpha 0x7f080161
 int id save_overlay_view 0x7f080162
 int id sawtooth 0x7f080163
@@ -3245,6 +3260,7 @@ int id submenuarrow 0x7f0801a9
 int id submit_area 0x7f0801aa
 int id supportScrollUp 0x7f0801ab
 int id tabMode 0x7f0801ac
+int id tableLayout 0x7f0801ff
 int id tag_accessibility_actions 0x7f0801ad
 int id tag_accessibility_clickable_spans 0x7f0801ae
 int id tag_accessibility_heading 0x7f0801af
@@ -3290,7 +3306,10 @@ int id transition_position 0x7f0801d6
 int id transition_scene_layoutid_cache 0x7f0801d7
 int id transition_transform 0x7f0801d8
 int id triangle 0x7f0801d9
+int id txtLista 0x7f080200
 int id txtLogin 0x7f0801da
+int id txtMapa 0x7f080201
+int id txtPerfil 0x7f080202
 int id txtRegistro 0x7f0801db
 int id txtRegistro2 0x7f0801dc
 int id unchecked 0x7f0801dd
@@ -3298,7 +3317,6 @@ int id uniform 0x7f0801de
 int id unlabeled 0x7f0801df
 int id up 0x7f0801e0
 int id useLogo 0x7f0801e1
-int id username 0x7f0801e2
 int id vertical_only 0x7f0801e3
 int id view_offset_helper 0x7f0801e4
 int id view_transition 0x7f0801e5
@@ -3424,6 +3442,7 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
+int layout activity_options 0x7f0b006b
 int layout activity_register 0x7f0b001d
 int layout custom_dialog 0x7f0b001e
 int layout design_bottom_navigation_item 0x7f0b001f

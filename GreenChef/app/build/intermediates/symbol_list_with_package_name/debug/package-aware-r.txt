@@ -2706,6 +2706,9 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bottom_background
+drawable bottom_background_white
+drawable bottom_circle
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2720,6 +2723,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable fondo
+drawable green_banner_background
 drawable ic_arrow_back_black_24
 drawable ic_baseline_lock_24
 drawable ic_baseline_person_24
@@ -2831,6 +2836,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id Username
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3036,6 +3042,13 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageLista01
+id imageLista02
+id imageMapa01
+id imageMapa02
+id imagePerfil01
+id imagePrefil02
+id imageView3
 id immediateStop
 id included
 id indeterminate
@@ -3170,6 +3183,8 @@ id right_side
 id rlHeader
 id rounded
 id row_index_key
+id saludo
+id saludoUsuario
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3246,6 +3261,7 @@ id submenuarrow
 id submit_area
 id supportScrollUp
 id tabMode
+id tableLayout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3291,7 +3307,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtLista
 id txtLogin
+id txtMapa
+id txtPerfil
 id txtRegistro
 id txtRegistro2
 id unchecked
@@ -3299,7 +3318,6 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id username
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3425,6 +3443,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_options
 layout activity_register
 layout custom_dialog
 layout design_bottom_navigation_item

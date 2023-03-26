@@ -105,6 +105,23 @@ public class Procesos {
         return existe;
     }
 
+    public boolean comprobarPassword(String nombreUsuario, String password){
+        boolean pswd;
+        // Recuperar el usuario actualmente conectado
+        Usuarios user = Realm.getDefaultInstance().where(Usuarios.class)
+                .equalTo("username", nombreUsuario)
+                .findFirst();
+
+        // Comprobar si la contraseña ingresada es igual a la contraseña almacenada en la base de datos
+        if (user.getPassword().equals(password)) {
+            pswd = true;
+        } else {
+            pswd = false;
+        }
+
+        return pswd;
+    }
+
     /**
      * Crea un objeto de la clase Usuarios y los guarda en la base de datos
      * @param username

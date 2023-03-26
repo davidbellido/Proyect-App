@@ -27,6 +27,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.GreenChef" >
         <activity
+            android:name="com.example.greenchef.OptionsActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.example.greenchef.RegisterActivity"
             android:exported="false" >
             <meta-data
