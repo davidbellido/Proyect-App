@@ -4,24 +4,17 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android"
             android:shape="oval">
 
-            <solid android:color="@color/verde02" />
+            <solid android:color="@color/verde03" />
 
             <size
                 android:width="80dp"
                 android:height="80dp" />
-            <stroke
-                android:width="2dp"
-                android:color="@color/verde02" />
             <corners android:radius="40dp" />
             <padding
                 android:left="8dp"
                 android:top="8dp"
                 android:right="8dp"
                 android:bottom="8dp" />
-            <gradient
-                android:startColor="@color/verde03"
-                android:endColor="@color/verde04"
-                android:angle="270" />
         </shape>
     </item>
 </selector>
