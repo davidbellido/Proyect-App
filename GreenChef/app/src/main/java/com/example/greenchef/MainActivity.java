@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnInicioSesion;
     private Realm realm;
     private boolean contraseniaCorrecta, existeUsuario;
+    private Bundle bundle;
     Procesos proceso;
 
     @Override
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String usuario = username.getText().toString();
+                bundle = new Bundle();
+                bundle.putString("nombreUsuario", usuario);
+
                 String contrasenia = password.getText().toString();
                 proceso = new Procesos();
 
@@ -56,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     contraseniaCorrecta = proceso.comprobarPassword(usuario, contrasenia);
                     if (contraseniaCorrecta){
                         Intent i = new Intent(MainActivity.this,OptionsActivity.class);
+                        i.putExtras(bundle);
                         MainActivity.this.startActivity(i);
                     }else {
                         Toast.makeText(getApplicationContext(), "Contraseña incorrecta", Toast.LENGTH_SHORT).show();

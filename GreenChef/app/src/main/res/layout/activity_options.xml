@@ -28,7 +28,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Hey "
             android:textSize="30dp" />
 
         <TextView
@@ -36,7 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Buenos Dias! "
             android:textSize="40dp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,11 +66,12 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/bottom_background_white">
 
-                            <ImageView
-                                android:id="@+id/imageMapa01"
+                            <ImageButton
+                                android:id="@+id/btnMapa"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -111,11 +110,12 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/bottom_background_white">
 
-                            <ImageView
-                                android:id="@+id/imageLista01"
+                            <ImageButton
+                                android:id="@+id/btnRecetas"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -154,11 +154,12 @@
                             android:layout_height="match_parent"
                             android:background="@drawable/bottom_background_white">
 
-                            <ImageView
-                                android:id="@+id/imagePerfil01"
+                            <ImageButton
+                                android:id="@+id/btnPerfil"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"

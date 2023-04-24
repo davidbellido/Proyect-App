@@ -10,111 +10,210 @@
 9        android:targetSdkVersion="32" />
 9-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
 10
-11    <permission
-11-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\df85a5c095bf5083cf2758b47239ab8b\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-12        android:name="com.example.greenchef.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\df85a5c095bf5083cf2758b47239ab8b\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\df85a5c095bf5083cf2758b47239ab8b\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+11    <!-- Include required permissions for Google Maps API to run. -->
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+12-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:22-76
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+13-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:22-64
 14
-15    <uses-permission android:name="com.example.greenchef.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\df85a5c095bf5083cf2758b47239ab8b\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\df85a5c095bf5083cf2758b47239ab8b\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-16
-17    <application
-17-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:5:5-42:19
-18        android:allowBackup="true"
-18-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:6:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\df85a5c095bf5083cf2758b47239ab8b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-20        android:dataExtractionRules="@xml/data_extraction_rules"
-20-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:7:9-65
-21        android:debuggable="true"
-22        android:fullBackupContent="@xml/backup_rules"
-22-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:8:9-54
-23        android:icon="@mipmap/ic_launcher"
-23-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:9:9-43
-24        android:label="@string/app_name"
-24-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:10:9-41
-25        android:roundIcon="@mipmap/ic_launcher_round"
-25-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:11:9-54
-26        android:supportsRtl="true"
-26-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:12:9-35
-27        android:testOnly="true"
-28        android:theme="@style/Theme.GreenChef" >
-28-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:13:9-47
-29        <activity
-29-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:15:9-21:20
-30            android:name="com.example.greenchef.OptionsActivity"
-30-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:16:13-44
-31            android:exported="false" >
-31-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:17:13-37
-32            <meta-data
-32-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
-33                android:name="android.app.lib_name"
-33-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
-34                android:value="" />
-34-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
-35        </activity>
-36        <activity
-36-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:22:9-28:20
-37            android:name="com.example.greenchef.RegisterActivity"
-37-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:23:13-45
-38            android:exported="false" >
-38-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:24:13-37
-39            <meta-data
-39-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
-40                android:name="android.app.lib_name"
-40-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
-41                android:value="" />
-41-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
-42        </activity>
+15    <uses-feature
+15-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
+16        android:glEsVersion="0x00020000"
+16-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
+17        android:required="true" />
+17-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
+18
+19    <queries>
+19-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
+20
+21        <!-- Needs to be explicitly declared on Android R+ -->
+22        <package android:name="com.google.android.apps.maps" />
+22-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+22-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
+23    </queries>
+24
+25    <permission
+25-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+26        android:name="com.example.greenchef.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+26-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+27        android:protectionLevel="signature" />
+27-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+28
+29    <uses-permission android:name="com.example.greenchef.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+29-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+29-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+30
+31    <application
+31-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:5:5-75:19
+32        android:allowBackup="true"
+32-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:6:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+34        android:dataExtractionRules="@xml/data_extraction_rules"
+34-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:7:9-65
+35        android:debuggable="true"
+36        android:fullBackupContent="@xml/backup_rules"
+36-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:8:9-54
+37        android:icon="@mipmap/ic_launcher"
+37-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:9:9-43
+38        android:label="@string/app_name"
+38-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:10:9-41
+39        android:roundIcon="@mipmap/ic_launcher_round"
+39-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:11:9-54
+40        android:supportsRtl="true"
+40-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:12:9-35
+41        android:testOnly="true"
+42        android:theme="@style/Theme.GreenChef" >
+42-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:13:9-47
 43        <activity
-43-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:29:9-41:20
-44            android:name="com.example.greenchef.MainActivity"
-44-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:30:13-41
-45            android:exported="true" >
-45-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:31:13-36
-46            <intent-filter>
-46-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:32:13-36:29
-47                <action android:name="android.intent.action.MAIN" />
-47-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:33:17-69
-47-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:33:25-66
-48
-49                <category android:name="android.intent.category.LAUNCHER" />
-49-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:35:17-77
-49-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:35:27-74
-50            </intent-filter>
-51
-52            <meta-data
-52-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
-53                android:name="android.app.lib_name"
-53-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
-54                android:value="" />
-54-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
-55        </activity>
+43-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:15:9-21:20
+44            android:name="com.example.greenchef.ProfileActivity"
+44-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:16:13-44
+45            android:exported="false" >
+45-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:17:13-37
+46            <meta-data
+46-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
+47                android:name="android.app.lib_name"
+47-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
+48                android:value="" />
+48-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
+49        </activity>
+50        <!--
+51             TODO: Before you run your application, you need a Google Maps API key.
+52
+53             To get one, follow the directions here:
+54
+55                https://developers.google.com/maps/documentation/android-sdk/get-api-key
 56
-57        <provider
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\d1003dd12adeee0b2d0542304bb63e20\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-58            android:name="androidx.startup.InitializationProvider"
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\d1003dd12adeee0b2d0542304bb63e20\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-59            android:authorities="com.example.greenchef.androidx-startup"
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\d1003dd12adeee0b2d0542304bb63e20\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-60            android:exported="false" >
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\d1003dd12adeee0b2d0542304bb63e20\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-61            <meta-data
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\d1003dd12adeee0b2d0542304bb63e20\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-62                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\d1003dd12adeee0b2d0542304bb63e20\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-63                android:value="androidx.startup" />
-63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\d1003dd12adeee0b2d0542304bb63e20\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-64            <meta-data
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\015cdfef6562416ec1cae06fa203ccf1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-65                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\015cdfef6562416ec1cae06fa203ccf1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-66                android:value="androidx.startup" />
-66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\015cdfef6562416ec1cae06fa203ccf1\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-67        </provider>
-68    </application>
-69
-70</manifest>
+57             Once you have your API key (it starts with "AIza"), define a new property in your
+58             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+59             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+60        -->
+61        <meta-data
+61-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:33:9-35:44
+62            android:name="com.google.android.geo.API_KEY"
+62-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:34:13-58
+63            android:value="YOUR_API_KEY" />
+63-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:35:13-41
+64
+65        <activity
+65-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:37:9-40:59
+66            android:name="com.example.greenchef.MapsActivity"
+66-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:38:13-41
+67            android:exported="false"
+67-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:39:13-37
+68            android:label="@string/title_activity_maps" />
+68-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:40:13-56
+69        <activity
+69-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:41:9-47:20
+70            android:name="com.example.greenchef.FoodActivity"
+70-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:42:13-41
+71            android:exported="false" >
+71-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:43:13-37
+72            <meta-data
+72-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
+73                android:name="android.app.lib_name"
+73-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
+74                android:value="" />
+74-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
+75        </activity>
+76        <activity
+76-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:48:9-54:20
+77            android:name="com.example.greenchef.OptionsActivity"
+77-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:49:13-44
+78            android:exported="false" >
+78-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:50:13-37
+79            <meta-data
+79-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
+80                android:name="android.app.lib_name"
+80-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
+81                android:value="" />
+81-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
+82        </activity>
+83        <activity
+83-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:55:9-61:20
+84            android:name="com.example.greenchef.RegisterActivity"
+84-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:56:13-45
+85            android:exported="false" >
+85-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:57:13-37
+86            <meta-data
+86-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
+87                android:name="android.app.lib_name"
+87-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
+88                android:value="" />
+88-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
+89        </activity>
+90        <activity
+90-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:62:9-74:20
+91            android:name="com.example.greenchef.MainActivity"
+91-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:63:13-41
+92            android:exported="true" >
+92-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:64:13-36
+93            <intent-filter>
+93-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:65:13-69:29
+94                <action android:name="android.intent.action.MAIN" />
+94-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:66:17-69
+94-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:66:25-66
+95
+96                <category android:name="android.intent.category.LAUNCHER" />
+96-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:68:17-77
+96-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:68:27-74
+97            </intent-filter>
+98
+99            <meta-data
+99-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
+100                android:name="android.app.lib_name"
+100-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
+101                android:value="" />
+101-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
+102        </activity>
+103        <!-- Needs to be explicitly declared on P+ -->
+104        <uses-library
+104-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+105            android:name="org.apache.http.legacy"
+105-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+106            android:required="false" />
+106-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+107
+108        <activity
+108-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+109            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+109-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+110            android:exported="false"
+110-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+111            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+111-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+112
+113        <meta-data
+113-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+114            android:name="com.google.android.gms.version"
+114-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+115            android:value="@integer/google_play_services_version" />
+115-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+116
+117        <provider
+117-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+118            android:name="androidx.startup.InitializationProvider"
+118-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+119            android:authorities="com.example.greenchef.androidx-startup"
+119-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+120            android:exported="false" >
+120-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+121            <meta-data
+121-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+122                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+122-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+123                android:value="androidx.startup" />
+123-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+124            <meta-data
+124-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+125                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+125-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+126                android:value="androidx.startup" />
+126-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+127        </provider>
+128    </application>
+129
+130</manifest>
