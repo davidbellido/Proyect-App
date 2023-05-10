@@ -1,21 +1,23 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-MERGED from [io.realm:realm-android-library:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\8f6a352de923994dd57f2a6ef2fd4c4b\transformed\realm-android-library-10.11.1\AndroidManifest.xml:2:1-9:12
-MERGED from [io.realm:realm-android-kotlin-extensions:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\a6e395c8f9d1881fd3fbfd2947665c7a\transformed\realm-android-kotlin-extensions-10.11.1\AndroidManifest.xml:2:1-9:12
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:2:1-12:12
+MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\ab7e054ae68c1094533b97fee23d9354\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\begar\.gradle\caches\transforms-3\34dde6a0dbbc41d39bb1e174034e0abd\transformed\viewbinding-7.3.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\begar\.gradle\caches\transforms-3\9e20cf129e1140a29a897a65f2741a60\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\begar\.gradle\caches\transforms-3\8b8615764cb0ceddd69d49d201c7b2f9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\begar\.gradle\caches\transforms-3\24e5041a191efabd87c69bba0ac950c5\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\begar\.gradle\caches\transforms-3\915ed44880b1c0ebdd57298028a263e4\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:17:1-44:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\e4dab3e7373496e5c87bb1b3ab3c9008\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\aa61fbde214a89d37f850df87f02efcb\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:16:1-26:12
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\begar\.gradle\caches\transforms-3\e023b38640a3533276445965ebbd3cde\transformed\play-services-location-21.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\f69ddc14e1642372ae0a3bdce158446c\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\begar\.gradle\caches\transforms-3\5d42e5bb299f2fdbbc915dc7e461920e\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.6.0] C:\Users\begar\.gradle\caches\transforms-3\f68016e71d4dcbf704bc059e7b79a658\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\d1ae20d9e9323afdac330a539469e28a\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -42,56 +44,113 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\begar\.gradle\caches\transforms-3\804bfd7d7c9581281e20fca853cb3f85\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\1084a9b586be54c1dd1081cc9d697e14\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\f45dd97af55db49e104e4d775b7b7ec7\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:15:1-41:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\242926c59bac645f9e39c18403d77f07\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\dc4bd2538c5c49ae233b424f0b3afcb5\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\4078bb059431ffe92392723944208f32\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\begar\.gradle\caches\transforms-3\16ec8eef02dce4f1db5c42ecbe7e0551\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\begar\.gradle\caches\transforms-3\3d8593929f9f7752fe4577cd07bd73c0\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\begar\.gradle\caches\transforms-3\1ba2c23b52e31b53ee2ff35d2d781c11\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-encoders-json:16.1.0] C:\Users\begar\.gradle\caches\transforms-3\b183a7dfc1d150a77205a0fbf132a529\transformed\firebase-encoders-json-16.1.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\0064300b639cdb41efd6e5ed781b579c\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\44e6964f013cfe2d7a45b560713d252d\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\b87212fccf25d79de49571d259689271\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\54be2d7964afdf683ec6a75bff444caa\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\begar\.gradle\caches\transforms-3\851493f4ccd8fae1ff88976d66f1dacb\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\begar\.gradle\caches\transforms-3\f89a08e10c3fbb3d4610b3d6d0ad8b31\transformed\volley-1.2.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\begar\.gradle\caches\transforms-3\67ce4e2c0407dd8afc0d54fcf4f0803f\transformed\transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
 	package
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:1-77:12
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-91:12
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:5-67
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:12:5-67
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:12:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:5:22-64
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:6:5-81
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:9:5-81
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:6:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:7:22-76
+uses-permission#android.hardware.location.gps
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:8:5-69
+	android:name
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:8:22-66
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:9:22-78
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:10:5-79
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:5:5-75:19
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:12:5-89:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\begar\.gradle\caches\transforms-3\9e20cf129e1140a29a897a65f2741a60\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\begar\.gradle\caches\transforms-3\9e20cf129e1140a29a897a65f2741a60\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\begar\.gradle\caches\transforms-3\8b8615764cb0ceddd69d49d201c7b2f9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\begar\.gradle\caches\transforms-3\8b8615764cb0ceddd69d49d201c7b2f9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:14:5-22:19
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:36:5-42:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\aa61fbde214a89d37f850df87f02efcb\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\aa61fbde214a89d37f850df87f02efcb\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\begar\.gradle\caches\transforms-3\e023b38640a3533276445965ebbd3cde\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\begar\.gradle\caches\transforms-3\e023b38640a3533276445965ebbd3cde\transformed\play-services-location-21.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\f69ddc14e1642372ae0a3bdce158446c\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\f69ddc14e1642372ae0a3bdce158446c\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:20:5-24:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:25:5-39:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\242926c59bac645f9e39c18403d77f07\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\242926c59bac645f9e39c18403d77f07\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\dc4bd2538c5c49ae233b424f0b3afcb5\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
@@ -99,97 +158,105 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\begar\.gradle\cach
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:19:9-35
 	android:label
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:10:9-41
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:17:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:15:9-54
 	android:roundIcon
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:18:9-54
 	tools:targetApi
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:14:9-29
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:21:9-29
 	android:icon
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:9:9-43
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:16:9-43
 	android:allowBackup
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:13:9-47
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:20:9-47
 	android:dataExtractionRules
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:7:9-65
-activity#com.example.greenchef.ProfileActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:15:9-21:20
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:14:9-65
+activity#com.example.greenchef.AdminActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:22:9-28:20
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:17:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:16:13-44
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:23:13-42
 meta-data#android.app.lib_name
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:18:13-20:36
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
 	android:value
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:20:17-33
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:19:17-52
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+activity#com.example.greenchef.ProfileActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:29:9-35:20
+	android:exported
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:30:13-44
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:33:9-35:44
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:47:9-49:71
 	android:value
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:35:13-41
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:49:13-68
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:34:13-58
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:48:13-58
 activity#com.example.greenchef.MapsActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:37:9-40:59
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:51:9-54:59
 	android:label
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:40:13-56
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:54:13-56
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:53:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:38:13-41
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:52:13-41
 activity#com.example.greenchef.FoodActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:41:9-47:20
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:55:9-61:20
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:43:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:57:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:42:13-41
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:56:13-41
 activity#com.example.greenchef.OptionsActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:48:9-54:20
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:62:9-68:20
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:50:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:64:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:49:13-44
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:63:13-44
 activity#com.example.greenchef.RegisterActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:55:9-61:20
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:69:9-75:20
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:57:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:71:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:56:13-45
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:70:13-45
 activity#com.example.greenchef.MainActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:62:9-74:20
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:76:9-88:20
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:64:13-36
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:78:13-36
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:63:13-41
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:77:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:65:13-69:29
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:79:13-83:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:66:17-69
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:80:17-69
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:66:25-66
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:80:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:68:17-77
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:82:17-77
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml:68:27-74
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:82:27-74
 uses-sdk
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-MERGED from [io.realm:realm-android-library:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\8f6a352de923994dd57f2a6ef2fd4c4b\transformed\realm-android-library-10.11.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.realm:realm-android-library:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\8f6a352de923994dd57f2a6ef2fd4c4b\transformed\realm-android-library-10.11.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.realm:realm-android-kotlin-extensions:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\a6e395c8f9d1881fd3fbfd2947665c7a\transformed\realm-android-kotlin-extensions-10.11.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.realm:realm-android-kotlin-extensions:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\a6e395c8f9d1881fd3fbfd2947665c7a\transformed\realm-android-kotlin-extensions-10.11.1\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\ab7e054ae68c1094533b97fee23d9354\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\ab7e054ae68c1094533b97fee23d9354\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\begar\.gradle\caches\transforms-3\34dde6a0dbbc41d39bb1e174034e0abd\transformed\viewbinding-7.3.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\begar\.gradle\caches\transforms-3\34dde6a0dbbc41d39bb1e174034e0abd\transformed\viewbinding-7.3.1\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\begar\.gradle\caches\transforms-3\9e20cf129e1140a29a897a65f2741a60\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\begar\.gradle\caches\transforms-3\9e20cf129e1140a29a897a65f2741a60\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\begar\.gradle\caches\transforms-3\8b8615764cb0ceddd69d49d201c7b2f9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\begar\.gradle\caches\transforms-3\8b8615764cb0ceddd69d49d201c7b2f9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:7:5-44
+MERGED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:7:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\begar\.gradle\caches\transforms-3\24e5041a191efabd87c69bba0ac950c5\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\begar\.gradle\caches\transforms-3\24e5041a191efabd87c69bba0ac950c5\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\begar\.gradle\caches\transforms-3\915ed44880b1c0ebdd57298028a263e4\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
@@ -198,12 +265,14 @@ MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.g
 MERGED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\e4dab3e7373496e5c87bb1b3ab3c9008\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\e4dab3e7373496e5c87bb1b3ab3c9008\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\aa61fbde214a89d37f850df87f02efcb\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\aa61fbde214a89d37f850df87f02efcb\transformed\play-services-tasks-18.0.1\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\begar\.gradle\caches\transforms-3\e023b38640a3533276445965ebbd3cde\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:21.0.1] C:\Users\begar\.gradle\caches\transforms-3\e023b38640a3533276445965ebbd3cde\transformed\play-services-location-21.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\f69ddc14e1642372ae0a3bdce158446c\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\f69ddc14e1642372ae0a3bdce158446c\transformed\play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\begar\.gradle\caches\transforms-3\5d42e5bb299f2fdbbc915dc7e461920e\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\begar\.gradle\caches\transforms-3\5d42e5bb299f2fdbbc915dc7e461920e\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.6.0] C:\Users\begar\.gradle\caches\transforms-3\f68016e71d4dcbf704bc059e7b79a658\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
@@ -256,6 +325,10 @@ MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\begar\.gradle\caches
 MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\1084a9b586be54c1dd1081cc9d697e14\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\f45dd97af55db49e104e4d775b7b7ec7\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\f45dd97af55db49e104e4d775b7b7ec7\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:18:5-20:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\242926c59bac645f9e39c18403d77f07\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\242926c59bac645f9e39c18403d77f07\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\begar\.gradle\caches\transforms-3\dc4bd2538c5c49ae233b424f0b3afcb5\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
@@ -268,6 +341,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\begar\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\begar\.gradle\caches\transforms-3\3d8593929f9f7752fe4577cd07bd73c0\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\begar\.gradle\caches\transforms-3\1ba2c23b52e31b53ee2ff35d2d781c11\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\begar\.gradle\caches\transforms-3\1ba2c23b52e31b53ee2ff35d2d781c11\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-encoders-json:16.1.0] C:\Users\begar\.gradle\caches\transforms-3\b183a7dfc1d150a77205a0fbf132a529\transformed\firebase-encoders-json-16.1.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:16.1.0] C:\Users\begar\.gradle\caches\transforms-3\b183a7dfc1d150a77205a0fbf132a529\transformed\firebase-encoders-json-16.1.0\AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\0064300b639cdb41efd6e5ed781b579c\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\0064300b639cdb41efd6e5ed781b579c\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\44e6964f013cfe2d7a45b560713d252d\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -278,24 +353,36 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\begar\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\begar\.gradle\caches\transforms-3\54be2d7964afdf683ec6a75bff444caa\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\begar\.gradle\caches\transforms-3\851493f4ccd8fae1ff88976d66f1dacb\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\begar\.gradle\caches\transforms-3\851493f4ccd8fae1ff88976d66f1dacb\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\begar\.gradle\caches\transforms-3\f89a08e10c3fbb3d4610b3d6d0ad8b31\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.android.volley:volley:1.2.1] C:\Users\begar\.gradle\caches\transforms-3\f89a08e10c3fbb3d4610b3d6d0ad8b31\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\begar\.gradle\caches\transforms-3\67ce4e2c0407dd8afc0d54fcf4f0803f\transformed\transport-api-2.2.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\begar\.gradle\caches\transforms-3\67ce4e2c0407dd8afc0d54fcf4f0803f\transformed\transport-api-2.2.0\AndroidManifest.xml:18:5-20:41
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChef\GreenChef\app\src\main\AndroidManifest.xml
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:11:5-76
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:23:22-76
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:5-67
+		ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:11:22-73
+activity#com.google.android.libraries.places.widget.AutocompleteActivity
+ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:15:9-21:20
+	android:label
+		ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:18:13-62
+	android:windowSoftInputMode
+		ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:20:13-55
+	android:exported
+		ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:17:13-37
+	android:theme
+		ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:19:13-61
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:24:22-64
+		ADDED from [com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:16:13-91
 uses-feature#0x00020000
 ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
@@ -315,19 +402,19 @@ ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gr
 	android:name
 		ADDED from [com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\begar\.gradle\caches\transforms-3\16ff219570f8a0221853aa0a469d1b2e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.0.0] C:\Users\begar\.gradle\caches\transforms-3\22efe7d960d668647b2982df9de9cb7d\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
@@ -374,3 +461,31 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\c
 		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:30:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:32:13-34:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:34:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:33:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:33:13-132

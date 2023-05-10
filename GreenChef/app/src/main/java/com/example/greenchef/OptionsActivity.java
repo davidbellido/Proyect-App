@@ -5,12 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.example.greenchef.Procesos.Procesos;
 
 import java.util.Calendar;
 
@@ -19,7 +16,7 @@ public class OptionsActivity extends AppCompatActivity {
     private ImageButton btnMapa;
     private ImageButton btnPerfil;
     private TextView txtSaludo, txtSaludoUsuario;
-    private Bundle bundle;
+    private Bundle bundle, bundleMapa;
     private String nombreUsuario;
 
     @Override
@@ -42,6 +39,9 @@ public class OptionsActivity extends AppCompatActivity {
         nombreUsuario = bundle.getString("nombreUsuario");
         txtSaludoUsuario.setText("Hola " + nombreUsuario + "!");
 
+        bundleMapa = new Bundle();
+        bundleMapa.putString("nombreUsuario", nombreUsuario);
+
         btnRecetas = this.findViewById(R.id.btnRecetas);
         btnRecetas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +56,7 @@ public class OptionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(OptionsActivity.this, MapsActivity.class);
+                i.putExtras(bundleMapa);
                 OptionsActivity.this.startActivity(i);
             }
         });

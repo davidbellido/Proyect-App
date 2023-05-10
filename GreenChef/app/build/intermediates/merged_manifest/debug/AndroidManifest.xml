@@ -7,10 +7,14 @@
     <uses-sdk
         android:minSdkVersion="21"
         android:targetSdkVersion="32" />
-
-    <!-- Include required permissions for Google Maps API to run. -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permisos necesarios para integrar a google maps -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <uses-feature
         android:glEsVersion="0x00020000"
@@ -41,6 +45,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.GreenChef" >
         <activity
+            android:name="com.example.greenchef.AdminActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.example.greenchef.ProfileActivity"
             android:exported="false" >
             <meta-data
@@ -60,7 +71,7 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyC8lUmKP3jkfenalk5bZoDnqXHe50zT5Yo" />
 
         <activity
             android:name="com.example.greenchef.MapsActivity"
@@ -100,7 +111,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <!-- Needs to be explicitly declared on P+ -->
+        <activity
+            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+            android:exported="false"
+            android:label="@string/places_autocomplete_label"
+            android:theme="@style/PlacesAutocompleteOverlay"
+            android:windowSoftInputMode="adjustResize" >
+        </activity> <!-- Needs to be explicitly declared on P+ -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -125,6 +142,23 @@
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <service
+            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+            android:exported="false" >
+            <meta-data
+                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+                android:value="cct" />
+        </service>
+        <service
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" >
+        </service>
+
+        <receiver
+            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+            android:exported="false" />
     </application>
 
 </manifest>

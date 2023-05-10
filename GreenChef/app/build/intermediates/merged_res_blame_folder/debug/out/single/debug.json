@@ -1,158 +1,246 @@
 [
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_bottom_circle.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\bottom_circle.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\layout_activity_profile.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\layout\\activity_profile.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_green_banner_background.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\green_banner_background.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_custom_editext.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\custom_editext.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\layout_activity_options.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\layout\\activity_options.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_ic_baseline_lock_24.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\ic_baseline_lock_24.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_shadow_login.9.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\shadow_login.9.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_shadow_left.9.png.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\shadow_left.9.png"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_proteina.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\proteina.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_circle_bottom.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\circle_bottom.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_verduras.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\verduras.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_shadow_right.9.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\shadow_right.9.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\ic_launcher_background.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-pngs-27:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_recetas.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\recetas.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_shape_login_panel.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\shape_login_panel.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_ic_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\ic_baseline_person_24.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_fsecos.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\fsecos.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\layout_activity_register.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\layout\\activity_register.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_legumbres.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\legumbres.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_cereal.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\cereal.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_bottom_background_white.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\bottom_background_white.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_yogur.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\yogur.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\xml\\data_extraction_rules.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_home.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\home.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_shape_left_panel.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\shape_left_panel.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_shape_left_panel.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\shape_left_panel.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_logoapp.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\logoapp.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_bottom_background.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\bottom_background.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_ic_baseline_person_24.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\ic_baseline_person_24.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_ic_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\ic_baseline_lock_24.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_green_banner_background.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\green_banner_background.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_granos.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\granos.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_fruta.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\fruta.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\layout_activity_options.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\layout\\activity_options.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_shape_right_panel.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\shape_right_panel.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_shadow_login.9.png.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\shadow_login.9.png"
+        "merged": "com.example.greenchef.app-merged_res-33:/layout_activity_admin.xml.flat",
+        "source": "com.example.greenchef.app-main-35:/layout/activity_admin.xml"
     },
     {
-        "merged": "com.example.greenchef.app-merged_res-32:/layout_activity_options.xml.flat",
-        "source": "com.example.greenchef.app-main-34:/layout/activity_options.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_logoapp.png.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\logoapp.png"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_bottom_circle.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\bottom_circle.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable-v24_fondo.jpg.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable-v24\\fondo.jpg"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\xml\\backup_rules.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_shape_right_panel.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\shape_right_panel.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\drawable_shadow_right.9.png.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\drawable\\shadow_right.9.png"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_shape_login_panel.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\shape_login_panel.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_perfil.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\perfil.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\layout_activity_food.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\layout\\activity_food.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_lacteos.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\lacteos.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-32:\\layout_activity_maps.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-34:\\layout\\activity_maps.xml"
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_recetafondo.jpg.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\recetafondo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_circle_bottom.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\circle_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\layout_activity_maps.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\layout\\activity_maps.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\layout_activity_food.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\layout\\activity_food.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_bottom_background.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\bottom_background.xml"
+    },
+    {
+        "merged": "com.example.greenchef.app-merged_res-33:/drawable_admin_window.xml.flat",
+        "source": "com.example.greenchef.app-main-35:/drawable/admin_window.xml"
+    },
+    {
+        "merged": "com.example.greenchef.app-merged_res-33:/drawable_fondo.png.flat",
+        "source": "com.example.greenchef.app-main-35:/drawable/fondo.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable-v24_fondo.jpg.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable-v24\\fondo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_shadow_left.9.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\shadow_left.9.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-pngs-28:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_custom_editext.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\custom_editext.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-34:\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_bottom_background_white.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\bottom_background_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "com.example.greenchef.app-merged_res-33:/drawable_cerrarsesion.png.flat",
+        "source": "com.example.greenchef.app-main-35:/drawable/cerrarsesion.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-33:\\drawable_mapa.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-35:\\drawable\\mapa.png"
     }
 ]

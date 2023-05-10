@@ -12,6 +12,7 @@
     <color name="verde04">#DBE4C6</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">GreenChef</string>
+    <string name="title_activity_maps">MapsActivity</string>
     <style name="Theme.GreenChef" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

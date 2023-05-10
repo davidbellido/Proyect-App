@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.greenchef.app-mergeDebugResources-27:/values-xlarge-v4/values-xlarge-v4.xml",
+            "outputFile": "com.example.greenchef.app-mergeDebugResources-31:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\begar\\.gradle\\caches\\transforms-3\\2627c93adf3da611050d5ac344842aa7\\transformed\\appcompat-1.6.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\begar\\.gradle\\caches\\transforms-3\\915ed44880b1c0ebdd57298028a263e4\\transformed\\appcompat-1.6.1\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

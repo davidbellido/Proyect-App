@@ -1,5 +1,7 @@
 package com.example.greenchef;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,11 +14,18 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.greenchef.Model.Usuarios;
-import com.example.greenchef.Procesos.Procesos;
+
+import org.bson.Document;
 
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
+import io.realm.mongodb.App;
+import io.realm.mongodb.AppConfiguration;
+import io.realm.mongodb.Credentials;
+import io.realm.mongodb.User;
+import io.realm.mongodb.mongo.MongoClient;
+import io.realm.mongodb.mongo.MongoCollection;
+import io.realm.mongodb.mongo.MongoDatabase;
+
 
 public class MainActivity extends AppCompatActivity {
     private TextView txtSignUp;
@@ -25,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     private Button btnInicioSesion;
     private Realm realm;
-    private boolean contraseniaCorrecta, existeUsuario;
     private Bundle bundle;
-    Procesos proceso;
+    String AppId = "pruebaproyecto-urnlx";
+    MongoDatabase mongoDatabase;
+    MongoClient mongoClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         txtSignUp.setOnClickListener(onClickSignUp());
         txtSignUp2.setOnClickListener(onClickSignUp());
 
-        initRealm();
+
 
         btnInicioSesion = this.findViewById(R.id.btnInicioSesion);
         btnInicioSesion.setOnClickListener(new View.OnClickListener() {
@@ -53,26 +63,16 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("nombreUsuario", usuario);
 
                 String contrasenia = password.getText().toString();
-                proceso = new Procesos();
 
-                existeUsuario = proceso.existeUsuario(usuario);
-                if (existeUsuario){
-                    contraseniaCorrecta = proceso.comprobarPassword(usuario, contrasenia);
-                    if (contraseniaCorrecta){
-                        Intent i = new Intent(MainActivity.this,OptionsActivity.class);
-                        i.putExtras(bundle);
-                        MainActivity.this.startActivity(i);
-                    }else {
-                        Toast.makeText(getApplicationContext(), "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
-                    }
-                    //Toast.makeText(getApplicationContext(), "Usuario existe", Toast.LENGTH_SHORT).show();
+                if (usuario.equals("admin")){
+                    loginAdmins(usuario,contrasenia);
                 }else
-                    Toast.makeText(getApplicationContext(), "Usuario no existe", Toast.LENGTH_SHORT).show();
+                    loginUsers(usuario,contrasenia);
+
 
             }
         });
 
-        //realm.close();
 
         try {
             this.getSupportActionBar().hide();
@@ -81,35 +81,110 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*private class LoginTask extends AsyncTask<String, Usuarios, String> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-        }
-
-        @Override
-        protected String doInBackground(String... strings) {
-
-            proceso = new Procesos();
-
-            existeUsuario = proceso.existeUsuario(strings[0]);
-            if (existeUsuario){
-                Toast.makeText(getApplicationContext(), "Usuario existe", Toast.LENGTH_SHORT).show();
-            }else
-                Toast.makeText(getApplicationContext(), "Usuario no existe", Toast.LENGTH_SHORT).show();
-
-            return null;
-        }
-    }*/
-
-    private void initRealm() {
+    private void loginUsers(String usuario,String contrasenia) {
         Realm.init(this);
-        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
-                .name("GreenChef")
-                .schemaVersion(1)
-                .deleteRealmIfMigrationNeeded()
-                .build();
-        Realm.setDefaultConfiguration(realmConfiguration);
+        App app = new App(new AppConfiguration.Builder(AppId).build());
+
+        Credentials credentials = Credentials.anonymous();
+        app.loginAsync(credentials, new App.Callback<User>() {
+            @Override
+            public void onResult(App.Result<User> result) {
+                if (result.isSuccess()) {
+
+                    User user = app.currentUser();
+                    mongoClient = user.getMongoClient("mongodb-atlas");
+                    mongoDatabase = mongoClient.getDatabase("GreenChef");
+                    MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Users");
+
+                    Document query = new Document("nick", usuario).append("password", contrasenia);
+                    mongoCollection.findOne(query).getAsync(result1 -> {
+                        if (result1.isSuccess()) {
+                            Document usuario = result1.get();
+                            if (usuario != null) {
+                                Intent i = new Intent(MainActivity.this,OptionsActivity.class);
+                                i.putExtras(bundle);
+                                MainActivity.this.startActivity(i);
+                            } else {
+                                // Crear un AlertDialog.Builder
+                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                                // Establecer el título y el mensaje del diálogo
+                                builder.setTitle("Error en el Login").setMessage("Lo siento, el usuario o la contraseña que has introducido son incorrectos.");
+
+                                // Añadir un botón "Aceptar" al diálogo
+                                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // Cerrar el diálogo
+                                        dialog.dismiss();
+                                    }
+                                });
+
+                                // Crear el AlertDialog y mostrarlo
+                                AlertDialog dialog = builder.create();
+                                dialog.show();
+                            }
+                        } else {
+                            Toast.makeText(MainActivity.this, "Error al buscar usuario", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else {
+                    Toast.makeText(MainActivity.this, "Error al conectar con la base de datos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void loginAdmins(String usuario,String contrasenia) {
+        Realm.init(this);
+        App app = new App(new AppConfiguration.Builder(AppId).build());
+
+        Credentials credentials = Credentials.anonymous();
+        app.loginAsync(credentials, new App.Callback<User>() {
+            @Override
+            public void onResult(App.Result<User> result) {
+                if (result.isSuccess()) {
+
+                    User user = app.currentUser();
+                    mongoClient = user.getMongoClient("mongodb-atlas");
+                    mongoDatabase = mongoClient.getDatabase("GreenChef");
+                    MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Admin");
+
+                    Document query = new Document("log", usuario).append("password", contrasenia);
+                    mongoCollection.findOne(query).getAsync(result1 -> {
+                        if (result1.isSuccess()) {
+                            Document usuario = result1.get();
+                            if (usuario != null) {
+                                Intent i = new Intent(MainActivity.this,AdminActivity.class);
+                                i.putExtras(bundle);
+                                MainActivity.this.startActivity(i);
+                            } else {
+                                // Crear un AlertDialog.Builder
+                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+                                // Establecer el título y el mensaje del diálogo
+                                builder.setTitle("Error en el Login").setMessage("Lo siento, no tienes permiso de admin o la contraseña es incorrecta.");
+
+                                // Añadir un botón "Aceptar" al diálogo
+                                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // Cerrar el diálogo
+                                        dialog.dismiss();
+                                    }
+                                });
+
+                                // Crear el AlertDialog y mostrarlo
+                                AlertDialog dialog = builder.create();
+                                dialog.show();
+                            }
+                        } else {
+                            Toast.makeText(MainActivity.this, "Error al buscar usuario", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else {
+                    Toast.makeText(MainActivity.this, "Error al conectar con la base de datos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     private View.OnClickListener onClickSignUp(){

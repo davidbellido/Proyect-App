@@ -4,88 +4,596 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FoodActivity">
+    android:background="@drawable/recetafondo"
+    tools:context=".OptionsActivity">
 
     <LinearLayout
+        android:id="@+id/llLoginPanel"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="450px">
 
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Selecciona los alimentos que prefieres:"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"/>
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_background_white"
+            android:backgroundTint="@color/verde01">
 
-        <LinearLayout
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnProteina"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageProteina"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/proteina" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtProteina"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Proteinas"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnVerduras"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageVerduras"
+                                android:layout_width="160px"
+                                android:layout_height="130px"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/verduras" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtVerduras"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Verduras"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnCereales"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageCereales"
+                                android:layout_width="wrap_content"
+                                android:layout_height="45dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/cereal" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtCereales"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Perfil"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnLacteos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageLacteos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="120px"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/lacteos" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtLacteos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lacteos"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnSecos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageSecos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200px"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/fsecos" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtSecos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="F.Secos"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnFrutas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageFrutas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="150px"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/fruta" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtFrutas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Frutas"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnGranos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageGranos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="120px"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/granos" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtGranos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Granos"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnLegumbres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imageLegumbres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="250px"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/legumbres" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtLegumbres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Legumbres"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bottom_background_white"
+                            android:backgroundTint="@color/verde01">
+
+                            <ImageButton
+                                android:id="@+id/btnPostres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/circle_bottom"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/bottom_circle" />
+
+                            <ImageView
+                                android:id="@+id/imagePostres"
+                                android:layout_width="wrap_content"
+                                android:layout_height="130px"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/yogur" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/txtPostres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Postres"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:layout_height="250px"
+            android:background="@drawable/bottom_background_white"
+            android:backgroundTint="@color/verde03"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="1">
 
-            <CheckBox
-                android:id="@+id/chk_proteinas"
+            <TableLayout
+                android:id="@+id/tableNavigation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Proteínas"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <CheckBox
-                android:id="@+id/chk_vegetales"
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vegetales"/>
+                android:layout_height="match_parent"
+                android:gravity="center">
 
-            <CheckBox
-                android:id="@+id/chk_cereales"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cereales"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/chk_frutas"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Frutas"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bottom_background_white"
+                        android:backgroundTint="@color/verde03">
 
-            <CheckBox
-                android:id="@+id/chk_lacteos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lácteos"/>
+                        <ImageButton
+                            android:id="@+id/btnMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="200px"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/circle_bottom"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/bottom_circle" />
 
-            <CheckBox
-                android:id="@+id/chk_frutos_secos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Frutos secos"/>
+                        <ImageView
+                            android:id="@+id/imageMap"
+                            android:layout_width="120px"
+                            android:layout_height="120px"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/mapa" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
-            <CheckBox
-                android:id="@+id/chk_granos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Granos"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/chk_postres"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Postres"/>
-        </LinearLayout>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bottom_background_white"
+                        android:backgroundTint="@color/verde03">
 
-        <Button
-            android:id="@+id/btn_continuar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Continuar"
-            android:textColor="@color/white"
-            android:background="@color/verde01"
-            android:layout_margin="16dp"/>
+                        <ImageButton
+                            android:id="@+id/btnHome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/circle_bottom"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/bottom_circle" />
+
+                        <ImageView
+                            android:id="@+id/imageHome"
+                            android:layout_width="160px"
+                            android:layout_height="130px"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/home" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bottom_background_white"
+                        android:backgroundTint="@color/verde03">
+
+                        <ImageButton
+                            android:id="@+id/btnUsuario"
+                            android:layout_width="200px"
+                            android:layout_height="200px"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/circle_bottom"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/bottom_circle" />
+
+                        <ImageView
+                            android:id="@+id/imageUsuario"
+                            android:layout_width="180px"
+                            android:layout_height="200px"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_person_24" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+            </TableRow>
+            </TableLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
