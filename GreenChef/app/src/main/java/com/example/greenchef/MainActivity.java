@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.bson.Document;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.Realm;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
@@ -105,30 +106,42 @@ public class MainActivity extends AppCompatActivity {
                                 i.putExtras(bundle);
                                 MainActivity.this.startActivity(i);
                             } else {
-                                // Crear un AlertDialog.Builder
-                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
-                                // Establecer el título y el mensaje del diálogo
-                                builder.setTitle("Error en el Login").setMessage("Lo siento, el usuario o la contraseña que has introducido son incorrectos.");
+                                new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE)
+                                        .setTitleText("Oops...")
+                                        .setContentText("Usuario o contraseña incorrectos")
+                                        .show();
 
-                                // Añadir un botón "Aceptar" al diálogo
-                                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        // Cerrar el diálogo
-                                        dialog.dismiss();
-                                    }
-                                });
-
-                                // Crear el AlertDialog y mostrarlo
-                                AlertDialog dialog = builder.create();
-                                dialog.show();
+//                                // Crear un AlertDialog.Builder
+//                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//
+//                                // Establecer el título y el mensaje del diálogo
+//                                builder.setTitle("Error en el Login").setMessage("Lo siento, el usuario o la contraseña que has introducido son incorrectos.");
+//
+//                                // Añadir un botón "Aceptar" al diálogo
+//                                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog, int id) {
+//                                        // Cerrar el diálogo
+//                                        dialog.dismiss();
+//                                    }
+//                                });
+//
+//                                // Crear el AlertDialog y mostrarlo
+//                                AlertDialog dialog = builder.create();
+//                                dialog.show();
                             }
                         } else {
-                            Toast.makeText(MainActivity.this, "Error al buscar usuario", Toast.LENGTH_SHORT).show();
+                            new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE)
+                                    .setTitleText("Oops...")
+                                    .setContentText("Error al buscar usuario")
+                                    .show();
                         }
                     });
                 } else {
-                    Toast.makeText(MainActivity.this, "Error al conectar con la base de datos", Toast.LENGTH_SHORT).show();
+                    new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Oops...")
+                            .setContentText("Error al conectar con la base de datos")
+                            .show();
                 }
             }
         });

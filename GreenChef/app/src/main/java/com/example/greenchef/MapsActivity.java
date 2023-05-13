@@ -46,6 +46,7 @@ import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.Realm;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
@@ -148,11 +149,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mongoCollection.findOne(query).getAsync(result1 -> {
                         if (result1.isSuccess()) {
 
-                            //Alertdialog donde pueda introducir nomnre, direccion, telefono, horario
-                            AlertDialog.Builder builder = new AlertDialog.Builder(MapsActivity.this);
-                            builder.setTitle("Introducir Supermercado");
+                            // SweetAlertDialog donde puedes introducir nombre, dirección, teléfono y horario
+                            SweetAlertDialog alert = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE)
+                            .setTitleText("Introducir Supermercado");
 
-                            // Crear los campos de texto programáticamente
+// Crear los campos de texto programáticamente
                             final EditText etNombre = new EditText(MapsActivity.this);
                             etNombre.setHint("Nombre");
 
@@ -165,7 +166,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             final EditText etHoraCierre = new EditText(MapsActivity.this);
                             etHoraCierre.setHint("Hora de cierre");
 
-                            // Agregar los campos de texto al AlertDialog
+// Agregar los campos de texto al SweetAlertDialog
                             LinearLayout layout = new LinearLayout(MapsActivity.this);
                             layout.setOrientation(LinearLayout.VERTICAL);
                             layout.addView(etNombre);
@@ -173,67 +174,71 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             layout.addView(etHoraApertura);
                             layout.addView(etHoraCierre);
 
-                            builder.setView(layout);
+                            alert.setCustomView(layout);
 
-                            // Configurar los botones del AlertDialog
-                            builder.setPositiveButton("Guardar", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    // Obtener los valores ingresados por el usuario
-                                    String nombre = etNombre.getText().toString();
-                                    int telefono = Integer.parseInt(etTelefono.getText().toString());
-                                    String horaApertura = etHoraApertura.getText().toString();
-                                    String horaCierre = etHoraCierre.getText().toString();
-                                    Double latitud = latLng.latitude;
-                                    Double longitud = latLng.longitude;
-                                    String via="";
+// Configurar los botones del SweetAlertDialog
+                            alert.setConfirmText("Guardar")
+                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                            // Obtener los valores ingresados por el usuario
+                                            String nombre = etNombre.getText().toString();
+                                            int telefono = Integer.parseInt(etTelefono.getText().toString());
+                                            String horaApertura = etHoraApertura.getText().toString();
+                                            String horaCierre = etHoraCierre.getText().toString();
+                                            Double latitud = latLng.latitude;
+                                            Double longitud = latLng.longitude;
+                                            String via = "";
 
-                                    Geocoder geocoder = new Geocoder(MapsActivity.this);
+                                            Geocoder geocoder = new Geocoder(MapsActivity.this);
 
-                                    try {
-                                        List<Address> direcciones = geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1);
+                                            try {
+                                                List<Address> direcciones = geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1);
 
-                                        Address direccion = direcciones.get(0);
-                                        via = direccion.getAddressLine(0);
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
-                                    }
+                                                Address direccion = direcciones.get(0);
+                                                via = direccion.getAddressLine(0);
+                                            } catch (IOException e) {
+                                                e.printStackTrace();
+                                            }
 
-                                    mongoClient = user.getMongoClient("mongodb-atlas");
-                                    mongoDatabase = mongoClient.getDatabase("GreenChef");
-                                    MongoCollection<Document> mongoCollection2 = mongoDatabase.getCollection("SuperMarket");
+                                            mongoClient = user.getMongoClient("mongodb-atlas");
+                                            mongoDatabase = mongoClient.getDatabase("GreenChef");
+                                            MongoCollection<Document> mongoCollection2 = mongoDatabase.getCollection("SuperMarket");
 
-                                    Document supermarket = new Document();
-                                    supermarket.append("id", 7)
-                                            .append("nombre", nombre)
-                                            .append("direccion", via)
-                                            .append("latitud", latitud)
-                                            .append("longitud", longitud)
-                                            .append("telefono", telefono)
-                                            .append("hapertura", horaApertura)
-                                            .append("hcierre", horaCierre);
+                                            Document supermarket = new Document();
+                                            supermarket.append("id", 7)
+                                                    .append("nombre", nombre)
+                                                    .append("direccion", via)
+                                                    .append("latitud", latitud)
+                                                    .append("longitud", longitud)
+                                                    .append("telefono", telefono)
+                                                    .append("hapertura", horaApertura)
+                                                    .append("hcierre", horaCierre);
 
-                                    mongoCollection2.insertOne(supermarket).getAsync(result1 -> {
-                                        if (result1.isSuccess()) {
-                                            Toast.makeText(MapsActivity.this, "Insertado", Toast.LENGTH_SHORT).show();
-                                        } else {
-                                            Toast.makeText(MapsActivity.this, "No insertado", Toast.LENGTH_SHORT).show();
+                                            mongoCollection2.insertOne(supermarket).getAsync(result1 -> {
+                                                if (result1.isSuccess()) {
+                                                    Toast.makeText(MapsActivity.this, "Insertado", Toast.LENGTH_SHORT).show();
+                                                } else {
+                                                    Toast.makeText(MapsActivity.this, "No insertado", Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                            mMap.addMarker(new MarkerOptions().position(latLng).title(nombre));
+
+                                            sweetAlertDialog.dismiss();
+                                        }
+                                    })
+                                    .setCancelText("Cancelar")
+                                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                            sweetAlertDialog.dismiss();
                                         }
                                     });
-                                    mMap.addMarker(new MarkerOptions().position(latLng).title(nombre));
-                                }
-                            });
 
-                            builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    dialog.dismiss();
-                                }
-                            });
+// Mostrar el SweetAlertDialog
+                            alert.create();
+                            alert.show();
 
-                            // Mostrar el AlertDialog
-                            AlertDialog alertDialog = builder.create();
-                            alertDialog.show();
                         } else {
                             Toast.makeText(MapsActivity.this, "No tienes permiso para marcar un supermercado", Toast.LENGTH_SHORT).show();
                         }
@@ -259,8 +264,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mongoClient = user.getMongoClient("mongodb-atlas");
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SuperMarket");
-
-                    Document query = new Document();
 
                     RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find().iterator();
 
@@ -289,25 +292,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                             String hcierre = supermercado.getString("hcierre");
 
                                             if (supermercado != null) {
-                                                AlertDialog.Builder builder = new AlertDialog.Builder(MapsActivity.this);
-                                                builder.setTitle(supermercado.getString("nombre"));
-                                                builder.setMessage("Dirección: " + direccion + "\n" +
+                                                SweetAlertDialog builder = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE);
+                                                builder.setTitleText(supermercado.getString("nombre"));
+                                                builder.setContentText("Dirección: " + direccion + "\n" +
                                                         "Teléfono: " + telefono + "\n" +
                                                         "Horario de apertura: " + hapertura + "\n" +
                                                         "Horario de cierre: " + hcierre);
-                                                builder.setPositiveButton("Añadir Producto", new DialogInterface.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(DialogInterface dialog, int which) {
-                                                        dialog.dismiss();
-                                                    }
-                                                });
-                                                builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(DialogInterface dialog, int which) {
-                                                        dialog.dismiss();
-                                                    }
-                                                });
+                                                builder.setConfirmText("Añadir Producto")
+                                                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                            @Override
+                                                            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                                                sweetAlertDialog.dismiss();
+                                                            }
+                                                        })
+                                                        .setCancelText("Cancelar")
+                                                        .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                            @Override
+                                                            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                                                sweetAlertDialog.dismiss();
+                                                            }
+                                                        });
+
+                                                builder.create();
                                                 builder.show();
+
                                             }
                                                 });
                                         return true;

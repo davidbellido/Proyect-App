@@ -15,6 +15,7 @@ import org.bson.Document;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.Realm;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
@@ -85,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity {
         };
     }
 
-    private void registerUsers(String usuario, String email, String contrasenia, String fechaRegistro) {
+    private void registerUsers(String nick, String email, String contrasenia, String fechaRegistro) {
         Realm.init(this);
         App app = new App(new AppConfiguration.Builder(AppId).build());
 
@@ -101,21 +102,29 @@ public class RegisterActivity extends AppCompatActivity {
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Users");
 
                     Document usuario = new Document();
-                    usuario.append("id_usuario", 2)
-                            .append("nick", usuario)
+                    usuario.append("id_usuario", 4)
+                            .append("nick", nick)
                             .append("email", email)
                             .append("password", contrasenia)
                             .append("fecharegistro", fechaRegistro);
 
                     mongoCollection.insertOne(usuario).getAsync(result1 -> {
                         if (result1.isSuccess()) {
-                            Toast.makeText(RegisterActivity.this, "Insertado", Toast.LENGTH_SHORT).show();
+                            new SweetAlertDialog(RegisterActivity.this, SweetAlertDialog.SUCCESS_TYPE)
+                                    .setTitleText("¡Registro exitoso!")
+                                    .setContentText("¡Bienvenido a GreenChef!")
+                                    .setConfirmText("Volver")
+                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                        @Override
+                                        public void onClick(SweetAlertDialog sDialog) {
+                                            RegisterActivity.this.finish();
+                                        }
+                                    })
+                                    .show();
                         } else {
                             Toast.makeText(RegisterActivity.this, "No insertado", Toast.LENGTH_SHORT).show();
                         }
                     });
-
-                    Toast.makeText(RegisterActivity.this, "Conectado", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(RegisterActivity.this, "No conectado", Toast.LENGTH_SHORT).show();
                 }

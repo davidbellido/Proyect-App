@@ -46,6 +46,8 @@ public class AdminActivity extends AppCompatActivity {
         btnUpdateAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(AdminActivity.this, ListProductActivity.class);
+                AdminActivity.this.startActivity(i);
             }
         });
 
