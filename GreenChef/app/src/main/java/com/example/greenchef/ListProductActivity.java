@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -22,6 +24,7 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.Realm;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
@@ -40,6 +43,7 @@ public class ListProductActivity extends AppCompatActivity {
     List<Producto> listaProductos = new ArrayList<>();
     ArrayAdapter<Producto> adaptador;
     int id_producto;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,12 +107,12 @@ public class ListProductActivity extends AppCompatActivity {
     }
 
     private void mostrarDialogoEdicion(final Producto producto) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Editar producto");
+        SweetAlertDialog builder = new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE);
+        builder.setTitleText("Editar producto");
 
         // Inflar el layout personalizado para el diálogo de edición
         View dialogView = getLayoutInflater().inflate(R.layout.dialog_edit_product, null);
-        builder.setView(dialogView);
+        builder.setCustomView(dialogView);
 
         // Obtener las referencias a los elementos del diálogo
         EditText nombreEditText = dialogView.findViewById(R.id.etNombre);
@@ -123,9 +127,10 @@ public class ListProductActivity extends AppCompatActivity {
         precioEditText.setText(String.valueOf(producto.getPrecio()));
 
         // Configurar los botones del diálogo
-        builder.setPositiveButton("Guardar", new DialogInterface.OnClickListener() {
+        builder.setConfirmText("Guardar");
+                builder.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
                 // Obtener los nuevos valores de los campos del diálogo
                 String nuevoNombre = nombreEditText.getText().toString();
                 int nuevoUsuario = Integer.parseInt(usuarioEditText.getText().toString());
@@ -145,15 +150,54 @@ public class ListProductActivity extends AppCompatActivity {
                 adaptador.notifyDataSetChanged();
 
                 // Mostrar un mensaje de éxito
-                Toast.makeText(ListProductActivity.this, "Producto actualizado", Toast.LENGTH_SHORT).show();
+                final SweetAlertDialog dialogo = new SweetAlertDialog(ListProductActivity.this, SweetAlertDialog.PROGRESS_TYPE)
+                        .setTitleText("Actualizando")
+                        .setContentText("Espere por favor...");
+                dialogo.show();
+                dialogo.setCancelable(false);
+                new CountDownTimer(800 * 7, 800) {
+                    public void onTick(long millisUntilFinished) {
+                        i++;
+                        switch (i) {
+                            case 0:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.blue_btn_bg_color));
+                                break;
+                            case 1:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_50));
+                                break;
+                            case 2:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                                break;
+                            case 3:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_20));
+                                break;
+                            case 4:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_blue_grey_80));
+                                break;
+                            case 5:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.warning_stroke_color));
+                                break;
+                            case 6:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                                break;
+                        }
+                    }
+
+                    public void onFinish() {
+                        i = -1;
+                        dialogo.setTitleText("¡Actualizado!")
+                                .setContentText("El producto se ha actualizado correctamente")
+                                .setConfirmText("OK")
+                                .setConfirmClickListener(null)
+                                .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+                    }
+                }.start();
             }
         });
 
-        builder.setNegativeButton("Cancelar", null);
-
         // Mostrar el diálogo
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        builder.create();
+        builder.show();
     }
 
     private void modificarProducto(int productId, String nuevoNombre, int nuevoUsuario, int nuevoSupermercado, double nuevoPrecio) {
@@ -170,6 +214,7 @@ public class ListProductActivity extends AppCompatActivity {
                 if (results.hasNext()) {
                     // Crea el objeto con los campos que se van a actualizar
                     Document actualizaciones =  new Document()
+                            .append("id", productId)
                             .append("nombre", nuevoNombre)
                             .append("id_user", nuevoUsuario)
                             .append("id_supermarket", nuevoSupermercado)
@@ -178,9 +223,9 @@ public class ListProductActivity extends AppCompatActivity {
                     // Actualiza el documento en MongoDB
                     mongoCollection.updateOne(filtro, actualizaciones).getAsync( result -> {
                         if (result.isSuccess()) {
-                            Toast.makeText(ListProductActivity.this, "Producto actualizado en MongoDB", Toast.LENGTH_SHORT).show();
+                            Log.d("ListProductActivity", "Producto actualizado en MongoDB");
                         } else {
-                            Toast.makeText(ListProductActivity.this, "Producto actualizado en MongoDB", Toast.LENGTH_SHORT).show();
+                            Log.d("ListProductActivity", "Producto actualizado en MongoDB");
                         }
                     });
                 } else {

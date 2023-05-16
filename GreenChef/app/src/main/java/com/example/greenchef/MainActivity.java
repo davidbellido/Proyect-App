@@ -30,7 +30,6 @@ import io.realm.mongodb.mongo.MongoDatabase;
 
 public class MainActivity extends AppCompatActivity {
     private TextView txtSignUp;
-    private TextView txtSignUp2;
     private EditText username;
     private EditText password;
     private Button btnInicioSesion;
@@ -48,11 +47,8 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.Username);
         password = findViewById(R.id.password);
         txtSignUp = findViewById(R.id.txtRegistro);
-        txtSignUp2 = findViewById(R.id.txtRegistro2);
 
         txtSignUp.setOnClickListener(onClickSignUp());
-        txtSignUp2.setOnClickListener(onClickSignUp());
-
 
 
         btnInicioSesion = this.findViewById(R.id.btnInicioSesion);

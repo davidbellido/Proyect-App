@@ -7,14 +7,14 @@
             <solid android:color="@color/verde03" />
 
             <size
-                android:width="80dp"
-                android:height="80dp" />
+                android:width="220px"
+                android:height="220px" />
             <corners android:radius="40dp" />
             <padding
-                android:left="8dp"
-                android:top="8dp"
-                android:right="8dp"
-                android:bottom="8dp" />
+                android:left="8px"
+                android:top="8px"
+                android:right="8px"
+                android:bottom="8px" />
         </shape>
     </item>
 </selector>

@@ -60,7 +60,7 @@
 33-->[androidx.core:core:1.9.0] C:\Users\begar\.gradle\caches\transforms-3\e73094163b3588b6bb92ab574b73aa49\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 34
 35    <application
-35-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:12:5-96:19
+35-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:12:5-159:19
 36        android:allowBackup="true"
 36-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:13:9-35
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -83,8 +83,8 @@
 46-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:20:9-47
 47        <activity
 47-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:22:9-28:20
-48            android:name="com.example.greenchef.ListProductActivity"
-48-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:23:13-48
+48            android:name="com.example.greenchef.foodactivities.LegumesActivity"
+48-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:23:13-59
 49            android:exported="false" >
 49-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:24:13-37
 50            <meta-data
@@ -96,8 +96,8 @@
 53        </activity>
 54        <activity
 54-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:29:9-35:20
-55            android:name="com.example.greenchef.AdminActivity"
-55-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:30:13-42
+55            android:name="com.example.greenchef.foodactivities.DessertsActivity"
+55-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:30:13-60
 56            android:exported="false" >
 56-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:31:13-37
 57            <meta-data
@@ -109,8 +109,8 @@
 60        </activity>
 61        <activity
 61-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:36:9-42:20
-62            android:name="com.example.greenchef.ProfileActivity"
-62-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:37:13-44
+62            android:name="com.example.greenchef.foodactivities.DriedFruitsActivity"
+62-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:37:13-63
 63            android:exported="false" >
 63-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:38:13-37
 64            <meta-data
@@ -120,182 +120,299 @@
 66                android:value="" />
 66-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
 67        </activity>
-68        <!--
-69             TODO: Before you run your application, you need a Google Maps API key.
-70
-71             To get one, follow the directions here:
-72
-73                https://developers.google.com/maps/documentation/android-sdk/get-api-key
-74
-75             Once you have your API key (it starts with "AIza"), define a new property in your
-76             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
-77             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
-78        -->
-79        <meta-data
-79-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:54:9-56:71
-80            android:name="com.google.android.geo.API_KEY"
-80-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:55:13-58
-81            android:value="AIzaSyC8lUmKP3jkfenalk5bZoDnqXHe50zT5Yo" />
-81-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:56:13-68
-82
-83        <activity
-83-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:58:9-61:59
-84            android:name="com.example.greenchef.MapsActivity"
-84-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:59:13-41
-85            android:exported="false"
-85-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:60:13-37
-86            android:label="@string/title_activity_maps" />
-86-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:61:13-56
-87        <activity
-87-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:62:9-68:20
-88            android:name="com.example.greenchef.FoodActivity"
-88-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:63:13-41
-89            android:exported="false" >
-89-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:64:13-37
-90            <meta-data
-90-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
-91                android:name="android.app.lib_name"
-91-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
-92                android:value="" />
-92-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
-93        </activity>
-94        <activity
-94-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:69:9-75:20
-95            android:name="com.example.greenchef.OptionsActivity"
-95-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:70:13-44
-96            android:exported="false" >
-96-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:71:13-37
-97            <meta-data
-97-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
-98                android:name="android.app.lib_name"
-98-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
-99                android:value="" />
-99-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
-100        </activity>
-101        <activity
-101-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:76:9-82:20
-102            android:name="com.example.greenchef.RegisterActivity"
-102-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:77:13-45
-103            android:exported="false" >
-103-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:78:13-37
-104            <meta-data
-104-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
-105                android:name="android.app.lib_name"
-105-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
-106                android:value="" />
-106-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
-107        </activity>
-108        <activity
-108-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:83:9-95:20
-109            android:name="com.example.greenchef.MainActivity"
-109-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:84:13-41
-110            android:exported="true" >
-110-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:85:13-36
-111            <intent-filter>
-111-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:86:13-90:29
-112                <action android:name="android.intent.action.MAIN" />
-112-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:87:17-69
-112-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:87:25-66
-113
-114                <category android:name="android.intent.category.LAUNCHER" />
-114-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:89:17-77
-114-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:89:27-74
-115            </intent-filter>
-116
-117            <meta-data
-117-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
-118                android:name="android.app.lib_name"
-118-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
-119                android:value="" />
-119-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
-120        </activity>
-121        <activity
-121-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:15:9-21:20
-122            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
-122-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:16:13-91
-123            android:exported="false"
-123-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:17:13-37
-124            android:label="@string/places_autocomplete_label"
-124-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:18:13-62
-125            android:theme="@style/PlacesAutocompleteOverlay"
-125-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:19:13-61
-126            android:windowSoftInputMode="adjustResize" >
-126-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:20:13-55
-127        </activity> <!-- Needs to be explicitly declared on P+ -->
-128        <uses-library
-128-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
-129            android:name="org.apache.http.legacy"
-129-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
-130            android:required="false" />
-130-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
-131
-132        <activity
-132-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
-133            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-133-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
-134            android:exported="false"
-134-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
-135            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-135-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
-136
-137        <meta-data
-137-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
-138            android:name="com.google.android.gms.version"
-138-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
-139            android:value="@integer/google_play_services_version" />
-139-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
-140
-141        <provider
-141-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-142            android:name="androidx.startup.InitializationProvider"
-142-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-143            android:authorities="com.example.greenchef.androidx-startup"
-143-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-144            android:exported="false" >
-144-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-145            <meta-data
-145-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-146                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-146-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-147                android:value="androidx.startup" />
-147-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-148            <meta-data
-148-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-149                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-149-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-150                android:value="androidx.startup" />
-150-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-151        </provider>
-152
-153        <service
-153-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:29:9-35:19
-154            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-154-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:30:13-103
-155            android:exported="false" >
-155-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:31:13-37
-156            <meta-data
-156-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:32:13-34:39
-157                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-157-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:33:17-94
-158                android:value="cct" />
-158-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:34:17-36
-159        </service>
-160        <service
-160-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:26:9-30:19
-161            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-161-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:27:13-117
-162            android:exported="false"
-162-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:28:13-37
-163            android:permission="android.permission.BIND_JOB_SERVICE" >
-163-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:29:13-69
-164        </service>
-165
-166        <receiver
-166-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:32:9-34:40
-167            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-167-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:33:13-132
-168            android:exported="false" />
-168-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:34:13-37
-169    </application>
-170
-171</manifest>
+68        <activity
+68-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:43:9-49:20
+69            android:name="com.example.greenchef.foodactivities.DairyActivity"
+69-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:44:13-57
+70            android:exported="false" >
+70-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:45:13-37
+71            <meta-data
+71-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+72                android:name="android.app.lib_name"
+72-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+73                android:value="" />
+73-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+74        </activity>
+75        <activity
+75-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:50:9-56:20
+76            android:name="com.example.greenchef.foodactivities.GrainsActivity"
+76-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:51:13-58
+77            android:exported="false" >
+77-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:52:13-37
+78            <meta-data
+78-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+79                android:name="android.app.lib_name"
+79-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+80                android:value="" />
+80-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+81        </activity>
+82        <activity
+82-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:57:9-63:20
+83            android:name="com.example.greenchef.foodactivities.FruitsActivity"
+83-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:58:13-58
+84            android:exported="false" >
+84-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:59:13-37
+85            <meta-data
+85-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+86                android:name="android.app.lib_name"
+86-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+87                android:value="" />
+87-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+88        </activity>
+89        <activity
+89-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:64:9-70:20
+90            android:name="com.example.greenchef.foodactivities.CerealActivity"
+90-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:65:13-58
+91            android:exported="false" >
+91-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:66:13-37
+92            <meta-data
+92-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+93                android:name="android.app.lib_name"
+93-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+94                android:value="" />
+94-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+95        </activity>
+96        <activity
+96-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:71:9-77:20
+97            android:name="com.example.greenchef.foodactivities.VegetablesActivity"
+97-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:72:13-62
+98            android:exported="false" >
+98-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:73:13-37
+99            <meta-data
+99-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+100                android:name="android.app.lib_name"
+100-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+101                android:value="" />
+101-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+102        </activity>
+103        <activity
+103-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:78:9-84:20
+104            android:name="com.example.greenchef.foodactivities.ProteinActivity"
+104-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:79:13-59
+105            android:exported="false" >
+105-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:80:13-37
+106            <meta-data
+106-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+107                android:name="android.app.lib_name"
+107-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+108                android:value="" />
+108-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+109        </activity>
+110        <activity
+110-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:85:9-91:20
+111            android:name="com.example.greenchef.ListProductActivity"
+111-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:86:13-48
+112            android:exported="false" >
+112-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:87:13-37
+113            <meta-data
+113-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+114                android:name="android.app.lib_name"
+114-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+115                android:value="" />
+115-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+116        </activity>
+117        <activity
+117-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:92:9-98:20
+118            android:name="com.example.greenchef.AdminActivity"
+118-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:93:13-42
+119            android:exported="false" >
+119-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:94:13-37
+120            <meta-data
+120-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+121                android:name="android.app.lib_name"
+121-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+122                android:value="" />
+122-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+123        </activity>
+124        <activity
+124-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:99:9-105:20
+125            android:name="com.example.greenchef.ProfileActivity"
+125-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:100:13-44
+126            android:exported="false" >
+126-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:101:13-37
+127            <meta-data
+127-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+128                android:name="android.app.lib_name"
+128-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+129                android:value="" />
+129-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+130        </activity>
+131        <!--
+132             TODO: Before you run your application, you need a Google Maps API key.
+133
+134             To get one, follow the directions here:
+135
+136                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+137
+138             Once you have your API key (it starts with "AIza"), define a new property in your
+139             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+140             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+141        -->
+142        <meta-data
+142-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:117:9-119:71
+143            android:name="com.google.android.geo.API_KEY"
+143-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:118:13-58
+144            android:value="AIzaSyC8lUmKP3jkfenalk5bZoDnqXHe50zT5Yo" />
+144-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:119:13-68
+145
+146        <activity
+146-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:121:9-124:59
+147            android:name="com.example.greenchef.MapsActivity"
+147-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:122:13-41
+148            android:exported="false"
+148-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:123:13-37
+149            android:label="@string/title_activity_maps" />
+149-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:124:13-56
+150        <activity
+150-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:125:9-131:20
+151            android:name="com.example.greenchef.FoodActivity"
+151-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:126:13-41
+152            android:exported="false" >
+152-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:127:13-37
+153            <meta-data
+153-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+154                android:name="android.app.lib_name"
+154-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+155                android:value="" />
+155-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+156        </activity>
+157        <activity
+157-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:132:9-138:20
+158            android:name="com.example.greenchef.OptionsActivity"
+158-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:133:13-44
+159            android:exported="false" >
+159-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:134:13-37
+160            <meta-data
+160-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+161                android:name="android.app.lib_name"
+161-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+162                android:value="" />
+162-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+163        </activity>
+164        <activity
+164-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:139:9-145:20
+165            android:name="com.example.greenchef.RegisterActivity"
+165-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:140:13-45
+166            android:exported="false" >
+166-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:141:13-37
+167            <meta-data
+167-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+168                android:name="android.app.lib_name"
+168-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+169                android:value="" />
+169-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+170        </activity>
+171        <activity
+171-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:146:9-158:20
+172            android:name="com.example.greenchef.MainActivity"
+172-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:147:13-41
+173            android:exported="true" >
+173-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:148:13-36
+174            <intent-filter>
+174-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:149:13-153:29
+175                <action android:name="android.intent.action.MAIN" />
+175-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:150:17-69
+175-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:150:25-66
+176
+177                <category android:name="android.intent.category.LAUNCHER" />
+177-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:152:17-77
+177-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:152:27-74
+178            </intent-filter>
+179
+180            <meta-data
+180-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-27:36
+181                android:name="android.app.lib_name"
+181-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:17-52
+182                android:value="" />
+182-->C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-33
+183        </activity>
+184        <activity
+184-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:15:9-21:20
+185            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
+185-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:16:13-91
+186            android:exported="false"
+186-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:17:13-37
+187            android:label="@string/places_autocomplete_label"
+187-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:18:13-62
+188            android:theme="@style/PlacesAutocompleteOverlay"
+188-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:19:13-61
+189            android:windowSoftInputMode="adjustResize" >
+189-->[com.google.android.libraries.places:places:3.1.0] C:\Users\begar\.gradle\caches\transforms-3\c0cb593394891c566070f365f2755aa1\transformed\places-3.1.0\AndroidManifest.xml:20:13-55
+190        </activity> <!-- Needs to be explicitly declared on P+ -->
+191        <uses-library
+191-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
+192            android:name="org.apache.http.legacy"
+192-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
+193            android:required="false" />
+193-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\begar\.gradle\caches\transforms-3\97e613983b90f993342491c71e7bf610\transformed\play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
+194
+195        <activity
+195-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+196            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+196-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+197            android:exported="false"
+197-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+198            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+198-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\08a84f62799d48446cec83d9395880f0\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+199
+200        <meta-data
+200-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+201            android:name="com.google.android.gms.version"
+201-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+202            android:value="@integer/google_play_services_version" />
+202-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\begar\.gradle\caches\transforms-3\68c1e580e46ef8bd63f8ab4186b816af\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+203
+204        <provider
+204-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+205            android:name="androidx.startup.InitializationProvider"
+205-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+206            android:authorities="com.example.greenchef.androidx-startup"
+206-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+207            android:exported="false" >
+207-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+208            <meta-data
+208-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+209                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+209-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+210                android:value="androidx.startup" />
+210-->[androidx.emoji2:emoji2:1.2.0] C:\Users\begar\.gradle\caches\transforms-3\ce40ba286acf9b7e6f7b8ff76b7dd8a8\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+211            <meta-data
+211-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+212                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+212-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+213                android:value="androidx.startup" />
+213-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\begar\.gradle\caches\transforms-3\e62846995705b228e780d9fe7123942f\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+214        </provider>
+215
+216        <service
+216-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:29:9-35:19
+217            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+217-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:30:13-103
+218            android:exported="false" >
+218-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:31:13-37
+219            <meta-data
+219-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:32:13-34:39
+220                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+220-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:33:17-94
+221                android:value="cct" />
+221-->[com.google.android.datatransport:transport-backend-cct:2.3.0] C:\Users\begar\.gradle\caches\transforms-3\f69a5429f695060dff3bc019ede616cd\transformed\transport-backend-cct-2.3.0\AndroidManifest.xml:34:17-36
+222        </service>
+223        <service
+223-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:26:9-30:19
+224            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+224-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:27:13-117
+225            android:exported="false"
+225-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:28:13-37
+226            android:permission="android.permission.BIND_JOB_SERVICE" >
+226-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:29:13-69
+227        </service>
+228
+229        <receiver
+229-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:32:9-34:40
+230            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+230-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:33:13-132
+231            android:exported="false" />
+231-->[com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\begar\.gradle\caches\transforms-3\b240908d7b45e751f36fda8b164c0472\transformed\transport-runtime-2.2.3\AndroidManifest.xml:34:13-37
+232    </application>
+233
+234</manifest>

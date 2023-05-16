@@ -32,17 +32,20 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingTop="100px"
                     android:gravity="center">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingLeft="50px"
+                        android:paddingTop="50px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -60,8 +63,8 @@
 
                             <ImageView
                                 android:id="@+id/imageProteina"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="180px"
+                                android:layout_height="150px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -77,18 +80,21 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingTop="50px"
+                        android:paddingLeft="150px"
+                        android:paddingRight="150px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -123,18 +129,20 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingRight="50px"
+                        android:paddingTop="50px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -152,8 +160,8 @@
 
                             <ImageView
                                 android:id="@+id/imageCereales"
-                                android:layout_width="wrap_content"
-                                android:layout_height="45dp"
+                                android:layout_width="160px"
+                                android:layout_height="130px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -165,27 +173,30 @@
                             android:id="@+id/txtCereales"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Perfil"
+                            android:text="Cereales"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingTop="50px"
                     android:gravity="center">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingLeft="50px"
+                        android:paddingTop="50px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -203,7 +214,7 @@
 
                             <ImageView
                                 android:id="@+id/imageLacteos"
-                                android:layout_width="wrap_content"
+                                android:layout_width="160px"
                                 android:layout_height="120px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -220,23 +231,26 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingTop="50px"
+                        android:paddingLeft="20px"
+                        android:paddingRight="20px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
                             <ImageButton
-                                android:id="@+id/btnSecos"
+                                android:id="@+id/btnFsecos"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
@@ -248,9 +262,9 @@
                                 app:srcCompat="@drawable/bottom_circle" />
 
                             <ImageView
-                                android:id="@+id/imageSecos"
-                                android:layout_width="wrap_content"
-                                android:layout_height="200px"
+                                android:id="@+id/imageFsecos"
+                                android:layout_width="180px"
+                                android:layout_height="150px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -259,25 +273,27 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <TextView
-                            android:id="@+id/txtSecos"
+                            android:id="@+id/txtFsecos"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="F.Secos"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingRight="50px"
+                        android:paddingTop="50px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -295,7 +311,7 @@
 
                             <ImageView
                                 android:id="@+id/imageFrutas"
-                                android:layout_width="wrap_content"
+                                android:layout_width="180px"
                                 android:layout_height="150px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -312,23 +328,26 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </TableRow>
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:paddingTop="50px"
                     android:gravity="center">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingLeft="50px"
+                        android:paddingTop="50px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -346,8 +365,8 @@
 
                             <ImageView
                                 android:id="@+id/imageGranos"
-                                android:layout_width="wrap_content"
-                                android:layout_height="120px"
+                                android:layout_width="110px"
+                                android:layout_height="110px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -363,18 +382,21 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingTop="50px"
+                        android:paddingLeft="20px"
+                        android:paddingRight="20px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -392,8 +414,8 @@
 
                             <ImageView
                                 android:id="@+id/imageLegumbres"
-                                android:layout_width="wrap_content"
-                                android:layout_height="250px"
+                                android:layout_width="180px"
+                                android:layout_height="150px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -409,18 +431,20 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp" />
+                            android:textSize="12sp" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
+                        android:paddingRight="50px"
+                        android:paddingTop="50px"
                         android:orientation="vertical">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_width="220px"
+                            android:layout_height="220px"
+                            android:layout_gravity="center"
                             android:background="@drawable/bottom_background_white"
                             android:backgroundTint="@color/verde01">
 
@@ -438,8 +462,8 @@
 
                             <ImageView
                                 android:id="@+id/imagePostres"
-                                android:layout_width="wrap_content"
-                                android:layout_height="130px"
+                                android:layout_width="180px"
+                                android:layout_height="150px"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -455,7 +479,7 @@
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="20sp"/>
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </TableRow>
 

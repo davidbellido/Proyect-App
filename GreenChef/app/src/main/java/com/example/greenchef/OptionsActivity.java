@@ -47,6 +47,7 @@ public class OptionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(OptionsActivity.this, FoodActivity.class);
+                i.putExtras(bundleMapa);
                 OptionsActivity.this.startActivity(i);
             }
         });
