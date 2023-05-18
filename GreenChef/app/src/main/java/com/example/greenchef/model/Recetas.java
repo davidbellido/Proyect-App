@@ -72,4 +72,8 @@ public class Recetas {
     public int getImagen() {
         return imagen;
     }
+
+    public void setImagen(int imagen) {
+        this.imagen = imagen;
+    }
 }

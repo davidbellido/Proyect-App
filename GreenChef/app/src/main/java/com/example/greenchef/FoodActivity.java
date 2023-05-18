@@ -18,8 +18,10 @@ import com.example.greenchef.foodactivities.LegumesActivity;
 import com.example.greenchef.foodactivities.ProteinActivity;
 import com.example.greenchef.foodactivities.VegetablesActivity;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class FoodActivity extends AppCompatActivity {
-    private ImageButton btnProtein, btnVegetables,btnCereal, btnFruits, btnGrains, btnDairy, btnDriedFruits, btndesserts, btnLegumes;
+    private ImageButton btnProtein, btnVegetables,btnCereal, btnFruits, btnGrains, btnDairy, btnDriedFruits, btnDesserts, btnLegumes;
     private ImageButton btnMap, btnHome, btnProfile;
     private Bundle bundle;
     private String nombreUsuario;
@@ -34,6 +36,23 @@ public class FoodActivity extends AppCompatActivity {
         }catch (Exception e){
         }
 
+        new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
+                .setTitleText("ELIJA EL TIPO DE ALIMENTO QUE DESEE")
+                .setContentText("Dependiendo de que tipo de alimento escoja, la aplicación le proporcionará recetas los más ajustables posibles a sus preferencias")
+                .setConfirmButtonBackgroundColor(getResources().getColor(R.color.verde03))
+                .setCancelButtonBackgroundColor(getResources().getColor(cn.pedant.SweetAlert.R.color.red_btn_bg_color))
+                .setConfirmText("Continuar")
+                .setCancelText("Cancelar")
+                .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        Intent i = new Intent(FoodActivity.this, OptionsActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                })
+                .show();
+
         bundle = getIntent().getExtras();
         nombreUsuario = bundle.getString("nombreUsuario");
         bundle.putString("nombreUsuario", nombreUsuario);
@@ -45,7 +64,7 @@ public class FoodActivity extends AppCompatActivity {
         btnGrains = this.findViewById(R.id.btnGranos);
         btnDairy = this.findViewById(R.id.btnLacteos);
         btnDriedFruits = this.findViewById(R.id.btnFsecos);
-        btndesserts = this.findViewById(R.id.btnPostres);
+        btnDesserts = this.findViewById(R.id.btnPostres);
         btnLegumes = this.findViewById(R.id.btnLegumbres);
 
         btnMap = this.findViewById(R.id.btnMap);
@@ -133,7 +152,7 @@ public class FoodActivity extends AppCompatActivity {
             }
         });
 
-        btndesserts.setOnClickListener(new View.OnClickListener() {
+        btnDesserts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(FoodActivity.this, DessertsActivity.class);

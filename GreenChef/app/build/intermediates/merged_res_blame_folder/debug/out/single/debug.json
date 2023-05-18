@@ -8,12 +8,12 @@
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\recetafondo.jpg"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\drawable_cereal.png.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\cereal.png"
-    },
-    {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-36:\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\drawable_cereal.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\cereal.png"
     },
     {
         "merged": "com.example.greenchef.app-merged_res-35:/layout_element_list_recipes.xml.flat",
@@ -112,6 +112,10 @@
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-36:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\layout_activity_recipes_compound.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\layout\\activity_recipes_compound.xml"
+    },
+    {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\layout_element_list_recipes.xml.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\layout\\element_list_recipes.xml"
     },
@@ -138,6 +142,10 @@
     {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\drawable_shape_right_panel.xml.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\shape_right_panel.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\drawable_reloj.png.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\reloj.png"
     },
     {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -290,6 +298,10 @@
     {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\drawable_fsecos.png.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\fsecos.png"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\drawable_blue_marker.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\blue_marker.xml"
     },
     {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\layout_activity_dairy.xml.flat",

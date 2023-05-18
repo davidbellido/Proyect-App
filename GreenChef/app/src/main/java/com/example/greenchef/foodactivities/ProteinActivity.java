@@ -3,6 +3,7 @@ package com.example.greenchef.foodactivities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -36,12 +37,13 @@ import io.realm.mongodb.mongo.MongoDatabase;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 
 public class ProteinActivity extends AppCompatActivity {
-    String AppId = "pruebaproyecto-urnlx";
-    MongoDatabase mongoDatabase;
-    MongoClient mongoClient;
-    List<Recetas> listaRecetas = new ArrayList<>();
-    ArrayAdapter<Recetas> adaptador;
+    private String AppId = "pruebaproyecto-urnlx";
+    private MongoDatabase mongoDatabase;
+    private MongoClient mongoClient;
+    private List<Recetas> listaRecetas = new ArrayList<>();
+    private ArrayAdapter<Recetas> adaptador;
     int id_producto;
+    private Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +65,7 @@ public class ProteinActivity extends AppCompatActivity {
                             if (convertView == null) {
                                 convertView = getLayoutInflater().inflate(R.layout.element_list_recipes, parent, false);
                             }
-                            ImageView imageView = convertView.findViewById(R.id.imgReceta);
+                            ImageView imageView = convertView.findViewById(R.id.imgRecetas);
                             TextView nombreTextView = convertView.findViewById(R.id.txtNombre);
                             TextView tiempoTextView = convertView.findViewById(R.id.txtTiempo);
 
@@ -90,6 +92,22 @@ public class ProteinActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     // Obtener el producto seleccionado
                     Recetas recetaSeleccionada = listaRecetas.get(position);
+
+                    // Crear el Intent
+                    Intent intent = new Intent(ProteinActivity.this, RecipesCompoundActivity.class);
+                    bundle = new Bundle();
+
+                    // Pasar los datos de la receta seleccionada como extras del Intent
+                    bundle.putString("nombreReceta", recetaSeleccionada.getNombre());
+                    bundle.putString("descripcion", recetaSeleccionada.getDescripcion());
+                    bundle.putStringArrayList("ingredientes", recetaSeleccionada.getIngredientes());
+                    bundle.putString("procedimiento", recetaSeleccionada.getProcedimiento());
+                    bundle.putString("tiempo", recetaSeleccionada.getTiempo());
+                    bundle.putInt("porciones", recetaSeleccionada.getPorciones());
+
+                    // Iniciar la actividad RecipesCompoundActivity
+                    intent.putExtras(bundle);
+                    startActivity(intent);
                 }
             });
     }

@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -23,6 +24,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -58,16 +61,17 @@ import io.realm.mongodb.mongo.MongoCollection;
 import io.realm.mongodb.mongo.MongoDatabase;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapClickListener{
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapClickListener {
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private LatLng latLng;
     private Bundle bundle;
     private String nombreUsuario;
-    String AppId = "pruebaproyecto-urnlx";
-    MongoDatabase mongoDatabase;
-    MongoClient mongoClient;
+    private String AppId = "pruebaproyecto-urnlx";
+    private MongoDatabase mongoDatabase;
+    private MongoClient mongoClient;
+    private FusedLocationProviderClient fusedLocationProviderClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +110,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Verifica si se otorgó el permiso de ubicación
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             // Obtiene la ubicación actual del usuario
-            FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+            fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
             fusedLocationProviderClient.getLastLocation()
                     .addOnSuccessListener(this, new OnSuccessListener<Location>() {
                         @Override
@@ -115,15 +119,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             if (location != null) {
                                 // Muestra la ubicación en el mapa
                                 latLng = new LatLng(location.getLatitude(), location.getLongitude());
-                                mMap.addMarker(new MarkerOptions().position(latLng).title("Ubicación actual"));
-                                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
+                                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
+                                // Habilitar la capa de ubicación
+                                if (ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                                        && ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                                    mMap.setMyLocationEnabled(true);
+                                }
+
+// Personalizar el estilo del punto de ubicación
+                                UiSettings uiSettings = mMap.getUiSettings();
+                                uiSettings.setMyLocationButtonEnabled(true);
                                 markSupermarket();
                             }
                         }
                     });
         }
 
-        if (nombreUsuario.equals("admin")){
+        if (nombreUsuario.equals("admin")) {
             mMap.setOnMapClickListener(this);
         }
 
@@ -151,7 +163,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             // SweetAlertDialog donde puedes introducir nombre, dirección, teléfono y horario
                             SweetAlertDialog alert = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE)
-                            .setTitleText("Introducir Supermercado");
+                                    .setTitleText("Introducir Supermercado");
 
 // Crear los campos de texto programáticamente
                             final EditText etNombre = new EditText(MapsActivity.this);
@@ -267,10 +279,88 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find().iterator();
 
-                    queryTask.getAsync(task->{
-                        if (task.isSuccess()){
+                    queryTask.getAsync(task -> {
+                        if (task.isSuccess()) {
                             MongoCursor<Document> results = task.get();
-                            while (results.hasNext()){
+                            if (ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(MapsActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                                // TODO: Consider calling
+                                //    ActivityCompat#requestPermissions
+                                // here to request the missing permissions, and then overriding
+                                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                                //                                          int[] grantResults)
+                                // to handle the case where the user grants the permission. See the documentation
+                                // for ActivityCompat#requestPermissions for more details.
+                                return;
+                            }
+                            fusedLocationProviderClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<Location>() {
+                                @Override
+                                public void onSuccess(Location location) {
+                                    if (location != null) {
+                                        LatLng userLatLng = new LatLng(location.getLatitude(), location.getLongitude());
+
+                                        // Definir el radio de distancia deseado en metros
+                                        double radio = 800; // Por ejemplo, 1000 metros (1 km)
+
+                                        while (results.hasNext()) {
+                                            Document supermarket = results.next();
+                                            double lat = supermarket.getDouble("latitud");
+                                            double lon = supermarket.getDouble("longitud");
+
+                                            LatLng supermarketLatLng = new LatLng(lat, lon);
+                                            float[] distance = new float[1];
+                                            Location.distanceBetween(userLatLng.latitude, userLatLng.longitude, supermarketLatLng.latitude, supermarketLatLng.longitude, distance);
+
+                                            if (distance[0] <= radio) {
+                                                mMap.addMarker(new MarkerOptions().position(supermarketLatLng));
+                                            }
+
+                                            mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                                                @Override
+                                                public boolean onMarkerClick(Marker marker) {
+                                                    LatLng position = marker.getPosition();
+                                                    Document query = new Document("latitud", position.latitude);
+                                                    mongoCollection.findOne(query).getAsync(result1 -> {
+
+                                                        Document supermercado = result1.get();
+                                                        String direccion = supermercado.getString("direccion");
+                                                        int telefono = supermercado.getInteger("telefono");
+                                                        String hapertura = supermercado.getString("hapertura");
+                                                        String hcierre = supermercado.getString("hcierre");
+
+                                                        if (supermercado != null) {
+                                                            SweetAlertDialog builder = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE);
+                                                            builder.setTitleText(supermercado.getString("nombre"));
+                                                            builder.setContentText("Dirección: " + direccion + "\n" +
+                                                                    "Teléfono: " + telefono + "\n" +
+                                                                    "Horario de apertura: " + hapertura + "\n" +
+                                                                    "Horario de cierre: " + hcierre);
+                                                            builder.setConfirmText("Añadir Producto")
+                                                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                                        @Override
+                                                                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                                                            sweetAlertDialog.dismiss();
+                                                                        }
+                                                                    })
+                                                                    .setCancelText("Cancelar")
+                                                                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                                        @Override
+                                                                        public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                                                            sweetAlertDialog.dismiss();
+                                                                        }
+                                                                    });
+
+                                                            builder.create();
+                                                            builder.show();
+                                                        }
+                                                    });
+                                                    return false;
+                                                }
+                                            });
+                                        }
+                                    }
+                                }
+                            });
+                           /*while (results.hasNext()){
                                 Document supermarket = results.next();
                                 String name = supermarket.getString("nombre");
                                 double lat = supermarket.getDouble("latitud");
@@ -281,47 +371,47 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                 mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                                     @Override
                                     public boolean onMarkerClick(Marker marker) {
-                                        LatLng position = marker.getPosition();
-                                        Document query = new Document("latitud", position.latitude);
-                                        mongoCollection.findOne(query).getAsync(result1 -> {
+                                            LatLng position = marker.getPosition();
+                                            Document query = new Document("latitud", position.latitude);
+                                            mongoCollection.findOne(query).getAsync(result1 -> {
 
-                                            Document supermercado = result1.get();
-                                            String direccion = supermercado.getString("direccion");
-                                            int telefono = supermercado.getInteger("telefono");
-                                            String hapertura = supermercado.getString("hapertura");
-                                            String hcierre = supermercado.getString("hcierre");
+                                                Document supermercado = result1.get();
+                                                String direccion = supermercado.getString("direccion");
+                                                int telefono = supermercado.getInteger("telefono");
+                                                String hapertura = supermercado.getString("hapertura");
+                                                String hcierre = supermercado.getString("hcierre");
 
-                                            if (supermercado != null) {
-                                                SweetAlertDialog builder = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE);
-                                                builder.setTitleText(supermercado.getString("nombre"));
-                                                builder.setContentText("Dirección: " + direccion + "\n" +
-                                                        "Teléfono: " + telefono + "\n" +
-                                                        "Horario de apertura: " + hapertura + "\n" +
-                                                        "Horario de cierre: " + hcierre);
-                                                builder.setConfirmText("Añadir Producto")
-                                                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                                            @Override
-                                                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                sweetAlertDialog.dismiss();
-                                                            }
-                                                        })
-                                                        .setCancelText("Cancelar")
-                                                        .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                                            @Override
-                                                            public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                sweetAlertDialog.dismiss();
-                                                            }
-                                                        });
+                                                if (supermercado != null) {
+                                                    SweetAlertDialog builder = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE);
+                                                    builder.setTitleText(supermercado.getString("nombre"));
+                                                    builder.setContentText("Dirección: " + direccion + "\n" +
+                                                            "Teléfono: " + telefono + "\n" +
+                                                            "Horario de apertura: " + hapertura + "\n" +
+                                                            "Horario de cierre: " + hcierre);
+                                                    builder.setConfirmText("Añadir Producto")
+                                                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                                @Override
+                                                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                                                    sweetAlertDialog.dismiss();
+                                                                }
+                                                            })
+                                                            .setCancelText("Cancelar")
+                                                            .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                                @Override
+                                                                public void onClick(SweetAlertDialog sweetAlertDialog) {
+                                                                    sweetAlertDialog.dismiss();
+                                                                }
+                                                            });
 
-                                                builder.create();
-                                                builder.show();
+                                                    builder.create();
+                                                    builder.show();
 
-                                            }
-                                                });
-                                        return true;
-                                    }
+                                                }
+                                            });
+                                            return true;
+                                        }
                                 });
-                            }
+                            }*/
 
                         }else {
                            Toast.makeText(MapsActivity.this, "Error al buscar supermercado", Toast.LENGTH_SHORT).show();
