@@ -91,7 +91,7 @@ public class FoodActivity extends AppCompatActivity {
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, ProfileActivity.class);
+                Intent i = new Intent(FoodActivity.this, UserActivity.class);
                 FoodActivity.this.startActivity(i);
             }
         });

@@ -45,6 +45,20 @@
         android:testOnly="true"
         android:theme="@style/Theme.GreenChef" >
         <activity
+            android:name="com.example.greenchef.SupermarketProductsActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="com.example.greenchef.UserActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.example.greenchef.foodactivities.RecipesCompoundActivity"
             android:exported="false" >
             <meta-data
@@ -123,13 +137,6 @@
         </activity>
         <activity
             android:name="com.example.greenchef.AdminActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.ProfileActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"

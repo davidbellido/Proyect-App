@@ -6,16 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".AdminActivity">
 
-    <LinearLayout
-        android:id="@+id/llLoginPanel"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAdmin"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/admin_window">
+            android:background="@drawable/admin_window"
+            tools:ignore="MissingConstraints">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,6 +40,14 @@
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <LinearLayout
+        android:id="@+id/llLoginPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/clAdmin"
+        app:layout_constraintTop_toTopOf="@+id/clLogOut">
+
         <Button
             android:id="@+id/btnMapaAdmin"
             android:layout_width="910px"
@@ -51,7 +55,7 @@
             android:text="Añadir Supermercado"
             android:textSize="12sp"
             android:textColor="@color/white"
-            android:layout_marginTop="190px"
+            android:layout_marginTop="10px"
             android:layout_marginLeft="85px"
             android:backgroundTint="@color/verde03"
             app:cornerRadius="20dp"/>
@@ -62,24 +66,21 @@
             android:text="Modificar Productos"
             android:textSize="12sp"
             android:textColor="@color/white"
-            android:layout_marginTop="50px"
+            android:layout_marginTop="20px"
             android:layout_marginLeft="85px"
             android:backgroundTint="@color/verde03"
             app:cornerRadius="20dp"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            app:layout_constraintBottom_toBottomOf="parent">
+    </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLogOut"
                 android:layout_width="match_parent"
                 android:layout_height="250px"
                 android:background="@drawable/bottom_background_white"
                 android:backgroundTint="@color/verde03"
-                app:layout_constraintVertical_bias="1"
-                tools:ignore="MissingConstraints">
+                tools:ignore="MissingConstraints"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="1">
 
 
                 <LinearLayout
@@ -119,8 +120,4 @@
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-
-    </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

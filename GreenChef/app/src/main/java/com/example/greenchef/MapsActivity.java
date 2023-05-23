@@ -67,6 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ActivityMapsBinding binding;
     private LatLng latLng;
     private Bundle bundle;
+    private Bundle bundleProducto;
     private String nombreUsuario;
     private String AppId = "pruebaproyecto-urnlx";
     private MongoDatabase mongoDatabase;
@@ -322,27 +323,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                     mongoCollection.findOne(query).getAsync(result1 -> {
 
                                                         Document supermercado = result1.get();
+                                                        int id = supermercado.getInteger("id");
+                                                        String nombre = supermercado.getString("nombre");
                                                         String direccion = supermercado.getString("direccion");
                                                         int telefono = supermercado.getInteger("telefono");
                                                         String hapertura = supermercado.getString("hapertura");
                                                         String hcierre = supermercado.getString("hcierre");
 
+                                                        bundleProducto = new Bundle();
+                                                        bundleProducto.putString("nombreSupermercado", nombre);
+                                                        bundleProducto.putInt("idSupermercado", id);
+
                                                         if (supermercado != null) {
                                                             SweetAlertDialog builder = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE);
-                                                            builder.setTitleText(supermercado.getString("nombre"));
+                                                            builder.setTitleText(nombre);
                                                             builder.setContentText("Dirección: " + direccion + "\n" +
                                                                     "Teléfono: " + telefono + "\n" +
                                                                     "Horario de apertura: " + hapertura + "\n" +
                                                                     "Horario de cierre: " + hcierre);
-                                                            builder.setConfirmText("Añadir Producto")
-                                                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                            builder.setNeutralButton("Productos", new SweetAlertDialog.OnSweetClickListener() {
                                                                         @Override
                                                                         public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                            sweetAlertDialog.dismiss();
+                                                                            Intent i = new Intent(MapsActivity.this,SupermarketProductsActivity.class);
+                                                                            i.putExtras(bundleProducto);
+                                                                            MapsActivity.this.startActivity(i);
                                                                         }
-                                                                    })
-                                                                    .setCancelText("Cancelar")
-                                                                    .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                                                    });
+
+                                                            builder.setConfirmText("Añadir")
+                                                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                                                         @Override
                                                                         public void onClick(SweetAlertDialog sweetAlertDialog) {
                                                                             sweetAlertDialog.dismiss();
@@ -360,58 +369,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     }
                                 }
                             });
-                           /*while (results.hasNext()){
-                                Document supermarket = results.next();
-                                String name = supermarket.getString("nombre");
-                                double lat = supermarket.getDouble("latitud");
-                                double lon = supermarket.getDouble("longitud");
-
-                                mMap.addMarker(new MarkerOptions().position(new LatLng(lat, lon)).title(name));
-
-                                mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-                                    @Override
-                                    public boolean onMarkerClick(Marker marker) {
-                                            LatLng position = marker.getPosition();
-                                            Document query = new Document("latitud", position.latitude);
-                                            mongoCollection.findOne(query).getAsync(result1 -> {
-
-                                                Document supermercado = result1.get();
-                                                String direccion = supermercado.getString("direccion");
-                                                int telefono = supermercado.getInteger("telefono");
-                                                String hapertura = supermercado.getString("hapertura");
-                                                String hcierre = supermercado.getString("hcierre");
-
-                                                if (supermercado != null) {
-                                                    SweetAlertDialog builder = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE);
-                                                    builder.setTitleText(supermercado.getString("nombre"));
-                                                    builder.setContentText("Dirección: " + direccion + "\n" +
-                                                            "Teléfono: " + telefono + "\n" +
-                                                            "Horario de apertura: " + hapertura + "\n" +
-                                                            "Horario de cierre: " + hcierre);
-                                                    builder.setConfirmText("Añadir Producto")
-                                                            .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                                                @Override
-                                                                public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                    sweetAlertDialog.dismiss();
-                                                                }
-                                                            })
-                                                            .setCancelText("Cancelar")
-                                                            .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                                                @Override
-                                                                public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                    sweetAlertDialog.dismiss();
-                                                                }
-                                                            });
-
-                                                    builder.create();
-                                                    builder.show();
-
-                                                }
-                                            });
-                                            return true;
-                                        }
-                                });
-                            }*/
 
                         }else {
                            Toast.makeText(MapsActivity.this, "Error al buscar supermercado", Toast.LENGTH_SHORT).show();

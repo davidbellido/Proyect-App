@@ -106,7 +106,10 @@ public class RegisterActivity extends AppCompatActivity {
                             .append("nick", nick)
                             .append("email", email)
                             .append("password", contrasenia)
-                            .append("fecharegistro", fechaRegistro);
+                            .append("fecharegistro", fechaRegistro)
+                            .append("nombre", "")
+                            .append("apellidos", "")
+                            .append("telefono", "");
 
                     mongoCollection.insertOne(usuario).getAsync(result1 -> {
                         if (result1.isSuccess()) {

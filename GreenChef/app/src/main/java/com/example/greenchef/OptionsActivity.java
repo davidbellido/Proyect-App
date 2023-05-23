@@ -66,7 +66,8 @@ public class OptionsActivity extends AppCompatActivity {
         btnPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(OptionsActivity.this, ProfileActivity.class);
+                Intent i = new Intent(OptionsActivity.this, UserActivity.class);
+                i.putExtras(bundleMapa);
                 OptionsActivity.this.startActivity(i);
             }
         });

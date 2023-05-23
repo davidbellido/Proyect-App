@@ -107,24 +107,6 @@ public class MainActivity extends AppCompatActivity {
                                         .setTitleText("Oops...")
                                         .setContentText("Usuario o contraseña incorrectos")
                                         .show();
-
-//                                // Crear un AlertDialog.Builder
-//                                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-//
-//                                // Establecer el título y el mensaje del diálogo
-//                                builder.setTitle("Error en el Login").setMessage("Lo siento, el usuario o la contraseña que has introducido son incorrectos.");
-//
-//                                // Añadir un botón "Aceptar" al diálogo
-//                                builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-//                                    public void onClick(DialogInterface dialog, int id) {
-//                                        // Cerrar el diálogo
-//                                        dialog.dismiss();
-//                                    }
-//                                });
-//
-//                                // Crear el AlertDialog y mostrarlo
-//                                AlertDialog dialog = builder.create();
-//                                dialog.show();
                             }
                         } else {
                             new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE)
