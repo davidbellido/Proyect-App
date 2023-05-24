@@ -89,6 +89,7 @@ public class UserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(UserActivity.this, OptionsActivity.class);
+                i.putExtras(bundle);
                 UserActivity.this.startActivity(i);
             }
         });

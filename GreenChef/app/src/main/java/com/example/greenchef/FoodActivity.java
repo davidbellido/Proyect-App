@@ -84,6 +84,7 @@ public class FoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(FoodActivity.this, OptionsActivity.class);
+                i.putExtras(bundle);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -92,6 +93,7 @@ public class FoodActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(FoodActivity.this, UserActivity.class);
+                i.putExtras(bundle);
                 FoodActivity.this.startActivity(i);
             }
         });

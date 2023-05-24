@@ -219,7 +219,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                             MongoCollection<Document> mongoCollection2 = mongoDatabase.getCollection("SuperMarket");
 
                                             Document supermarket = new Document();
-                                            supermarket.append("id", 7)
+                                            supermarket.append("id", 8)
                                                     .append("nombre", nombre)
                                                     .append("direccion", via)
                                                     .append("latitud", latitud)
