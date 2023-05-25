@@ -9,7 +9,7 @@ public class Recetas {
     private String procedimiento;
     private String tiempo;
     private int porciones;
-    private int imagen;
+    private byte[] imagen;
 
     public Recetas(String nombre, String descripcion, ArrayList ingredientes, String procedimiento, String tiempo, int porciones) {
         this.nombre = nombre;
@@ -69,11 +69,11 @@ public class Recetas {
         this.porciones = porciones;
     }
 
-    public int getImagen() {
+    public byte[] getImagen() {
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
 }

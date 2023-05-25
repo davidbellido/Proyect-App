@@ -12,10 +12,10 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imgSupermarket"
+            android:id="@+id/imgReceta"
             android:layout_width="match_parent"
             android:layout_height="550px"
-            android:background="@drawable/recetafondo" />
+            android:scaleType="fitXY" />
     </LinearLayout>
 
     <ScrollView

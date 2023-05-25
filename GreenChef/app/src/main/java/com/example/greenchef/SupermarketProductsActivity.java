@@ -8,17 +8,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.example.greenchef.foodactivities.ProteinActivity;
 import com.example.greenchef.model.Producto;
 
 
 import org.bson.Document;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 import io.realm.Realm;
@@ -120,15 +123,28 @@ public class SupermarketProductsActivity extends AppCompatActivity {
                         if (task.isSuccess()){
                             MongoCursor<Document> results = task.get();
                             while (results.hasNext()){
-                                Document supermarket = results.next();
-                                int id = supermarket.getInteger("id");
-                                String name = supermarket.getString("nombre");
-                                int id_user = supermarket.getInteger("id_user");
-                                int id_supermarket = supermarket.getInteger("id_supermarket");
-                                double price = supermarket.getDouble("precio");
+                                Document products = results.next();
+                                int id = products.getInteger("id");
+                                String name = products.getString("nombre");
+                                int id_user = products.getInteger("id_user");
+                                int id_supermarket = products.getInteger("id_supermarket");
+                                double price = products.getDouble("precio");
+
+                                // Obtener la imagen codificada en base64 desde el campo 'image'
+                                String encodedImage = products.getString("img");
+
+                                // Decodificar la imagen de base64 a bytes
+                                byte[] imageBytes = new byte[0];
+                                if (encodedImage != null) {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                        imageBytes = Base64.getDecoder().decode(encodedImage);
+                                    }
+                                }else
+                                    Toast.makeText(SupermarketProductsActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
 
                                 // Crea una instancia de Producto con los datos obtenidos y añádelo a la lista
                                 Producto producto = new Producto(id,name, id_user, id_supermarket, price);
+                                producto.setImagen(imageBytes);
                                 listaProductos.add(producto);
                             }
 

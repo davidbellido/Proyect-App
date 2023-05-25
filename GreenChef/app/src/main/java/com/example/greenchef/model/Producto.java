@@ -6,7 +6,7 @@ public class Producto {
     private int id_usuario;
     private int id_supermercado;
     private double precio;
-    private int imagen;
+    private byte[] imagen;
 
     public Producto(int id,String nombre, int id_usuario, int id_supermercado, double precio) {
         this.id = id;
@@ -56,8 +56,12 @@ public class Producto {
         this.precio = precio;
     }
 
-    public int getImagen() {
+    public byte[] getImagen() {
         return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
     }
 }
 

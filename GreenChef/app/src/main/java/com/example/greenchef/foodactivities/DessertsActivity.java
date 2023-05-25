@@ -3,7 +3,10 @@ package com.example.greenchef.foodactivities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +23,7 @@ import com.example.greenchef.model.Recetas;
 import org.bson.Document;
 
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 import io.realm.Realm;
@@ -71,8 +75,11 @@ public class DessertsActivity extends AppCompatActivity {
                         // Obtén el objeto Producto correspondiente a la posición en la lista
                         Recetas receta = getItem(position);
 
+                        // Convierte los bytes en un objeto Bitmap
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(receta.getImagen(), 0, receta.getImagen().length);
+
                         // Establece los valores de los elementos de la vista
-                        imageView.setImageResource(receta.getImagen());
+                        imageView.setImageBitmap(bitmap);
                         nombreTextView.setText(receta.getNombre());
                         tiempoTextView.setText(receta.getTiempo());
 
@@ -103,6 +110,7 @@ public class DessertsActivity extends AppCompatActivity {
                 bundle.putString("procedimiento", recetaSeleccionada.getProcedimiento());
                 bundle.putString("tiempo", recetaSeleccionada.getTiempo());
                 bundle.putInt("porciones", recetaSeleccionada.getPorciones());
+                bundle.putByteArray("imagen", recetaSeleccionada.getImagen());
 
                 // Iniciar la actividad RecipesCompoundActivity
                 intent.putExtras(bundle);
@@ -142,8 +150,21 @@ public class DessertsActivity extends AppCompatActivity {
                                 String tiempo = recipes.getString("tiempo_preparacion");
                                 int porciones = recipes.getInteger("porciones");
 
+                                // Obtener la imagen codificada en base64 desde el campo 'image'
+                                String encodedImage = recipes.getString("img");
+
+                                // Decodificar la imagen de base64 a bytes
+                                byte[] imageBytes = new byte[0];
+                                if (encodedImage != null) {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                        imageBytes = Base64.getDecoder().decode(encodedImage);
+                                    }
+                                }else
+                                    Toast.makeText(DessertsActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
+
                                 // Crea una instancia de Producto con los datos obtenidos y añádelo a la lista
                                 Recetas recetas = new Recetas(name, descripcion, ingredientes, procedimiento, tiempo, porciones);
+                                recetas.setImagen(imageBytes);
                                 listaRecetas.add(recetas);
                             }
 

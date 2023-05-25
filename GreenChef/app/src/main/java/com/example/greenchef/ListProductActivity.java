@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -77,8 +79,12 @@ public class ListProductActivity extends AppCompatActivity {
                         // Obtén el objeto Producto correspondiente a la posición en la lista
                         Producto producto = getItem(position);
 
+                        // Convierte los bytes en un objeto Bitmap
+                        Bitmap bitmap = BitmapFactory.decodeByteArray(producto.getImagen(), 0, producto.getImagen().length);
+
                         // Establece los valores de los elementos de la vista
-                        imageView.setImageResource(producto.getImagen());
+                        imageView.setImageBitmap(bitmap);
+
                         tituloTextView.setText(producto.getNombre());
                         String usuario = String.valueOf(producto.getId_usuario());
                         directorTextView.setText("Usuario: " + usuario);

@@ -3,7 +3,10 @@ package com.example.greenchef.foodactivities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.greenchef.R;
@@ -18,9 +21,11 @@ public class RecipesCompoundActivity extends AppCompatActivity {
     private String procedimiento;
     private String tiempo;
     private int porciones;
+    private byte[] imagen;
     private Bundle bundle;
 
     private TextView txtNombreReceta, txtDescripcion, txtIngredientes, txtProcedimiento, txtTiempo, txtPorciones;
+    private ImageView imgReceta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +58,15 @@ public class RecipesCompoundActivity extends AppCompatActivity {
         tiempo = bundle.getString("tiempo");
         porciones = bundle.getInt("porciones");
 
+        imagen = bundle.getByteArray("imagen");
+
         txtNombreReceta = this.findViewById(R.id.txtNombreReceta);
         txtDescripcion = this.findViewById(R.id.txtDescripcionR);
         txtIngredientes = this.findViewById(R.id.txtContenidoIngredientes);
         txtProcedimiento = this.findViewById(R.id.txtContenidoPreparacion);
         txtTiempo = this.findViewById(R.id.txtTiempoReal);
         txtPorciones = this.findViewById(R.id.txtNporciones);
+        imgReceta = this.findViewById(R.id.imgReceta);
 
         txtNombreReceta.setText(nombreReceta);
         txtDescripcion.setText(descripcion);
@@ -66,5 +74,12 @@ public class RecipesCompoundActivity extends AppCompatActivity {
         txtProcedimiento.setText(sb.toString());
         txtTiempo.setText(tiempo);
         txtPorciones.setText(String.valueOf(porciones));
+
+        // Convierte los bytes en un objeto Bitmap
+        Bitmap bitmap = BitmapFactory.decodeByteArray(imagen, 0, imagen.length);
+        imgReceta.setImageBitmap(bitmap);
+
+        // Aplica el ajuste de escala al ImageView
+        imgReceta.setScaleType(ImageView.ScaleType.FIT_XY);
     }
 }

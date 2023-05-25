@@ -236,10 +236,6 @@
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\fruta.png"
     },
     {
-        "merged": "com.example.greenchef.app-merged_res-35:/layout_activity_food.xml.flat",
-        "source": "com.example.greenchef.app-main-37:/layout/activity_food.xml"
-    },
-    {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-35:\\drawable_shape_login_panel.xml.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-37:\\drawable\\shape_login_panel.xml"
     },

@@ -1,8 +1,11 @@
 package com.example.greenchef;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,6 +32,12 @@ public class ColumnAdapter extends RecyclerView.Adapter<ColumnAdapter.ViewHolder
         Producto producto = items.get(position);
         holder.txtNombre.setText(producto.getNombre());
         holder.txtPrecio.setText(String.valueOf(producto.getPrecio()) + "€");
+
+        // Convierte los bytes en un objeto Bitmap
+        Bitmap bitmap = BitmapFactory.decodeByteArray(producto.getImagen(), 0, producto.getImagen().length);
+
+        // Establece los valores de los elementos de la vista
+        holder.imgProducto.setImageBitmap(bitmap);
     }
 
     @Override
@@ -39,11 +48,13 @@ public class ColumnAdapter extends RecyclerView.Adapter<ColumnAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
         public TextView txtNombre;
         private TextView txtPrecio;
+        private ImageView imgProducto;
 
         public ViewHolder(View itemView) {
             super(itemView);
             txtNombre = itemView.findViewById(R.id.txtNombre);
             txtPrecio = itemView.findViewById(R.id.txtPrecio);
+            imgProducto = itemView.findViewById(R.id.imgProducto);
         }
     }
 }
