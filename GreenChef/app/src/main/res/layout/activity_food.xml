@@ -9,13 +9,14 @@
     <LinearLayout
         android:id="@+id/lyImagen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/verde01">
 
         <ImageView
-            android:id="@+id/imgSupermarket"
+            android:id="@+id/imgRecipe"
             android:layout_width="match_parent"
             android:layout_height="550px"
-            android:background="@drawable/recetafondo" />
+            android:scaleType="fitXY"/>
     </LinearLayout>
 
     <LinearLayout

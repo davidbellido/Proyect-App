@@ -3,10 +3,15 @@ package com.example.greenchef;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.greenchef.foodactivities.CerealActivity;
 import com.example.greenchef.foodactivities.DairyActivity;
@@ -17,14 +22,34 @@ import com.example.greenchef.foodactivities.GrainsActivity;
 import com.example.greenchef.foodactivities.LegumesActivity;
 import com.example.greenchef.foodactivities.ProteinActivity;
 import com.example.greenchef.foodactivities.VegetablesActivity;
+import com.example.greenchef.model.Recetas;
+
+import org.bson.Document;
+
+import java.util.ArrayList;
+import java.util.Base64;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import io.realm.Realm;
+import io.realm.mongodb.App;
+import io.realm.mongodb.AppConfiguration;
+import io.realm.mongodb.Credentials;
+import io.realm.mongodb.RealmResultTask;
+import io.realm.mongodb.User;
+import io.realm.mongodb.mongo.MongoClient;
+import io.realm.mongodb.mongo.MongoCollection;
+import io.realm.mongodb.mongo.MongoDatabase;
+import io.realm.mongodb.mongo.iterable.MongoCursor;
 
 public class FoodActivity extends AppCompatActivity {
     private ImageButton btnProtein, btnVegetables,btnCereal, btnFruits, btnGrains, btnDairy, btnDriedFruits, btnDesserts, btnLegumes;
     private ImageButton btnMap, btnHome, btnProfile;
+    private ImageView imgRecipe;
     private Bundle bundle;
     private String nombreUsuario;
+    private String AppId = "pruebaproyecto-urnlx";
+    private MongoDatabase mongoDatabase;
+    private MongoClient mongoClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +60,8 @@ public class FoodActivity extends AppCompatActivity {
             this.getSupportActionBar().hide();
         }catch (Exception e){
         }
+
+        generarImagenesAleatorias();
 
         new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE)
                 .setTitleText("ELIJA EL TIPO DE ALIMENTO QUE DESEE")
@@ -56,6 +83,8 @@ public class FoodActivity extends AppCompatActivity {
         bundle = getIntent().getExtras();
         nombreUsuario = bundle.getString("nombreUsuario");
         bundle.putString("nombreUsuario", nombreUsuario);
+
+        imgRecipe = this.findViewById(R.id.imgRecipe);
 
         btnProtein = this.findViewById(R.id.btnProteina);
         btnVegetables = this.findViewById(R.id.btnVerduras);
@@ -167,6 +196,71 @@ public class FoodActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(FoodActivity.this, LegumesActivity.class);
                 FoodActivity.this.startActivity(i);
+            }
+        });
+    }
+
+    public void generarImagenesAleatorias(){
+        //Generar numeros aleatorios de 1 a 36
+        int numeroAleatorio = (int) (Math.random() * 36) + 1;
+
+        recuperarImagenes(numeroAleatorio);
+
+    }
+
+    private void recuperarImagenes(int numeroAleatorio) {
+        Realm.init(this);
+        App app = new App(new AppConfiguration.Builder(AppId).build());
+
+        Credentials credentials = Credentials.anonymous();
+        app.loginAsync(credentials, new App.Callback<User>() {
+            @Override
+            public void onResult(App.Result<User> result) {
+                if (result.isSuccess()) {
+
+                    User user = app.currentUser();
+                    mongoClient = user.getMongoClient("mongodb-atlas");
+                    mongoDatabase = mongoClient.getDatabase("GreenChef");
+                    MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Recipes");
+
+                    Document queryFilter = new Document().append("id", numeroAleatorio);
+                    RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find(queryFilter).iterator();
+
+                    queryTask.getAsync(task -> {
+                        if (task.isSuccess()) {
+                            MongoCursor<Document> results = task.get();
+                            while (results.hasNext()) {
+                                Document recipes = results.next();
+
+                                // Obtener la imagen codificada en base64 desde el campo 'image'
+                                String encodedImage = recipes.getString("img");
+
+                                // Decodificar la imagen de base64 a bytes
+                                byte[] imageBytes = new byte[0];
+                                if (encodedImage != null) {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                        imageBytes = Base64.getDecoder().decode(encodedImage);
+                                    }
+
+                                    // Convierte los bytes en un objeto Bitmap
+                                    Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+
+                                    // Establece los valores de los elementos de la vista
+                                    imgRecipe.setImageBitmap(bitmap);
+
+                                    // Aplica el ajuste de escala al ImageView
+                                    imgRecipe.setScaleType(ImageView.ScaleType.FIT_XY);
+                                }else
+                                    Toast.makeText(FoodActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
+                            }
+
+                        } else {
+                            Toast.makeText(FoodActivity.this, "Error al buscar recetas", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                } else {
+                    Toast.makeText(FoodActivity.this, "Error al conectar con la base de datos", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

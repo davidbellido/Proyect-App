@@ -41,6 +41,7 @@ drawable mercado
 drawable mercadona
 drawable perfil
 drawable pollo
+drawable productosvarios
 drawable proteina
 drawable recetafondo
 drawable recetas
@@ -61,6 +62,8 @@ id btnGranos
 id btnGuardarUsuario
 id btnHome
 id btnInicioSesion
+id btnInsertImage
+id btnInsertarProducto
 id btnLacteos
 id btnLegumbres
 id btnLogOut
@@ -111,12 +114,15 @@ id imageVerduras
 id imageView3
 id imgOut
 id imgProducto
+id imgReceta
 id imgRecetas
+id imgRecipe
 id imgReloj
 id imgSupermarket
 id ivImagen
 id listProducts
 id llLoginPanel
+id llProductsPanel
 id lvLista
 id lvProducts
 id lvProtein
@@ -142,6 +148,7 @@ id txtFrutas
 id txtFsecos
 id txtGranos
 id txtIngredientes
+id txtInsertarProducto
 id txtLacteos
 id txtLegumbres
 id txtLista
@@ -149,6 +156,7 @@ id txtLogin
 id txtMapa
 id txtNick
 id txtNombre
+id txtNombreProducto
 id txtNombreReceta
 id txtNombreUsuario
 id txtNporciones
@@ -173,6 +181,7 @@ layout activity_dried_fruits
 layout activity_food
 layout activity_fruits
 layout activity_grains
+layout activity_insert_user_product
 layout activity_legumes
 layout activity_list_product
 layout activity_main

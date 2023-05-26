@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionsActivity">
+
+    <LinearLayout
+        android:id="@+id/lyImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgSupermarket"
+            android:layout_width="match_parent"
+            android:layout_height="550px"
+            android:background="@drawable/mercadona" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llProductsPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="450px">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/listProducts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bottom_background_white"
+            android:backgroundTint="@color/verde01">
+
+            <TextView
+                android:id="@+id/txtInsertarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insertar producto"
+                android:textColor="@color/verde03"
+                android:paddingLeft="70px"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="50px"/>
+
+            <LinearLayout
+                android:id="@+id/llLoginPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtInsertarProducto">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Añadir nombre del producto"
+                    android:textColor="@color/verde03"
+                    android:paddingLeft="100px"
+                    android:paddingBottom="20px"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/txtNombreProducto"
+                    android:layout_width="910px"
+                    android:layout_height="150px"
+                    android:background="@drawable/custom_editext_user"
+                    android:layout_marginTop="10px"
+                    android:hint="Nombre del producto:"
+                    android:textColorHint="@color/verde03"
+                    android:paddingLeft="50px"
+                    android:layout_gravity="center"
+                    android:textColor="@color/verde03"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Añadir precio del producto:"
+                    android:textColor="@color/verde03"
+                    android:paddingTop="20px"
+                    android:paddingLeft="100px"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/txtPrecio"
+                    android:layout_width="910px"
+                    android:layout_height="150px"
+                    android:background="@drawable/custom_editext_user"
+                    android:layout_marginTop="30px"
+                    android:hint="Precio del producto"
+                    android:textColorHint="@color/verde03"
+                    android:paddingLeft="50px"
+                    android:layout_gravity="center"
+                    android:textColor="@color/verde03"/>
+
+                <ImageButton
+                    android:id="@+id/btnInsertImage"
+                    android:layout_width="310px"
+                    android:layout_height="210px"
+                    android:layout_marginTop="30px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/productosvarios"
+                    android:onClick="onInsertImageClick" />
+
+                <Button
+                    android:id="@+id/btnInsertarProducto"
+                    android:layout_width="910px"
+                    android:layout_height="60dp"
+                    android:text="Añadir Producto"
+                    android:textSize="18sp"
+                    android:textColor="@color/verde03"
+                    android:layout_marginTop="30px"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/verde04"
+                    app:cornerRadius="20dp"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

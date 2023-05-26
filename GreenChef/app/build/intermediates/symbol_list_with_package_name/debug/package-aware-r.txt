@@ -3345,6 +3345,7 @@ drawable places_autocomplete_toolbar_shadow
 drawable places_powered_by_google_dark
 drawable places_powered_by_google_light
 drawable pollo
+drawable productosvarios
 drawable proteina
 drawable quantum_ic_arrow_back_grey600_24
 drawable quantum_ic_clear_grey600_24
@@ -3477,6 +3478,8 @@ id btnGranos
 id btnGuardarUsuario
 id btnHome
 id btnInicioSesion
+id btnInsertImage
+id btnInsertarProducto
 id btnLacteos
 id btnLegumbres
 id btnLogOut
@@ -3655,7 +3658,9 @@ id imageVerduras
 id imageView3
 id imgOut
 id imgProducto
+id imgReceta
 id imgRecetas
+id imgRecipe
 id imgReloj
 id imgSupermarket
 id immediateStop
@@ -3682,6 +3687,7 @@ id listMode
 id listProducts
 id list_item
 id llLoginPanel
+id llProductsPanel
 id loading
 id lvLista
 id lvProducts
@@ -3968,6 +3974,7 @@ id txtFrutas
 id txtFsecos
 id txtGranos
 id txtIngredientes
+id txtInsertarProducto
 id txtLacteos
 id txtLegumbres
 id txtLista
@@ -3975,6 +3982,7 @@ id txtLogin
 id txtMapa
 id txtNick
 id txtNombre
+id txtNombreProducto
 id txtNombreReceta
 id txtNombreUsuario
 id txtNporciones
@@ -4134,6 +4142,7 @@ layout activity_dried_fruits
 layout activity_food
 layout activity_fruits
 layout activity_grains
+layout activity_insert_user_product
 layout activity_legumes
 layout activity_list_product
 layout activity_main

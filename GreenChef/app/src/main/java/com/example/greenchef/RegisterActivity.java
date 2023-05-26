@@ -1,5 +1,6 @@
 package com.example.greenchef;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,18 +32,19 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText correo;
     private EditText password;
     private Button btnInicioSesion;
-    String AppId = "pruebaproyecto-urnlx";
-    MongoDatabase mongoDatabase;
-    MongoClient mongoClient;
+    private String AppId = "pruebaproyecto-urnlx";
+    private MongoDatabase mongoDatabase;
+    private MongoClient mongoClient;
+    private boolean existeUsuario ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        username = findViewById(R.id.Username);
-        password = findViewById(R.id.password);
-        correo = findViewById(R.id.email);
+        username = this.findViewById(R.id.Username);
+        password = this.findViewById(R.id.password);
+        correo = this.findViewById(R.id.email);
 
         // Creamos un objeto Date con la fecha y hora actuales
         Date fechaActual = new Date();
@@ -68,7 +70,15 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = correo.getText().toString();
                 String fecha = fechaRegistro.toString();
 
-                registerUsers(usuario,email,contrasenia, fecha);
+                if (usuario.isEmpty() || contrasenia.isEmpty() || email.isEmpty()){
+                    new SweetAlertDialog(RegisterActivity.this, SweetAlertDialog.ERROR_TYPE)
+                            .setTitleText("Oops...")
+                            .setContentText("Rellena todos los campos")
+                            .show();
+                    return;
+                }else
+                    registerUsers(usuario,email,contrasenia, fecha);
+
             }
         });
 
@@ -111,21 +121,63 @@ public class RegisterActivity extends AppCompatActivity {
                             .append("apellidos", "")
                             .append("telefono", "");
 
-                    mongoCollection.insertOne(usuario).getAsync(result1 -> {
+                    if (comprobarUsuario(nick)){
+                        mongoCollection.insertOne(usuario).getAsync(result1 -> {
+                            if (result1.isSuccess()) {
+                                new SweetAlertDialog(RegisterActivity.this, SweetAlertDialog.SUCCESS_TYPE)
+                                        .setTitleText("¡Registro exitoso!")
+                                        .setContentText("¡Bienvenido a GreenChef!")
+                                        .setConfirmText("Volver")
+                                        .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                                            @Override
+                                            public void onClick(SweetAlertDialog sDialog) {
+                                                RegisterActivity.this.finish();
+                                            }
+                                        })
+                                        .show();
+                            } else {
+                                Toast.makeText(RegisterActivity.this, "No insertado", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }else{
+                        new SweetAlertDialog(RegisterActivity.this, SweetAlertDialog.ERROR_TYPE)
+                                .setTitleText("Oops...")
+                                .setContentText("Este nombre de usuario ya existe")
+                                .show();
+
+                        username.setText("");
+
+                    }
+                } else {
+                    Toast.makeText(RegisterActivity.this, "No conectado", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        }
+
+    private boolean comprobarUsuario(String nick) {
+        Realm.init(this);
+        App app = new App(new AppConfiguration.Builder(AppId).build());
+
+        Credentials credentials = Credentials.anonymous();
+        app.loginAsync(credentials, new App.Callback<User>() {
+            @Override
+            public void onResult(App.Result<User> result) {
+                if (result.isSuccess()) {
+
+                    User user = app.currentUser();
+                    mongoClient = user.getMongoClient("mongodb-atlas");
+                    mongoDatabase = mongoClient.getDatabase("GreenChef");
+                    MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Users");
+
+                    Document query = new Document("nick", nick);
+                    mongoCollection.findOne(query).getAsync(result1 -> {
                         if (result1.isSuccess()) {
-                            new SweetAlertDialog(RegisterActivity.this, SweetAlertDialog.SUCCESS_TYPE)
-                                    .setTitleText("¡Registro exitoso!")
-                                    .setContentText("¡Bienvenido a GreenChef!")
-                                    .setConfirmText("Volver")
-                                    .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
-                                        @Override
-                                        public void onClick(SweetAlertDialog sDialog) {
-                                            RegisterActivity.this.finish();
-                                        }
-                                    })
-                                    .show();
+
+                                existeUsuario = true;
+
                         } else {
-                            Toast.makeText(RegisterActivity.this, "No insertado", Toast.LENGTH_SHORT).show();
+                            existeUsuario = false;
                         }
                     });
                 } else {
@@ -133,5 +185,6 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-        }
+        return existeUsuario;
     }
+}

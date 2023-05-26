@@ -45,6 +45,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.GreenChef" >
         <activity
+            android:name="com.example.greenchef.InsertUserProductActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="com.example.greenchef.SupermarketProductsActivity"
             android:exported="false" >
             <meta-data

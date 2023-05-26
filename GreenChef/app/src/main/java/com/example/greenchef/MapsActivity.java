@@ -300,7 +300,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                         LatLng userLatLng = new LatLng(location.getLatitude(), location.getLongitude());
 
                                         // Definir el radio de distancia deseado en metros
-                                        double radio = 20000000; // Por ejemplo, 1000 metros (1 km)
+                                        double radio = 800; // Por ejemplo, 1000 metros (1 km)
 
                                         while (results.hasNext()) {
                                             Document supermarket = results.next();
@@ -354,7 +354,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                                                         @Override
                                                                         public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                            sweetAlertDialog.dismiss();
+                                                                            Intent i = new Intent(MapsActivity.this,InsertUserProductActivity.class);
+                                                                            i.putExtras(bundleProducto);
+                                                                            i.putExtras(bundle);
+                                                                            MapsActivity.this.startActivity(i);
                                                                         }
                                                                     });
 

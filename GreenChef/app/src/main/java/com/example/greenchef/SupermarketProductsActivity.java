@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -91,14 +92,13 @@ public class SupermarketProductsActivity extends AppCompatActivity {
                 recyclerView.setLayoutManager(layoutManager);
 
                 // Establecer el divisor personalizado para el RecyclerView
-                DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(SupermarketProductsActivity.this, layoutManager.getOrientation());
-                dividerItemDecoration.setDrawable(new ColorDrawable(ContextCompat.getColor(SupermarketProductsActivity.this, R.color.verde04)));
+                int dividerHeight = 30; // Altura personalizada en píxeles
+                CustomDividerItemDecoration dividerItemDecoration = new CustomDividerItemDecoration(SupermarketProductsActivity.this, layoutManager.getOrientation(), dividerHeight);
+                dividerItemDecoration.setDrawable(new ColorDrawable(ContextCompat.getColor(SupermarketProductsActivity.this, R.color.verde01)));
                 recyclerView.addItemDecoration(dividerItemDecoration);
+
             }
         });
-
-
-
     }
 
     private void obtenerListaProductos(ProductosCallback callback) {
