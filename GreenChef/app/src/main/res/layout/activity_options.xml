@@ -14,7 +14,7 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/imgPerfilHome"
             android:layout_width="300px"
             android:layout_height="300px"
             android:layout_gravity="center"
@@ -197,7 +197,52 @@
                 android:background="@drawable/green_banner_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-                tools:layout_editor_absoluteX="32dp"/>
+                tools:layout_editor_absoluteX="32dp">
+
+                <TextView
+                    android:id="@+id/txtUltReceta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ULTIMA RECETA AÑADIDA"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:paddingTop="20px"
+                    android:paddingLeft="80px" />
+
+                <LinearLayout
+                    android:id="@+id/lyImagenUltReceta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    android:paddingTop="40px"
+                    android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgUltReceta"
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:layout_marginTop="100px"
+                    android:background="@drawable/recetafondo"
+                    android:scaleType="fitXY"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtNombreUltReceta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Holas"
+                    android:paddingTop="470px"
+                    android:paddingLeft="20px"/>
+                <TextView
+                    android:id="@+id/txtTipoUltReceta"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Holas"
+                    android:paddingTop="470px"
+                    android:paddingLeft="630px"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

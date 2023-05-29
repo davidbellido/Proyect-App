@@ -3611,6 +3611,7 @@ int id frost 0x7f0800ee
 int id fullscreen_header 0x7f0800ef
 int id ghost_view 0x7f0800f0
 int id ghost_view_holder 0x7f0800f1
+int id glide_custom_view_target_tag 0x7f080291
 int id gone 0x7f0800f2
 int id graph 0x7f0800f3
 int id graph_wrap 0x7f0800f4
@@ -3656,12 +3657,15 @@ int id imageUsuario 0x7f08011b
 int id imageVerduras 0x7f08011c
 int id imageView3 0x7f08011d
 int id imgOut 0x7f08011e
+int id imgPerfilHome 0x7f080293
 int id imgProducto 0x7f08011f
+int id imgProfile 0x7f080292
 int id imgReceta 0x7f080120
 int id imgRecetas 0x7f080121
 int id imgRecipe 0x7f080122
 int id imgReloj 0x7f080123
 int id imgSupermarket 0x7f080124
+int id imgUltReceta 0x7f080295
 int id immediateStop 0x7f080125
 int id included 0x7f080126
 int id indeterminate 0x7f080127
@@ -3692,6 +3696,7 @@ int id lvLista 0x7f08013f
 int id lvProducts 0x7f080140
 int id lvProtein 0x7f080141
 int id lyImagen 0x7f080142
+int id lyImagenUltReceta 0x7f080299
 int id m3_side_sheet 0x7f080143
 int id map 0x7f080144
 int id marquee 0x7f080145
@@ -3983,6 +3988,7 @@ int id txtNick 0x7f080262
 int id txtNombre 0x7f080263
 int id txtNombreProducto 0x7f080264
 int id txtNombreReceta 0x7f080265
+int id txtNombreUltReceta 0x7f080294
 int id txtNombreUsuario 0x7f080266
 int id txtNporciones 0x7f080267
 int id txtPerfil 0x7f080268
@@ -3996,6 +4002,8 @@ int id txtTelefono 0x7f08026f
 int id txtTiempo 0x7f080270
 int id txtTiempoPreparacion 0x7f080271
 int id txtTiempoReal 0x7f080272
+int id txtTipoUltReceta 0x7f080297
+int id txtUltReceta 0x7f080298
 int id txtVerduras 0x7f080273
 int id unchecked 0x7f080274
 int id uniform 0x7f080275

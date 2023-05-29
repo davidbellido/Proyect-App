@@ -1,24 +1,38 @@
 package com.example.greenchef;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.greenchef.foodactivities.ProteinActivity;
 import com.example.greenchef.model.Recetas;
 
 import org.bson.Document;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Base64;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.Realm;
@@ -41,9 +55,12 @@ public class UserActivity extends AppCompatActivity {
     private EditText txtNombre, txtApellido, txtNick, txtEmail, txtTelefono;
     private TextView txtNombreUsuario;
     private Button btnGuardar;
-    private String name, apellidos, email, telefono, password, fecharegistro;
+    private String name, apellidos, email, telefono, password, fecharegistro, imagen;
     private int i;
-    private ImageButton btnMap, btnHome, btnRecetas;
+    private Uri imageUri;
+    private ImageButton btnMap, btnHome, btnRecetas, imgProfile;
+    private ActivityResultLauncher<Intent> imagePickerLauncher;
+    private  byte[] imageBytes = new byte[0];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +71,45 @@ public class UserActivity extends AppCompatActivity {
             this.getSupportActionBar().hide();
         }catch (Exception e){
         }
+
+        // Dentro de tu clase
+        imgProfile = this.findViewById(R.id.imgProfile);
+
+        imagePickerLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        Intent data = result.getData();
+                        if (data != null) {
+                            imageUri = data.getData();
+                            imgProfile.setBackground(null);
+                            // Mostrar la imagen en el ImageButton
+                            // Cargar la imagen redondeada con Glide
+                            Glide.with(this)
+                                    .load(imageUri)
+                                    .apply(RequestOptions.circleCropTransform())
+                                    .into(imgProfile);
+
+                            try {
+                                InputStream inputStream = getContentResolver().openInputStream(imageUri);
+                                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                                byte[] buffer = new byte[8192];
+                                int bytesRead;
+                                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                                    byteArrayOutputStream.write(buffer, 0, bytesRead);
+                                }
+                                inputStream.close();
+
+                                byte[] imageBytes = byteArrayOutputStream.toByteArray();
+                                if (imageBytes != null && imageBytes.length > 0) {
+                                    String encodedImage = android.util.Base64.encodeToString(imageBytes, android.util.Base64.DEFAULT);
+                                    imagen = encodedImage.replaceAll("\\n", "");
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
 
         bundle = getIntent().getExtras();
         nombreUsuario = bundle.getString("nombreUsuario");
@@ -136,7 +192,8 @@ public class UserActivity extends AppCompatActivity {
                                         .append("fecharegistro", fecharegistro)
                                         .append("nombre", txtNombre.getText().toString())
                                         .append("apellidos", txtApellido.getText().toString())
-                                        .append("telefono", txtTelefono.getText().toString());
+                                        .append("telefono", txtTelefono.getText().toString())
+                                        .append("img", imagen);
 
                                 // Actualiza el documento en MongoDB
                                 mongoCollection.updateOne(filtro, actualizaciones).getAsync(resul -> {
@@ -222,14 +279,36 @@ public class UserActivity extends AppCompatActivity {
                         if (task.isSuccess()) {
                             MongoCursor<Document> results = task.get();
                             while (results.hasNext()) {
-                                Document recipes = results.next();
-                                name = recipes.getString("nombre");
-                                apellidos = recipes.getString("apellidos");
-                                email = recipes.getString("email");
-                                telefono = recipes.getString("telefono");
+                                Document users = results.next();
+                                name = users.getString("nombre");
+                                apellidos = users.getString("apellidos");
+                                email = users.getString("email");
+                                telefono = users.getString("telefono");
 
-                                password = recipes.getString("password");
-                                fecharegistro = recipes.getString("fecharegistro");
+                                password = users.getString("password");
+                                fecharegistro = users.getString("fecharegistro");
+
+                                // Obtener la imagen codificada en base64 desde el campo 'image'
+                                imagen = users.getString("img");
+
+                                // Decodificar la imagen de base64 a bytes
+                                if (imagen != null) {
+                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                                        imageBytes = Base64.getDecoder().decode(imagen);
+                                    }
+                                }
+
+                            // Convierte los bytes en un objeto Bitmap
+                            Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
+
+                                if (imagen != null){
+                                    imgProfile.setBackground(null);
+                                    // Cargar la imagen redondeada con Glide
+                                    Glide.with(UserActivity.this)
+                                            .load(bitmap)
+                                            .apply(RequestOptions.circleCropTransform())
+                                            .into(imgProfile);
+                                }
 
                                 txtNombreUsuario.setText(name + " " + apellidos);
 
@@ -247,5 +326,9 @@ public class UserActivity extends AppCompatActivity {
             }
         }
         });
+    }
+    public void onInsertImageClick(View view) {
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        imagePickerLauncher.launch(intent);
     }
 }

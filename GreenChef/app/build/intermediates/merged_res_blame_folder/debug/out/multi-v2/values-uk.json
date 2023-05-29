@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.greenchef.app-mergeDebugResources-33:/values-uk/values-uk.xml",
+            "outputFile": "com.example.greenchef.app-mergeDebugResources-34:/values-uk/values-uk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\begar\\.gradle\\caches\\transforms-3\\c0cb593394891c566070f365f2755aa1\\transformed\\places-3.1.0\\res\\values-uk\\values.xml",

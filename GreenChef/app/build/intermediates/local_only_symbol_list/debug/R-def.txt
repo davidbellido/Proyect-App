@@ -113,12 +113,15 @@ id imageUsuario
 id imageVerduras
 id imageView3
 id imgOut
+id imgPerfilHome
 id imgProducto
+id imgProfile
 id imgReceta
 id imgRecetas
 id imgRecipe
 id imgReloj
 id imgSupermarket
+id imgUltReceta
 id ivImagen
 id listProducts
 id llLoginPanel
@@ -127,6 +130,7 @@ id lvLista
 id lvProducts
 id lvProtein
 id lyImagen
+id lyImagenUltReceta
 id map
 id password
 id rlHeader
@@ -158,6 +162,7 @@ id txtNick
 id txtNombre
 id txtNombreProducto
 id txtNombreReceta
+id txtNombreUltReceta
 id txtNombreUsuario
 id txtNporciones
 id txtPerfil
@@ -171,6 +176,8 @@ id txtTelefono
 id txtTiempo
 id txtTiempoPreparacion
 id txtTiempoReal
+id txtTipoUltReceta
+id txtUltReceta
 id txtVerduras
 id view1
 layout activity_admin
