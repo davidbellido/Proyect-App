@@ -156,6 +156,10 @@
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-37:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\layout_activity_recipes.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-38:\\layout\\activity_recipes.xml"
+    },
+    {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\drawable_fondo.png.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-38:\\drawable\\fondo.png"
     },
@@ -212,12 +216,12 @@
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-38:\\drawable\\custom_editext_user.xml"
     },
     {
-        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\layout_activity_food.xml.flat",
-        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-38:\\layout\\activity_food.xml"
-    },
-    {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\layout-land_element_list_recipes.xml.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-38:\\layout-land\\element_list_recipes.xml"
+    },
+    {
+        "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\layout_activity_food.xml.flat",
+        "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-38:\\layout\\activity_food.xml"
     },
     {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\drawable-v24_productosvarios.png.flat",
@@ -288,12 +292,12 @@
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-main-38:\\drawable\\shadow_login.9.png"
     },
     {
-        "merged": "com.example.greenchef.app-merged_res-36:/layout_activity_options.xml.flat",
-        "source": "com.example.greenchef.app-main-38:/layout/activity_options.xml"
-    },
-    {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-debug-37:\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.greenchef.app-merged_res-36:/layout_item_column.xml.flat",
+        "source": "com.example.greenchef.app-main-38:/layout/item_column.xml"
     },
     {
         "merged": "C:\\Users\\begar\\.gradle\\daemon\\7.4\\com.example.greenchef.app-merged_res-36:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",

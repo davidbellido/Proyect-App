@@ -1,4 +1,4 @@
-package com.example.greenchef;
+package com.example.greenchef.recipes_activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,25 +8,17 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.greenchef.foodactivities.CerealActivity;
-import com.example.greenchef.foodactivities.DairyActivity;
-import com.example.greenchef.foodactivities.DessertsActivity;
-import com.example.greenchef.foodactivities.DriedFruitsActivity;
-import com.example.greenchef.foodactivities.FruitsActivity;
-import com.example.greenchef.foodactivities.GrainsActivity;
-import com.example.greenchef.foodactivities.LegumesActivity;
-import com.example.greenchef.foodactivities.ProteinActivity;
-import com.example.greenchef.foodactivities.VegetablesActivity;
-import com.example.greenchef.model.Recetas;
+import com.example.greenchef.MapsActivity;
+import com.example.greenchef.OptionsActivity;
+import com.example.greenchef.R;
+import com.example.greenchef.profile_activities.UserActivity;
 
 import org.bson.Document;
 
-import java.util.ArrayList;
 import java.util.Base64;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -45,8 +37,8 @@ public class FoodActivity extends AppCompatActivity {
     private ImageButton btnProtein, btnVegetables,btnCereal, btnFruits, btnGrains, btnDairy, btnDriedFruits, btnDesserts, btnLegumes;
     private ImageButton btnMap, btnHome, btnProfile;
     private ImageView imgRecipe;
-    private Bundle bundle;
-    private String nombreUsuario;
+    private Bundle bundle, bundleTipo;
+    private String nombreUsuario, tipo;
     private String AppId = "pruebaproyecto-urnlx";
     private MongoDatabase mongoDatabase;
     private MongoClient mongoClient;
@@ -83,6 +75,9 @@ public class FoodActivity extends AppCompatActivity {
         bundle = getIntent().getExtras();
         nombreUsuario = bundle.getString("nombreUsuario");
         bundle.putString("nombreUsuario", nombreUsuario);
+
+        bundleTipo = new Bundle();
+
 
         imgRecipe = this.findViewById(R.id.imgRecipe);
 
@@ -130,7 +125,12 @@ public class FoodActivity extends AppCompatActivity {
         btnProtein.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, ProteinActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Proteina";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -138,7 +138,12 @@ public class FoodActivity extends AppCompatActivity {
         btnVegetables.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, VegetablesActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Verduras";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -146,7 +151,12 @@ public class FoodActivity extends AppCompatActivity {
         btnCereal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, CerealActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Cereales";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -154,7 +164,12 @@ public class FoodActivity extends AppCompatActivity {
         btnFruits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, FruitsActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Frutas";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -162,7 +177,12 @@ public class FoodActivity extends AppCompatActivity {
         btnGrains.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, GrainsActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Granos";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -170,7 +190,12 @@ public class FoodActivity extends AppCompatActivity {
         btnDairy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, DairyActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Lacteos";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -178,7 +203,12 @@ public class FoodActivity extends AppCompatActivity {
         btnDriedFruits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, DriedFruitsActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Fsecos";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -186,7 +216,12 @@ public class FoodActivity extends AppCompatActivity {
         btnDesserts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, DessertsActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Postres";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });
@@ -194,7 +229,12 @@ public class FoodActivity extends AppCompatActivity {
         btnLegumes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(FoodActivity.this, LegumesActivity.class);
+                Intent i = new Intent(FoodActivity.this, RecipesActivity.class);
+
+                tipo = "Legumbres";
+                bundleTipo.putString("tipo", tipo);
+
+                i.putExtras(bundleTipo);
                 FoodActivity.this.startActivity(i);
             }
         });

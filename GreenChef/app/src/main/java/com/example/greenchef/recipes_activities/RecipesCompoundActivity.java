@@ -1,8 +1,7 @@
-package com.example.greenchef.foodactivities;
+package com.example.greenchef.recipes_activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.greenchef.R;
-import com.example.greenchef.model.Recetas;
 
 import java.util.ArrayList;
 

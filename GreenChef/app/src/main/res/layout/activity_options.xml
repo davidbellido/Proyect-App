@@ -223,7 +223,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="300px"
                     android:layout_marginTop="100px"
-                    android:background="@drawable/recetafondo"
                     android:scaleType="fitXY"/>
 
                 </LinearLayout>

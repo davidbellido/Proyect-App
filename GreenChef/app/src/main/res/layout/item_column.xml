@@ -19,8 +19,7 @@
             android:layout_height="300px"
             android:layout_marginTop="20px"
             android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:background="@drawable/pollo"/>
+            android:scaleType="centerCrop"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -31,10 +30,9 @@
                 android:id="@+id/txtNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pollo"
                 android:paddingTop="20px"
                 android:paddingLeft="50px"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textAlignment="center"/>
@@ -43,7 +41,6 @@
                 android:id="@+id/txtPrecio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11€"
                 android:paddingLeft="50px"
                 android:paddingBottom="10px"
                 android:textColor="@color/white"

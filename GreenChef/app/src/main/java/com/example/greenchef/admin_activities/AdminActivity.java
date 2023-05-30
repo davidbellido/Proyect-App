@@ -1,13 +1,16 @@
-package com.example.greenchef;
+package com.example.greenchef.admin_activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.example.greenchef.login_register_activities.MainActivity;
+import com.example.greenchef.MapsActivity;
+import com.example.greenchef.R;
 
 public class AdminActivity extends AppCompatActivity {
     private ImageButton btnlogOut;

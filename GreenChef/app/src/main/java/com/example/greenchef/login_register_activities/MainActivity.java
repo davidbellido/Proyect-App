@@ -1,11 +1,9 @@
-package com.example.greenchef;
+package com.example.greenchef.login_register_activities;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +12,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+import com.example.greenchef.OptionsActivity;
+import com.example.greenchef.R;
+import com.example.greenchef.admin_activities.AdminActivity;
 
 import org.bson.Document;
 
@@ -98,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                         if (result1.isSuccess()) {
                             Document usuario = result1.get();
                             if (usuario != null) {
-                                Intent i = new Intent(MainActivity.this,OptionsActivity.class);
+                                Intent i = new Intent(MainActivity.this, OptionsActivity.class);
                                 i.putExtras(bundle);
                                 MainActivity.this.startActivity(i);
                             } else {
@@ -145,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         if (result1.isSuccess()) {
                             Document usuario = result1.get();
                             if (usuario != null) {
-                                Intent i = new Intent(MainActivity.this,AdminActivity.class);
+                                Intent i = new Intent(MainActivity.this, AdminActivity.class);
                                 i.putExtras(bundle);
                                 MainActivity.this.startActivity(i);
                             } else {
@@ -182,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
         return new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this,RegisterActivity.class);
+                Intent i = new Intent(MainActivity.this, RegisterActivity.class);
                 MainActivity.this.startActivity(i);
             }
         };

@@ -1,7 +1,6 @@
-package com.example.greenchef.foodactivities;
+package com.example.greenchef.recipes_activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,7 +18,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.example.greenchef.ListProductActivity;
 import com.example.greenchef.R;
 import com.example.greenchef.model.Recetas;
 
@@ -40,30 +38,34 @@ import io.realm.mongodb.mongo.MongoCollection;
 import io.realm.mongodb.mongo.MongoDatabase;
 import io.realm.mongodb.mongo.iterable.MongoCursor;
 
-public class ProteinActivity extends AppCompatActivity {
+public class RecipesActivity extends AppCompatActivity {
     private String AppId = "pruebaproyecto-urnlx";
     private MongoDatabase mongoDatabase;
     private MongoClient mongoClient;
     private List<Recetas> listaRecetas = new ArrayList<>();
     private ArrayAdapter<Recetas> adaptador;
     int id_producto;
-    private Bundle bundle;
+    private Bundle bundle, bundleTipo;
+    private String tipo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_protein);
+        setContentView(R.layout.activity_recipes);
 
         try {
             this.getSupportActionBar().hide();
         } catch (Exception e) {
         }
 
+        bundleTipo = getIntent().getExtras();
+        tipo = bundleTipo.getString("tipo");
+
             ListView listView = findViewById(R.id.lvProtein);
             obtenerListaRecetas(new RecetasCallback() {
                 @Override
                 public void onRecetasObtenidos(List<Recetas> listaRecetas) {
-                    adaptador = new ArrayAdapter<Recetas>(ProteinActivity.this, R.layout.element_list_recipes, listaRecetas) {
+                    adaptador = new ArrayAdapter<Recetas>(RecipesActivity.this, R.layout.element_list_recipes, listaRecetas) {
                         @Override
                         public View getView(int position, View convertView, ViewGroup parent) {
                             if (convertView == null) {
@@ -101,7 +103,7 @@ public class ProteinActivity extends AppCompatActivity {
                     Recetas recetaSeleccionada = listaRecetas.get(position);
 
                     // Crear el Intent
-                    Intent intent = new Intent(ProteinActivity.this, RecipesCompoundActivity.class);
+                    Intent intent = new Intent(RecipesActivity.this, RecipesCompoundActivity.class);
                     bundle = new Bundle();
 
                     // Pasar los datos de la receta seleccionada como extras del Intent
@@ -136,7 +138,7 @@ public class ProteinActivity extends AppCompatActivity {
                         mongoDatabase = mongoClient.getDatabase("GreenChef");
                         MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Recipes");
 
-                        Document queryFilter = new Document().append("tipo", "Proteina");
+                        Document queryFilter = new Document().append("tipo", tipo);
                         RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find(queryFilter).iterator();
 
                         queryTask.getAsync(task -> {
@@ -161,7 +163,7 @@ public class ProteinActivity extends AppCompatActivity {
                                             imageBytes = Base64.getDecoder().decode(encodedImage);
                                         }
                                     }else
-                                        Toast.makeText(ProteinActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RecipesActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
 
                                     // Crea una instancia de Producto con los datos obtenidos y añádelo a la lista
                                     Recetas recetas = new Recetas(name, descripcion, ingredientes, procedimiento, tiempo, porciones);
@@ -172,11 +174,11 @@ public class ProteinActivity extends AppCompatActivity {
                                 // Asegúrate de llamar a la devolución de llamada con la lista de productos
                                 callback.onRecetasObtenidos(listaRecetas);
                             } else {
-                                Toast.makeText(ProteinActivity.this, "Error al buscar recetas", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RecipesActivity.this, "Error al buscar recetas", Toast.LENGTH_SHORT).show();
                             }
                         });
                     } else {
-                        Toast.makeText(ProteinActivity.this, "Error al conectar con la base de datos", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RecipesActivity.this, "Error al conectar con la base de datos", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

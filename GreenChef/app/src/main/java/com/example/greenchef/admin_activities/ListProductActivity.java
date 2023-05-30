@@ -1,9 +1,7 @@
-package com.example.greenchef;
+package com.example.greenchef.admin_activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
@@ -20,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.greenchef.R;
 import com.example.greenchef.model.Producto;
 
 import org.bson.Document;
@@ -202,6 +201,65 @@ public class ListProductActivity extends AppCompatActivity {
                 }.start();
             }
         });
+        builder.setCancelText("Borrar");
+        builder.setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog sweetAlertDialog) {
+                // Eliminar el producto de MongoDB
+                eliminarProducto(producto.getId());
+
+                // Eliminar el producto de la lista
+                listaProductos.remove(producto);
+
+                // Notificar al adaptador que los datos han cambiado
+                adaptador.notifyDataSetChanged();
+
+                // Mostrar un mensaje de éxito
+                final SweetAlertDialog dialogo = new SweetAlertDialog(ListProductActivity.this, SweetAlertDialog.PROGRESS_TYPE)
+                        .setTitleText("Borrando")
+                        .setContentText("Espere por favor...");
+                dialogo.show();
+                dialogo.setCancelable(false);
+                new CountDownTimer(800 * 7, 800) {
+                    public void onTick(long millisUntilFinished) {
+                        i++;
+                        switch (i) {
+                            case 0:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.blue_btn_bg_color));
+                                break;
+                            case 1:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_50));
+                                break;
+                            case 2:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                                break;
+                            case 3:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_20));
+                                break;
+                            case 4:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_blue_grey_80));
+                                break;
+                            case 5:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.warning_stroke_color));
+                                break;
+                            case 6:
+                                dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                                break;
+                        }
+                    }
+
+                    public void onFinish() {
+                        i = -1;
+                        dialogo.setTitleText("¡Borrado!")
+                                .setContentText("El producto se ha borrado correctamente")
+                                .setConfirmText("OK")
+                                .setConfirmClickListener(null)
+                                .changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
+                    }
+                }.start();
+                builder.dismiss();
+            }
+        });
 
         // Mostrar el diálogo
         builder.create();
@@ -312,5 +370,35 @@ public class ListProductActivity extends AppCompatActivity {
     // Interfaz de devolución de llamada para obtener la lista de productos
     interface ProductosCallback {
         void onProductosObtenidos(List<Producto> listaProductos);
+    }
+
+    //Metodo para eliminar un producto de la colleccion SupermarketProducts
+    private void eliminarProducto(int productId) {
+        // Obtén la referencia a la colección "SupermarketProducts" en MongoDB
+        MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SupermarketProducts");
+
+        // Crea el filtro para buscar el producto por su ID
+        Document filtro = new Document().append("id", productId);
+        RealmResultTask<MongoCursor<Document>> findTask = mongoCollection.find(filtro).iterator();
+
+        findTask.getAsync(task -> {
+            if (task.isSuccess()) {
+                MongoCursor<Document> results = task.get();
+                if (results.hasNext()) {
+                    // Elimina el documento de MongoDB
+                    mongoCollection.deleteOne(filtro).getAsync( result -> {
+                        if (result.isSuccess()) {
+                            Log.d("ListProductActivity", "Producto eliminado de MongoDB");
+                        } else {
+                            Log.d("ListProductActivity", "Producto no eliminado de MongoDB");
+                        }
+                    });
+                } else {
+                    Toast.makeText(ListProductActivity.this, "No se ha encontrado el producto", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(ListProductActivity.this, "Error al buscar el producto", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

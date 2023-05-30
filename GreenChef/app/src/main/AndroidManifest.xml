@@ -20,7 +20,7 @@
         android:theme="@style/Theme.GreenChef"
         tools:targetApi="31">
         <activity
-            android:name=".InsertUserProductActivity"
+            android:name=".supermarket_activities.InsertUserProductActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -28,7 +28,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SupermarketProductsActivity"
+            android:name=".supermarket_activities.SupermarketProductsActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -36,7 +36,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".UserActivity"
+            android:name=".profile_activities.UserActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -44,84 +44,28 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".foodactivities.RecipesCompoundActivity"
+            android:name=".recipes_activities.RecipesCompoundActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".foodactivities.LegumesActivity"
+            android:name=".recipes_activities.RecipesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".foodactivities.DessertsActivity"
+            android:name=".admin_activities.ListProductActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".foodactivities.DriedFruitsActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".foodactivities.DairyActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".foodactivities.GrainsActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".foodactivities.FruitsActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".foodactivities.CerealActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".foodactivities.VegetablesActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".foodactivities.ProteinActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ListProductActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".AdminActivity"
+            android:name=".admin_activities.AdminActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -148,7 +92,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".FoodActivity"
+            android:name=".recipes_activities.FoodActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -163,7 +107,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".login_register_activities.RegisterActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -171,7 +115,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".login_register_activities.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

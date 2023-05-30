@@ -4,20 +4,18 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.greenchef.supermarket_activities.InsertUserProductActivity;
+import com.example.greenchef.supermarket_activities.SupermarketProductsActivity;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,28 +23,15 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.greenchef.databinding.ActivityMapsBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.android.libraries.places.api.Places;
-import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.api.model.PlaceLikelihood;
-import com.google.android.libraries.places.api.model.RectangularBounds;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceRequest;
-import com.google.android.libraries.places.api.net.FindCurrentPlaceResponse;
-import com.google.android.libraries.places.api.net.PlacesClient;
 
 import org.bson.Document;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.DecimalFormat;
-import java.util.Arrays;
 import java.util.List;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -73,6 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private MongoDatabase mongoDatabase;
     private MongoClient mongoClient;
     private FusedLocationProviderClient fusedLocationProviderClient;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,6 +139,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             public void onResult(App.Result<User> result) {
                 if (result.isSuccess()) {
 
+                    recuperarUltimoId();
+
                     User user = app.currentUser();
                     mongoClient = user.getMongoClient("mongodb-atlas");
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
@@ -219,7 +207,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                             MongoCollection<Document> mongoCollection2 = mongoDatabase.getCollection("SuperMarket");
 
                                             Document supermarket = new Document();
-                                            supermarket.append("id", 8)
+                                            supermarket.append("id_supermarket", id+1)
                                                     .append("nombre", nombre)
                                                     .append("direccion", via)
                                                     .append("latitud", latitud)
@@ -323,7 +311,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                     mongoCollection.findOne(query).getAsync(result1 -> {
 
                                                         Document supermercado = result1.get();
-                                                        int id = supermercado.getInteger("id");
+                                                        int id = supermercado.getInteger("id_supermarket");
                                                         String nombre = supermercado.getString("nombre");
                                                         String direccion = supermercado.getString("direccion");
                                                         int telefono = supermercado.getInteger("telefono");
@@ -344,7 +332,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                             builder.setNeutralButton("Productos", new SweetAlertDialog.OnSweetClickListener() {
                                                                         @Override
                                                                         public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                            Intent i = new Intent(MapsActivity.this,SupermarketProductsActivity.class);
+                                                                            Intent i = new Intent(MapsActivity.this, SupermarketProductsActivity.class);
                                                                             i.putExtras(bundleProducto);
                                                                             MapsActivity.this.startActivity(i);
                                                                         }
@@ -354,7 +342,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                                                         @Override
                                                                         public void onClick(SweetAlertDialog sweetAlertDialog) {
-                                                                            Intent i = new Intent(MapsActivity.this,InsertUserProductActivity.class);
+                                                                            Intent i = new Intent(MapsActivity.this, InsertUserProductActivity.class);
                                                                             i.putExtras(bundleProducto);
                                                                             i.putExtras(bundle);
                                                                             MapsActivity.this.startActivity(i);
@@ -379,6 +367,42 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     });
                 } else {
                     Toast.makeText(MapsActivity.this, "Error al conectar con la base de datos", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    public void recuperarUltimoId(){
+        Realm.init(this);
+        App app = new App(new AppConfiguration.Builder(AppId).build());
+
+        Credentials credentials = Credentials.anonymous();
+        app.loginAsync(credentials, new App.Callback<User>() {
+            @Override
+            public void onResult(App.Result<User> result) {
+                if (result.isSuccess()) {
+
+                    User user = app.currentUser();
+                    mongoClient = user.getMongoClient("mongodb-atlas");
+                    mongoDatabase = mongoClient.getDatabase("GreenChef");
+                    MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SuperMarket");
+
+                    // Consulta el ultimo producto por orden natural (último documento insertado)
+                    RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find().sort(new Document("$natural", -1)).limit(1).iterator();
+
+                    queryTask.getAsync(task -> {
+                        if (task.isSuccess()) {
+                            MongoCursor<Document> results = task.get();
+                            while (results.hasNext()) {
+                                Document products = results.next();
+
+                                id = products.getInteger("id_supermarket");
+
+                            }
+                        } else {
+                            Toast.makeText(MapsActivity.this, "Error al buscar usuario", Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
             }
         });

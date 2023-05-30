@@ -1,4 +1,4 @@
-package com.example.greenchef;
+package com.example.greenchef.adapter;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.greenchef.R;
 import com.example.greenchef.model.Producto;
 
 import java.util.List;

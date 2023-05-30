@@ -16,19 +16,15 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.greenchef.foodactivities.ProteinActivity;
+import com.example.greenchef.profile_activities.UserActivity;
+import com.example.greenchef.recipes_activities.FoodActivity;
 
 import org.bson.Document;
-import org.bson.types.ObjectId;
 
 import java.util.Base64;
 import java.util.Calendar;
 
 import io.realm.Realm;
-import io.realm.RealmObject;
-import io.realm.RealmQuery;
-import io.realm.RealmResults;
-import io.realm.Sort;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
 import io.realm.mongodb.Credentials;

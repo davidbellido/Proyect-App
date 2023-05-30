@@ -1,21 +1,20 @@
-package com.example.greenchef;
+package com.example.greenchef.supermarket_activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import com.example.greenchef.foodactivities.ProteinActivity;
+import com.example.greenchef.CustomDividerItemDecoration;
+import com.example.greenchef.R;
+import com.example.greenchef.adapter.ColumnAdapter;
 import com.example.greenchef.model.Producto;
 
 

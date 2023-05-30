@@ -1,4 +1,4 @@
-package com.example.greenchef;
+package com.example.greenchef.profile_activities;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -17,21 +17,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.greenchef.foodactivities.ProteinActivity;
-import com.example.greenchef.model.Recetas;
+import com.example.greenchef.MapsActivity;
+import com.example.greenchef.OptionsActivity;
+import com.example.greenchef.R;
+import com.example.greenchef.recipes_activities.FoodActivity;
 
 import org.bson.Document;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Base64;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
@@ -61,6 +61,7 @@ public class UserActivity extends AppCompatActivity {
     private ImageButton btnMap, btnHome, btnRecetas, imgProfile;
     private ActivityResultLauncher<Intent> imagePickerLauncher;
     private  byte[] imageBytes = new byte[0];
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,10 +183,11 @@ public class UserActivity extends AppCompatActivity {
                     findTask.getAsync(task -> {
                         if (task.isSuccess()) {
                             MongoCursor<Document> results = task.get();
+
                             if (results.hasNext()) {
                                 // Crea el objeto con los campos que se van a actualizar
                                 Document actualizaciones = new Document()
-                                        .append("id_usuario", 4)
+                                        .append("id_usuario", id)
                                         .append("nick", txtNick.getText().toString())
                                         .append("email", txtEmail.getText().toString())
                                         .append("password", password)
@@ -280,6 +282,7 @@ public class UserActivity extends AppCompatActivity {
                             MongoCursor<Document> results = task.get();
                             while (results.hasNext()) {
                                 Document users = results.next();
+                                id = users.getInteger("id_usuario");
                                 name = users.getString("nombre");
                                 apellidos = users.getString("apellidos");
                                 email = users.getString("email");

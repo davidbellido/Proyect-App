@@ -1,4 +1,4 @@
-package com.example.greenchef;
+package com.example.greenchef.supermarket_activities;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -6,11 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -20,13 +16,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.greenchef.R;
+
 import org.bson.Document;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Base64;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.Realm;
@@ -52,6 +48,7 @@ public class InsertUserProductActivity extends AppCompatActivity {
     private ImageButton btnImgProducto;
     private Button btnInsertarProducto;
     private ActivityResultLauncher<Intent> imagePickerLauncher;
+    private int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +69,8 @@ public class InsertUserProductActivity extends AppCompatActivity {
         nombreUsuario = bundleUsuario.getString("nombreUsuario");
 
         buscarIdUsuario(nombreUsuario);
+        //Llamada al metodo para recuperar el ultimo id de la coleccion de SupermarketProducts
+        recuperarUltimoId();
 
         imgSupermarket = this.findViewById(R.id.imgSupermarket);
 
@@ -156,7 +155,7 @@ public class InsertUserProductActivity extends AppCompatActivity {
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SupermarketProducts");
 
                     Document product = new Document();
-                    product.append("id", 32)
+                    product.append("id", id+1)
                             .append("nombre", nombreProducto)
                             .append("id_user", idUsuario)
                             .append("id_supermarket", idSupermercado)
@@ -231,5 +230,41 @@ public class InsertUserProductActivity extends AppCompatActivity {
     public void onInsertImageClick(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         imagePickerLauncher.launch(intent);
+    }
+
+    public void recuperarUltimoId(){
+        Realm.init(this);
+        App app = new App(new AppConfiguration.Builder(AppId).build());
+
+        Credentials credentials = Credentials.anonymous();
+        app.loginAsync(credentials, new App.Callback<User>() {
+            @Override
+            public void onResult(App.Result<User> result) {
+                if (result.isSuccess()) {
+
+                    User user = app.currentUser();
+                    mongoClient = user.getMongoClient("mongodb-atlas");
+                    mongoDatabase = mongoClient.getDatabase("GreenChef");
+                    MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SupermarketProducts");
+
+                    // Consulta el ultimo producto por orden natural (último documento insertado)
+                    RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find().sort(new Document("$natural", -1)).limit(1).iterator();
+
+                    queryTask.getAsync(task -> {
+                        if (task.isSuccess()) {
+                            MongoCursor<Document> results = task.get();
+                            while (results.hasNext()) {
+                                Document products = results.next();
+
+                                id = products.getInteger("id");
+
+                            }
+                        } else {
+                            Toast.makeText(InsertUserProductActivity.this, "Error al buscar usuario", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+        });
     }
 }

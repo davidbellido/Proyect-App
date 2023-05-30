@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/verde03"
     android:layout_height="match_parent"
-    tools:context=".ListProductActivity">
+    tools:context=".admin_activities.ListProductActivity">
 
     <ListView
         android:id="@+id/lvLista"

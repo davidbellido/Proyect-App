@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
 MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\c0d41d5ab14b9a6975f66088e6bf6004\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:2:1-12:12
 MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\begar\.gradle\caches\transforms-3\ab7e054ae68c1094533b97fee23d9354\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:viewbinding:7.3.1] C:\Users\begar\.gradle\caches\transforms-3\34dde6a0dbbc41d39bb1e174034e0abd\transformed\viewbinding-7.3.1\AndroidManifest.xml:2:1-9:12
@@ -65,22 +65,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\begar\.
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\begar\.gradle\caches\transforms-3\f89a08e10c3fbb3d4610b3d6d0ad8b31\transformed\volley-1.2.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\begar\.gradle\caches\transforms-3\67ce4e2c0407dd8afc0d54fcf4f0803f\transformed\transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
 MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\begar\.gradle\caches\transforms-3\1dbae57131fe252916173ea7a169fae3\transformed\materialish-progress-1.7\AndroidManifest.xml:2:1-13:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
-INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
+INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
 	package
 		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
 		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
 		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-189:12
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:1-133:12
 		INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:2:11-69
@@ -129,7 +129,7 @@ MERGED from [com.google.android.datatransport:transport-runtime:2.2.3] C:\Users\
 	android:name
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:12:5-187:19
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:12:5-131:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\begar\.gradle\caches\transforms-3\9e20cf129e1140a29a897a65f2741a60\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\begar\.gradle\caches\transforms-3\9e20cf129e1140a29a897a65f2741a60\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\begar\.gradle\caches\transforms-3\8b8615764cb0ceddd69d49d201c7b2f9\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -188,164 +188,116 @@ MERGED from [com.pnikosis:materialish-progress:1.7] C:\Users\begar\.gradle\cache
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:20:9-47
 	android:dataExtractionRules
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:14:9-65
-activity#com.example.greenchef.InsertUserProductActivity
+activity#com.example.greenchef.supermarket_activities.InsertUserProductActivity
 ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:22:9-29:20
 	android:screenOrientation
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:25:13-49
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:23:13-54
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:23:13-77
 meta-data#android.app.lib_name
 ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:26:13-28:36
 	android:value
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:28:17-33
 	android:name
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:27:17-52
-activity#com.example.greenchef.SupermarketProductsActivity
+activity#com.example.greenchef.supermarket_activities.SupermarketProductsActivity
 ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:30:9-37:20
 	android:screenOrientation
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:33:13-49
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:31:13-56
-activity#com.example.greenchef.UserActivity
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:31:13-79
+activity#com.example.greenchef.profile_activities.UserActivity
 ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:38:9-45:20
 	android:screenOrientation
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:41:13-49
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:40:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:39:13-41
-activity#com.example.greenchef.foodactivities.RecipesCompoundActivity
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:39:13-60
+activity#com.example.greenchef.recipes_activities.RecipesCompoundActivity
 ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:46:9-52:20
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:47:13-67
-activity#com.example.greenchef.foodactivities.LegumesActivity
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:47:13-71
+activity#com.example.greenchef.recipes_activities.RecipesActivity
 ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:53:9-59:20
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:54:13-59
-activity#com.example.greenchef.foodactivities.DessertsActivity
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:54:13-63
+activity#com.example.greenchef.admin_activities.ListProductActivity
 ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:60:9-66:20
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:62:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:61:13-60
-activity#com.example.greenchef.foodactivities.DriedFruitsActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:67:9-73:20
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:61:13-65
+activity#com.example.greenchef.admin_activities.AdminActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:67:9-74:20
+	android:screenOrientation
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:70:13-49
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:68:13-63
-activity#com.example.greenchef.foodactivities.DairyActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:74:9-80:20
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:76:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:68:13-59
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:86:9-88:71
+	android:value
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:88:13-68
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:75:13-57
-activity#com.example.greenchef.foodactivities.GrainsActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:81:9-87:20
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:87:13-58
+activity#com.example.greenchef.MapsActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:90:9-93:59
+	android:label
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:93:13-56
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:83:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:92:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:82:13-58
-activity#com.example.greenchef.foodactivities.FruitsActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:88:9-94:20
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:91:13-41
+activity#com.example.greenchef.recipes_activities.FoodActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:94:9-100:20
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:90:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:96:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:89:13-58
-activity#com.example.greenchef.foodactivities.CerealActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:95:9-101:20
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:95:13-60
+activity#com.example.greenchef.OptionsActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:101:9-108:20
+	android:screenOrientation
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:104:13-49
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:97:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:103:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:96:13-58
-activity#com.example.greenchef.foodactivities.VegetablesActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:102:9-108:20
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:104:13-37
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:103:13-62
-activity#com.example.greenchef.foodactivities.ProteinActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:109:9-115:20
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:102:13-44
+activity#com.example.greenchef.login_register_activities.RegisterActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:109:9-116:20
+	android:screenOrientation
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:112:13-49
 	android:exported
 		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:111:13-37
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:110:13-59
-activity#com.example.greenchef.ListProductActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:116:9-122:20
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:118:13-37
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:117:13-48
-activity#com.example.greenchef.AdminActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:123:9-130:20
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:110:13-71
+activity#com.example.greenchef.login_register_activities.MainActivity
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:117:9-130:20
 	android:screenOrientation
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:126:13-49
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:120:13-49
 	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:125:13-37
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:119:13-36
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:124:13-42
-meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:142:9-144:71
-	android:value
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:144:13-68
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:143:13-58
-activity#com.example.greenchef.MapsActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:146:9-149:59
-	android:label
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:149:13-56
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:148:13-37
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:147:13-41
-activity#com.example.greenchef.FoodActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:150:9-156:20
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:152:13-37
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:151:13-41
-activity#com.example.greenchef.OptionsActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:157:9-164:20
-	android:screenOrientation
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:160:13-49
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:159:13-37
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:158:13-44
-activity#com.example.greenchef.RegisterActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:165:9-172:20
-	android:screenOrientation
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:168:13-49
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:167:13-37
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:166:13-45
-activity#com.example.greenchef.MainActivity
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:173:9-186:20
-	android:screenOrientation
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:176:13-49
-	android:exported
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:175:13-36
-	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:174:13-41
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:118:13-67
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:177:13-181:29
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:121:13-125:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:178:17-69
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:122:17-69
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:178:25-66
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:122:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:180:17-77
+ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:124:17-77
 	android:name
-		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:180:27-74
+		ADDED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml:124:27-74
 uses-sdk
 INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\begar\OneDrive\Escritorio\SDK_ANDROID\GreenChefPrueba\GreenChef\app\src\main\AndroidManifest.xml

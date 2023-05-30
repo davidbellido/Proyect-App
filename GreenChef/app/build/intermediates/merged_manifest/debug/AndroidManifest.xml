@@ -45,7 +45,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.GreenChef" >
         <activity
-            android:name="com.example.greenchef.InsertUserProductActivity"
+            android:name="com.example.greenchef.supermarket_activities.InsertUserProductActivity"
             android:exported="false"
             android:screenOrientation="portrait" >
             <meta-data
@@ -53,7 +53,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.SupermarketProductsActivity"
+            android:name="com.example.greenchef.supermarket_activities.SupermarketProductsActivity"
             android:exported="false"
             android:screenOrientation="portrait" >
             <meta-data
@@ -61,7 +61,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.UserActivity"
+            android:name="com.example.greenchef.profile_activities.UserActivity"
             android:exported="false"
             android:screenOrientation="portrait" >
             <meta-data
@@ -69,84 +69,28 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.foodactivities.RecipesCompoundActivity"
+            android:name="com.example.greenchef.recipes_activities.RecipesCompoundActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.foodactivities.LegumesActivity"
+            android:name="com.example.greenchef.recipes_activities.RecipesActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.foodactivities.DessertsActivity"
+            android:name="com.example.greenchef.admin_activities.ListProductActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.foodactivities.DriedFruitsActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.foodactivities.DairyActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.foodactivities.GrainsActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.foodactivities.FruitsActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.foodactivities.CerealActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.foodactivities.VegetablesActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.foodactivities.ProteinActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.ListProductActivity"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="com.example.greenchef.AdminActivity"
+            android:name="com.example.greenchef.admin_activities.AdminActivity"
             android:exported="false"
             android:screenOrientation="portrait" >
             <meta-data
@@ -173,7 +117,7 @@
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name="com.example.greenchef.FoodActivity"
+            android:name="com.example.greenchef.recipes_activities.FoodActivity"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -188,7 +132,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.RegisterActivity"
+            android:name="com.example.greenchef.login_register_activities.RegisterActivity"
             android:exported="false"
             android:screenOrientation="portrait" >
             <meta-data
@@ -196,7 +140,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.example.greenchef.MainActivity"
+            android:name="com.example.greenchef.login_register_activities.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait" >
             <intent-filter>
