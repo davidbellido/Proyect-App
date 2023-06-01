@@ -58,7 +58,7 @@ public class AdminActivity extends AppCompatActivity {
         btnlogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Aquí es donde se debe realizar la lógica de cierre de sesión y redirección
+                // Se realiza la lógica de cierre de sesión y redirección
                 logoutAdmin();
             }
         });

@@ -73,7 +73,6 @@ public class UserActivity extends AppCompatActivity {
         }catch (Exception e){
         }
 
-        // Dentro de tu clase
         imgProfile = this.findViewById(R.id.imgProfile);
 
         imagePickerLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -176,7 +175,7 @@ public class UserActivity extends AppCompatActivity {
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Users");
 
-                    // Crea el filtro para buscar el producto por su ID
+                    // Crear el filtro para buscar el producto por su ID
                     Document filtro = new Document().append("nick", nick);
                     RealmResultTask<MongoCursor<Document>> findTask = mongoCollection.find(filtro).iterator();
 
@@ -185,7 +184,7 @@ public class UserActivity extends AppCompatActivity {
                             MongoCursor<Document> results = task.get();
 
                             if (results.hasNext()) {
-                                // Crea el objeto con los campos que se van a actualizar
+                                // Crear el objeto con los campos que se van a actualizar
                                 Document actualizaciones = new Document()
                                         .append("id_usuario", id)
                                         .append("nick", txtNick.getText().toString())
@@ -197,7 +196,7 @@ public class UserActivity extends AppCompatActivity {
                                         .append("telefono", txtTelefono.getText().toString())
                                         .append("img", imagen);
 
-                                // Actualiza el documento en MongoDB
+                                // Actualizar el documento en MongoDB
                                 mongoCollection.updateOne(filtro, actualizaciones).getAsync(resul -> {
                                     if (resul.isSuccess()) {
                                         // Mostrar un mensaje de éxito

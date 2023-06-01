@@ -73,11 +73,11 @@ public class RecipesCompoundActivity extends AppCompatActivity {
         txtTiempo.setText(tiempo);
         txtPorciones.setText(String.valueOf(porciones));
 
-        // Convierte los bytes en un objeto Bitmap
+        // Convertir los bytes en un objeto Bitmap
         Bitmap bitmap = BitmapFactory.decodeByteArray(imagen, 0, imagen.length);
         imgReceta.setImageBitmap(bitmap);
 
-        // Aplica el ajuste de escala al ImageView
+        // Aplicar el ajuste de escala al ImageView
         imgReceta.setScaleType(ImageView.ScaleType.FIT_XY);
     }
 }

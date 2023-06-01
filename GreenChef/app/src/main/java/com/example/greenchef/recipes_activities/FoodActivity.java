@@ -282,13 +282,13 @@ public class FoodActivity extends AppCompatActivity {
                                         imageBytes = Base64.getDecoder().decode(encodedImage);
                                     }
 
-                                    // Convierte los bytes en un objeto Bitmap
+                                    // Convertir los bytes en un objeto Bitmap
                                     Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
 
-                                    // Establece los valores de los elementos de la vista
+                                    // Establecer los valores de los elementos de la vista
                                     imgRecipe.setImageBitmap(bitmap);
 
-                                    // Aplica el ajuste de escala al ImageView
+                                    // Aplicar el ajuste de escala al ImageView
                                     imgRecipe.setScaleType(ImageView.ScaleType.FIT_XY);
                                 }else
                                     Toast.makeText(FoodActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();

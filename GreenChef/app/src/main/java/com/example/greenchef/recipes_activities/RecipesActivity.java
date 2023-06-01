@@ -44,7 +44,6 @@ public class RecipesActivity extends AppCompatActivity {
     private MongoClient mongoClient;
     private List<Recetas> listaRecetas = new ArrayList<>();
     private ArrayAdapter<Recetas> adaptador;
-    int id_producto;
     private Bundle bundle, bundleTipo;
     private String tipo;
 
@@ -75,13 +74,13 @@ public class RecipesActivity extends AppCompatActivity {
                             TextView nombreTextView = convertView.findViewById(R.id.txtNombre);
                             TextView tiempoTextView = convertView.findViewById(R.id.txtTiempo);
 
-                            // Obtén el objeto Producto correspondiente a la posición en la lista
+                            // Obtener el objeto Producto correspondiente a la posición en la lista
                             Recetas receta = getItem(position);
 
-                            // Convierte los bytes en un objeto Bitmap
+                            // Convertir los bytes en un objeto Bitmap
                             Bitmap bitmap = BitmapFactory.decodeByteArray(receta.getImagen(), 0, receta.getImagen().length);
 
-                            // Establece los valores de los elementos de la vista
+                            // Establecer los valores de los elementos de la vista
                             imageView.setImageBitmap(bitmap);
                             nombreTextView.setText(receta.getNombre());
                             tiempoTextView.setText(receta.getTiempo());
@@ -165,13 +164,12 @@ public class RecipesActivity extends AppCompatActivity {
                                     }else
                                         Toast.makeText(RecipesActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
 
-                                    // Crea una instancia de Producto con los datos obtenidos y añádelo a la lista
+                                    // Crear una instancia de Receta con los datos obtenidos y añadirlo a la lista
                                     Recetas recetas = new Recetas(name, descripcion, ingredientes, procedimiento, tiempo, porciones);
                                     recetas.setImagen(imageBytes);
                                     listaRecetas.add(recetas);
                                 }
 
-                                // Asegúrate de llamar a la devolución de llamada con la lista de productos
                                 callback.onRecetasObtenidos(listaRecetas);
                             } else {
                                 Toast.makeText(RecipesActivity.this, "Error al buscar recetas", Toast.LENGTH_SHORT).show();

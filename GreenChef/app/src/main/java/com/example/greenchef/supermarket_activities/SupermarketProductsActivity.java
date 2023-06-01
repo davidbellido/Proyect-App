@@ -141,13 +141,12 @@ public class SupermarketProductsActivity extends AppCompatActivity {
                                 }else
                                     Toast.makeText(SupermarketProductsActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
 
-                                // Crea una instancia de Producto con los datos obtenidos y añádelo a la lista
+                                // Crear una instancia de Producto con los datos obtenidos y añadirlo a la lista
                                 Producto producto = new Producto(id,name, id_user, id_supermarket, price);
                                 producto.setImagen(imageBytes);
                                 listaProductos.add(producto);
                             }
 
-                            // Asegúrate de llamar a la devolución de llamada con la lista de productos
                             callback.onProductosObtenidos(listaProductos);
                         }else {
                             Toast.makeText(SupermarketProductsActivity.this, "Error al buscar productos", Toast.LENGTH_SHORT).show();

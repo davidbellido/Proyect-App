@@ -70,10 +70,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         bundle = getIntent().getExtras();
         nombreUsuario = bundle.getString("nombreUsuario");
 
-        // Solicita los permisos necesarios
+        // Solicitar los permisos necesarios
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
-        // Inicializa el mapa
+        // Inicializar el mapa
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
@@ -94,17 +94,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
-        // Verifica si se otorgó el permiso de ubicación
+        // Verificar si se otorgó el permiso de ubicación
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            // Obtiene la ubicación actual del usuario
+            // Obtener la ubicación actual del usuario
             fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
             fusedLocationProviderClient.getLastLocation()
                     .addOnSuccessListener(this, new OnSuccessListener<Location>() {
                         @Override
                         public void onSuccess(Location location) {
-                            // Verifica si la ubicación es válida
+                            // Verificar si la ubicación es válida
                             if (location != null) {
-                                // Muestra la ubicación en el mapa
+                                // Mostrar la ubicación en el mapa
                                 latLng = new LatLng(location.getLatitude(), location.getLongitude());
                                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16));
                                 // Habilitar la capa de ubicación
@@ -113,7 +113,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     mMap.setMyLocationEnabled(true);
                                 }
 
-// Personalizar el estilo del punto de ubicación
+                                // Personalizar el estilo del punto de ubicación
                                 UiSettings uiSettings = mMap.getUiSettings();
                                 uiSettings.setMyLocationButtonEnabled(true);
                                 markSupermarket();
@@ -150,11 +150,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mongoCollection.findOne(query).getAsync(result1 -> {
                         if (result1.isSuccess()) {
 
-                            // SweetAlertDialog donde puedes introducir nombre, dirección, teléfono y horario
                             SweetAlertDialog alert = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE)
                                     .setTitleText("Introducir Supermercado");
 
-// Crear los campos de texto programáticamente
+                            // Crear los campos de texto programáticamente
                             final EditText etNombre = new EditText(MapsActivity.this);
                             etNombre.setHint("Nombre");
 
@@ -167,7 +166,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             final EditText etHoraCierre = new EditText(MapsActivity.this);
                             etHoraCierre.setHint("Hora de cierre");
 
-// Agregar los campos de texto al SweetAlertDialog
+                            // Agregar los campos de texto al SweetAlertDialog
                             LinearLayout layout = new LinearLayout(MapsActivity.this);
                             layout.setOrientation(LinearLayout.VERTICAL);
                             layout.addView(etNombre);
@@ -177,7 +176,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                             alert.setCustomView(layout);
 
-// Configurar los botones del SweetAlertDialog
+                            // Configurar los botones del SweetAlertDialog
                             alert.setConfirmText("Guardar")
                                     .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                         @Override
@@ -236,7 +235,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                         }
                                     });
 
-// Mostrar el SweetAlertDialog
+                            // Mostrar el SweetAlertDialog
                             alert.create();
                             alert.show();
 
@@ -387,7 +386,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SuperMarket");
 
-                    // Consulta el ultimo producto por orden natural (último documento insertado)
+                    // Consultar el ultimo producto por orden natural (último documento insertado)
                     RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find().sort(new Document("$natural", -1)).limit(1).iterator();
 
                     queryTask.getAsync(task -> {

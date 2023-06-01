@@ -70,14 +70,14 @@ public class ListProductActivity extends AppCompatActivity {
                             convertView = getLayoutInflater().inflate(R.layout.element_list, parent, false);
                         }
 
-                        // Obtén referencias a los elementos de la vista
+                        // Obtenemos las referencias a los elementos de la vista
                         ImageView imageView = convertView.findViewById(R.id.ivImagen);
                         TextView tituloTextView = convertView.findViewById(R.id.tvTitulo);
                         TextView directorTextView = convertView.findViewById(R.id.tvDirector);
                         TextView duracionTextView = convertView.findViewById(R.id.tvDuracion);
                         TextView precioTextView = convertView.findViewById(R.id.tvPrecio);
 
-                        // Obtén el objeto Producto correspondiente a la posición en la lista
+                        // Obtenemos el objeto Producto correspondiente a la posición en la lista
                         Producto producto = getItem(position);
 
                         // Convierte los bytes en un objeto Bitmap
@@ -267,10 +267,10 @@ public class ListProductActivity extends AppCompatActivity {
     }
 
     private void modificarProducto(int productId, String nuevoNombre, int nuevoUsuario, int nuevoSupermercado, double nuevoPrecio) {
-        // Obtén la referencia a la colección "SupermarketProducts" en MongoDB
+        // Obtener la referencia a la colección "SupermarketProducts" en MongoDB
         MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SupermarketProducts");
 
-        // Crea el filtro para buscar el producto por su ID
+        // Crear el filtro para buscar el producto por su ID
         Document filtro = new Document().append("id", productId);
         RealmResultTask<MongoCursor<Document>> findTask = mongoCollection.find(filtro).iterator();
 
@@ -278,7 +278,7 @@ public class ListProductActivity extends AppCompatActivity {
             if (task.isSuccess()) {
                 MongoCursor<Document> results = task.get();
                 if (results.hasNext()) {
-                    // Crea el objeto con los campos que se van a actualizar
+                    // Crear el objeto con los campos que se van a actualizar
                     Document actualizaciones =  new Document()
                             .append("id", productId)
                             .append("nombre", nuevoNombre)
@@ -286,7 +286,7 @@ public class ListProductActivity extends AppCompatActivity {
                             .append("id_supermarket", nuevoSupermercado)
                             .append("precio", nuevoPrecio);
 
-                    // Actualiza el documento en MongoDB
+                    // Actualizar el documento en MongoDB
                     mongoCollection.updateOne(filtro, actualizaciones).getAsync( result -> {
                         if (result.isSuccess()) {
                             Log.d("ListProductActivity", "Producto actualizado en MongoDB");
@@ -348,13 +348,12 @@ public class ListProductActivity extends AppCompatActivity {
                                 }else
                                     Toast.makeText(ListProductActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
 
-                                // Crea una instancia de Producto con los datos obtenidos y añádelo a la lista
+                                // Crear una instancia de Producto con los datos obtenidos y añadirlo a la lista
                                 Producto producto = new Producto(id,name, id_user, id_supermarket, price);
                                 producto.setImagen(imageBytes);
                                 listaProductos.add(producto);
                             }
 
-                            // Asegúrate de llamar a la devolución de llamada con la lista de productos
                             callback.onProductosObtenidos(listaProductos);
                         }else {
                             Toast.makeText(ListProductActivity.this, "Error al buscar productos", Toast.LENGTH_SHORT).show();
@@ -374,10 +373,10 @@ public class ListProductActivity extends AppCompatActivity {
 
     //Metodo para eliminar un producto de la colleccion SupermarketProducts
     private void eliminarProducto(int productId) {
-        // Obtén la referencia a la colección "SupermarketProducts" en MongoDB
+        // Obtener la referencia a la colección "SupermarketProducts" en MongoDB
         MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SupermarketProducts");
 
-        // Crea el filtro para buscar el producto por su ID
+        // Crear el filtro para buscar el producto por su ID
         Document filtro = new Document().append("id", productId);
         RealmResultTask<MongoCursor<Document>> findTask = mongoCollection.find(filtro).iterator();
 
@@ -385,7 +384,8 @@ public class ListProductActivity extends AppCompatActivity {
             if (task.isSuccess()) {
                 MongoCursor<Document> results = task.get();
                 if (results.hasNext()) {
-                    // Elimina el documento de MongoDB
+
+                    // Eliminar el documento de MongoDB
                     mongoCollection.deleteOne(filtro).getAsync( result -> {
                         if (result.isSuccess()) {
                             Log.d("ListProductActivity", "Producto eliminado de MongoDB");

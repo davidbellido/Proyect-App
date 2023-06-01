@@ -159,7 +159,7 @@ public class OptionsActivity extends AppCompatActivity {
                                     }
                                 }
 
-                                // Convierte los bytes en un objeto Bitmap
+                                // Convertir los bytes en un objeto Bitmap
                                 Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
 
                                 if (imagen != null){
@@ -195,7 +195,7 @@ public class OptionsActivity extends AppCompatActivity {
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Recipes");
 
-                    // Consulta la última receta por orden natural (último documento insertado)
+                    // Consultar la última receta por orden natural (último documento insertado)
                     RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find().sort(new Document("$natural", -1)).limit(1).iterator();
 
                     queryTask.getAsync(task -> {
@@ -219,12 +219,12 @@ public class OptionsActivity extends AppCompatActivity {
                                     Toast.makeText(OptionsActivity.this, "Imagen vacia", Toast.LENGTH_SHORT).show();
                                 }
 
-                                // Convierte los bytes en un objeto Bitmap
+                                // Convertir los bytes en un objeto Bitmap
                                 Bitmap bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.length);
 
-                                // Establece los valores de los elementos de la vista
+                                // Establecer los valores de los elementos de la vista
                                 imgUltReceta.setImageBitmap(bitmap);
-                                // Aplica el ajuste de escala al ImageView
+                                // Aplicar el ajuste de escala al ImageView
                                 imgUltReceta.setScaleType(ImageView.ScaleType.FIT_XY);
 
                                 txtNombreReceta.setText(nombreReceta);

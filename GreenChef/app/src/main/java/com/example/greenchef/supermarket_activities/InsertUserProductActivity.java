@@ -69,6 +69,7 @@ public class InsertUserProductActivity extends AppCompatActivity {
         nombreUsuario = bundleUsuario.getString("nombreUsuario");
 
         buscarIdUsuario(nombreUsuario);
+
         //Llamada al metodo para recuperar el ultimo id de la coleccion de SupermarketProducts
         recuperarUltimoId();
 
@@ -83,6 +84,9 @@ public class InsertUserProductActivity extends AppCompatActivity {
                             Uri imageUri = data.getData();
                             // Mostrar la imagen en el ImageButton
                             btnImgProducto.setImageURI(imageUri);
+
+                            // Aplicar el ajuste de escala al ImageView
+                            btnImgProducto.setScaleType(ImageView.ScaleType.FIT_XY);
 
                             try {
                                 InputStream inputStream = getContentResolver().openInputStream(imageUri);
@@ -247,7 +251,7 @@ public class InsertUserProductActivity extends AppCompatActivity {
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("SupermarketProducts");
 
-                    // Consulta el ultimo producto por orden natural (último documento insertado)
+                    // Consultar el ultimo producto por orden natural (último documento insertado)
                     RealmResultTask<MongoCursor<Document>> queryTask = mongoCollection.find().sort(new Document("$natural", -1)).limit(1).iterator();
 
                     queryTask.getAsync(task -> {
