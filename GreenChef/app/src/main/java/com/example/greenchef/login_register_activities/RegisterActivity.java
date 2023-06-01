@@ -1,5 +1,6 @@
 package com.example.greenchef.login_register_activities;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -46,7 +47,24 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+
+        // Obtener el objeto Configuration
+        Configuration configuration = getResources().getConfiguration();
+
+        // Verificar si el dispositivo es una tablet según el tamaño de pantalla
+        boolean isTablet = (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+
+        if (isTablet) {
+            // El dispositivo es una tablet
+            // Cargamos el diseño para tablets
+            setContentView(R.layout.activity_register_tablet);
+        } else {
+            // El dispositivo es un móvil
+            // Cargamos el diseño para móviles
+            setContentView(R.layout.activity_register);
+        }
+
+        //setContentView(R.layout.activity_register);
 
         username = this.findViewById(R.id.Username);
         password = this.findViewById(R.id.password);

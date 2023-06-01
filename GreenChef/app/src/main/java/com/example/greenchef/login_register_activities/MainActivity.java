@@ -3,7 +3,9 @@ package com.example.greenchef.login_register_activities;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,7 +46,23 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // Obtener el objeto Configuration
+        Configuration configuration = getResources().getConfiguration();
+
+        // Verificar si el dispositivo es una tablet según el tamaño de pantalla
+        boolean isTablet = (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+
+        if (isTablet) {
+            // El dispositivo es una tablet
+            // Cargamos el diseño para tablets
+            setContentView(R.layout.activity_main_tablet);
+        } else {
+            // El dispositivo es un móvil
+            // Cargar el diseño para móviles
+            setContentView(R.layout.activity_main);
+        }
+
+        //setContentView(R.layout.activity_main);
 
         username = findViewById(R.id.Username);
         password = findViewById(R.id.password);

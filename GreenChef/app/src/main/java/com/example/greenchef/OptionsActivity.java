@@ -3,6 +3,7 @@ package com.example.greenchef;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
@@ -53,7 +54,23 @@ public class OptionsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_options);
+        // Obtener el objeto Configuration
+        Configuration configuration = getResources().getConfiguration();
+
+        // Verificar si el dispositivo es una tablet según el tamaño de pantalla
+        boolean isTablet = (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+
+        if (isTablet) {
+            // El dispositivo es una tablet
+            // Cargamos el layout para tablets
+            setContentView(R.layout.activity_options_tablet);
+        } else {
+            // El dispositivo es un móvil
+            // Cargamos el layout para móviles
+            setContentView(R.layout.activity_options);
+        }
+
+        //setContentView(R.layout.activity_options);
 
         try {
             this.getSupportActionBar().hide();

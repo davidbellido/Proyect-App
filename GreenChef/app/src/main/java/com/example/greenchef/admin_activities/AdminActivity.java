@@ -3,6 +3,7 @@ package com.example.greenchef.admin_activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +22,23 @@ public class AdminActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin);
+        // Obtener el objeto Configuration
+        Configuration configuration = getResources().getConfiguration();
+
+        // Verificar si el dispositivo es una tablet según el tamaño de pantalla
+        boolean isTablet = (configuration.screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+
+        if (isTablet) {
+            // El dispositivo es una tablet
+            // Cargamos el diseño para tablets
+            setContentView(R.layout.activity_admin_tablet);
+        } else {
+            // El dispositivo es un móvil
+            // Cargamos el diseño para móviles
+            setContentView(R.layout.activity_admin);
+        }
+
+        //setContentView(R.layout.activity_admin);
 
         try {
             this.getSupportActionBar().hide();

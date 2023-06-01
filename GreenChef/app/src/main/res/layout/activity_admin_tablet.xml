@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin_activities.AdminActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/admin_window"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="300px"
+                android:layout_height="300px"
+                android:layout_gravity="center"
+                android:paddingTop="50px"
+                android:background="@drawable/perfil"
+                tools:layout_editor_absoluteY="32dp" />
+
+            <TextView
+                android:id="@+id/saludoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="60px"
+                android:text="ADMINISTRADOR"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/clAdmin"
+        app:layout_constraintTop_toTopOf="@+id/clLogOut">
+
+        <Button
+            android:id="@+id/btnMapaAdmin"
+            android:layout_width="1010px"
+            android:layout_height="250px"
+            android:text="Añadir Supermercado"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10px"
+            android:layout_marginLeft="430px"
+            android:backgroundTint="@color/verde03"
+            app:cornerRadius="20dp"/>
+        <Button
+            android:id="@+id/btnModificarAdmin"
+            android:layout_width="1010px"
+            android:layout_height="250px"
+            android:text="Modificar Productos"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="430px"
+            android:backgroundTint="@color/verde03"
+            app:cornerRadius="20dp"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:background="@drawable/bottom_background_white"
+        android:backgroundTint="@color/verde03"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bottom_background_white"
+                android:backgroundTint="@color/verde03">
+
+                <ImageButton
+                    android:id="@+id/btnLogOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/circle_bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/bottom_circle" />
+
+                <ImageView
+                    android:id="@+id/imgOut"
+                    android:layout_width="160px"
+                    android:layout_height="90px"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/cerrarsesion" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

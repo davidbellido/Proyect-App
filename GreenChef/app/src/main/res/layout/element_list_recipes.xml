@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cvElemento"
     android:foregroundGravity="center"
-    android:layout_width="1000px"
+    android:layout_width="match_parent"
     android:layout_height="700px"
     android:backgroundTint="@color/verde03"
     app:cardCornerRadius="15dp">

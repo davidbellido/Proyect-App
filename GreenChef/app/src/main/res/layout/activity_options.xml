@@ -225,22 +225,23 @@
                     android:layout_marginTop="100px"
                     android:scaleType="fitXY"/>
 
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/txtNombreUltReceta"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgUltReceta"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <TextView
+                        android:id="@+id/txtTipoUltReceta"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="600px"
+                        app:layout_constraintTop_toTopOf="@+id/txtNombreUltReceta"
+                        app:layout_constraintStart_toEndOf="@+id/txtNombreUltReceta"
+                        app:layout_constraintEnd_toEndOf="parent"/>
 
-                <TextView
-                    android:id="@+id/txtNombreUltReceta"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Holas"
-                    android:paddingTop="470px"
-                    android:paddingLeft="20px"/>
-                <TextView
-                    android:id="@+id/txtTipoUltReceta"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Holas"
-                    android:paddingTop="470px"
-                    android:paddingLeft="630px"/>
+                </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
