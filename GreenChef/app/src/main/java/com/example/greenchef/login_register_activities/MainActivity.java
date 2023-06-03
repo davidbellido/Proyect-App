@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import com.example.greenchef.OptionsActivity;
 import com.example.greenchef.R;
 import com.example.greenchef.admin_activities.AdminActivity;
@@ -30,7 +29,6 @@ import io.realm.mongodb.User;
 import io.realm.mongodb.mongo.MongoClient;
 import io.realm.mongodb.mongo.MongoCollection;
 import io.realm.mongodb.mongo.MongoDatabase;
-
 
 public class MainActivity extends AppCompatActivity {
     private TextView txtSignUp;
@@ -62,16 +60,14 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_main);
         }
 
-        //setContentView(R.layout.activity_main);
-
+        // Inicialización de los elementos de la interfaz de usuario
         username = findViewById(R.id.Username);
         password = findViewById(R.id.password);
         txtSignUp = findViewById(R.id.txtRegistro);
-
-        txtSignUp.setOnClickListener(onClickSignUp());
-
-
         btnInicioSesion = this.findViewById(R.id.btnInicioSesion);
+
+        // Configuración de los eventos de clic en los botones
+        txtSignUp.setOnClickListener(onClickSignUp());
         btnInicioSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,54 +77,57 @@ public class MainActivity extends AppCompatActivity {
 
                 String contrasenia = password.getText().toString();
 
-                if (usuario.equals("admin")){
-                    loginAdmins(usuario,contrasenia);
-                }else
-                    loginUsers(usuario,contrasenia);
-
-
+                if (usuario.equals("admin")) {
+                    loginAdmins(usuario, contrasenia);
+                } else
+                    loginUsers(usuario, contrasenia);
             }
         });
 
-
+        // Ocultar la barra de acción
         try {
             this.getSupportActionBar().hide();
-        }catch (Exception e){
-
+        } catch (Exception e) {
         }
     }
 
-    private void loginUsers(String usuario,String contrasenia) {
+    // Método para el inicio de sesión de usuarios normales
+    private void loginUsers(String usuario, String contrasenia) {
+        // Inicialización de Realm y la aplicación de MongoDB
         Realm.init(this);
         App app = new App(new AppConfiguration.Builder(AppId).build());
 
+        // Inicio de sesión anónimo en MongoDB
         Credentials credentials = Credentials.anonymous();
         app.loginAsync(credentials, new App.Callback<User>() {
             @Override
             public void onResult(App.Result<User> result) {
                 if (result.isSuccess()) {
-
+                    // Obtención del cliente y la base de datos de MongoDB
                     User user = app.currentUser();
                     mongoClient = user.getMongoClient("mongodb-atlas");
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Users");
 
+                    // Consulta para buscar al usuario en la base de datos
                     Document query = new Document("nick", usuario).append("password", contrasenia);
                     mongoCollection.findOne(query).getAsync(result1 -> {
                         if (result1.isSuccess()) {
                             Document usuario = result1.get();
                             if (usuario != null) {
+                                // Si el usuario existe, se inicia la actividad OptionsActivity
                                 Intent i = new Intent(MainActivity.this, OptionsActivity.class);
                                 i.putExtras(bundle);
                                 MainActivity.this.startActivity(i);
                             } else {
-
+                                // Si el usuario no existe, se muestra un mensaje de error
                                 new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE)
                                         .setTitleText("Oops...")
                                         .setContentText("Usuario o contraseña incorrectos")
                                         .show();
                             }
                         } else {
+                            // Si hay un error en la búsqueda del usuario, se muestra un mensaje de error
                             new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE)
                                     .setTitleText("Oops...")
                                     .setContentText("Error al buscar usuario")
@@ -136,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                 } else {
+                    // Si hay un error en la conexión con la base de datos, se muestra un mensaje de error
                     new SweetAlertDialog(MainActivity.this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Oops...")
                             .setContentText("Error al conectar con la base de datos")
@@ -145,45 +145,43 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void loginAdmins(String usuario,String contrasenia) {
+    // Método para el inicio de sesión de administradores
+    private void loginAdmins(String usuario, String contrasenia) {
+        // Inicialización de Realm y la aplicación de MongoDB
         Realm.init(this);
         App app = new App(new AppConfiguration.Builder(AppId).build());
 
+        // Inicio de sesión anónimo en MongoDB
         Credentials credentials = Credentials.anonymous();
         app.loginAsync(credentials, new App.Callback<User>() {
             @Override
             public void onResult(App.Result<User> result) {
                 if (result.isSuccess()) {
-
+                    // Obtención del cliente y la base de datos de MongoDB
                     User user = app.currentUser();
                     mongoClient = user.getMongoClient("mongodb-atlas");
                     mongoDatabase = mongoClient.getDatabase("GreenChef");
                     MongoCollection<Document> mongoCollection = mongoDatabase.getCollection("Admin");
 
+                    // Consulta para buscar al administrador en la base de datos
                     Document query = new Document("log", usuario).append("password", contrasenia);
                     mongoCollection.findOne(query).getAsync(result1 -> {
                         if (result1.isSuccess()) {
                             Document usuario = result1.get();
                             if (usuario != null) {
+                                // Si el administrador existe, se inicia la actividad AdminActivity
                                 Intent i = new Intent(MainActivity.this, AdminActivity.class);
                                 i.putExtras(bundle);
                                 MainActivity.this.startActivity(i);
                             } else {
-                                // Crear un AlertDialog.Builder
+                                // Si el administrador no existe, se muestra un mensaje de error
                                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-                                // Establecer el título y el mensaje del diálogo
                                 builder.setTitle("Error en el Login").setMessage("Lo siento, no tienes permiso de admin o la contraseña es incorrecta.");
-
-                                // Añadir un botón "Aceptar" al diálogo
                                 builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
-                                        // Cerrar el diálogo
                                         dialog.dismiss();
                                     }
                                 });
-
-                                // Crear el AlertDialog y mostrarlo
                                 AlertDialog dialog = builder.create();
                                 dialog.show();
                             }
@@ -198,14 +196,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private View.OnClickListener onClickSignUp(){
+    // Método para manejar el evento de clic en el enlace de registro
+    private View.OnClickListener onClickSignUp() {
         return new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Iniciar la actividad RegisterActivity al hacer clic en el enlace de registro
                 Intent i = new Intent(MainActivity.this, RegisterActivity.class);
                 MainActivity.this.startActivity(i);
             }
         };
     }
 }
-

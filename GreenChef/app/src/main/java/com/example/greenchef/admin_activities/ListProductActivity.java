@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.greenchef.R;
 import com.example.greenchef.model.Producto;
+import com.example.greenchef.supermarket_activities.SupermarketProductsActivity;
 
 import org.bson.Document;
 
@@ -59,23 +60,65 @@ public class ListProductActivity extends AppCompatActivity {
 
         }
 
+        // Mostrar un mensaje de carga
+        final SweetAlertDialog dialogo = new SweetAlertDialog(ListProductActivity.this, SweetAlertDialog.PROGRESS_TYPE)
+                .setTitleText("Cargando Productos")
+                .setContentText("Espere por favor...");
+        dialogo.show();
+        dialogo.setCancelable(false);
+        new CountDownTimer(800 * 4, 800) {
+            public void onTick(long millisUntilFinished) {
+                i++;
+                switch (i) {
+                    case 0:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.blue_btn_bg_color));
+                        break;
+                    case 1:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_50));
+                        break;
+                    case 2:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                        break;
+                    case 3:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_20));
+                        break;
+                    case 4:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_blue_grey_80));
+                        break;
+                    case 5:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.warning_stroke_color));
+                        break;
+                    case 6:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                        break;
+                }
+            }
+
+            @Override
+            public void onFinish() {
+                i = -1;
+                dialogo.dismiss();
+            }
+        }.start();
+
+        // Llamada a la función obtenerListaProductos y pasando una interfaz de devolución de llamada
         ListView listView = findViewById(R.id.lvLista);
         obtenerListaProductos(new ProductosCallback() {
             @Override
             public void onProductosObtenidos(List<Producto> listaProductos) {
-                adaptador = new ArrayAdapter<Producto>(ListProductActivity.this, R.layout.element_list, listaProductos) {
+                adaptador = new ArrayAdapter<Producto>(ListProductActivity.this, R.layout.element_list_product, listaProductos) {
                     @Override
                     public View getView(int position, View convertView, ViewGroup parent) {
                         if (convertView == null) {
-                            convertView = getLayoutInflater().inflate(R.layout.element_list, parent, false);
+                            convertView = getLayoutInflater().inflate(R.layout.element_list_product, parent, false);
                         }
 
                         // Obtenemos las referencias a los elementos de la vista
                         ImageView imageView = convertView.findViewById(R.id.ivImagen);
-                        TextView tituloTextView = convertView.findViewById(R.id.tvTitulo);
-                        TextView directorTextView = convertView.findViewById(R.id.tvDirector);
-                        TextView duracionTextView = convertView.findViewById(R.id.tvDuracion);
-                        TextView precioTextView = convertView.findViewById(R.id.tvPrecio);
+                        TextView txtNombre = convertView.findViewById(R.id.txtNombre);
+                        TextView txtIdUsuario = convertView.findViewById(R.id.txtIdUsuario);
+                        TextView txtIdSupermarket = convertView.findViewById(R.id.txtIdSupermarket);
+                        TextView txtPrecio = convertView.findViewById(R.id.txtPrecio);
 
                         // Obtenemos el objeto Producto correspondiente a la posición en la lista
                         Producto producto = getItem(position);
@@ -86,12 +129,12 @@ public class ListProductActivity extends AppCompatActivity {
                         // Establece los valores de los elementos de la vista
                         imageView.setImageBitmap(bitmap);
 
-                        tituloTextView.setText(producto.getNombre());
+                        txtNombre.setText(producto.getNombre());
                         String usuario = String.valueOf(producto.getId_usuario());
-                        directorTextView.setText("Usuario: " + usuario);
+                        txtIdUsuario.setText("Usuario: " + usuario);
                         String supermarket = String.valueOf(producto.getId_supermercado());
-                        duracionTextView.setText("Supermercado: " + supermarket);
-                        precioTextView.setText(String.valueOf(producto.getPrecio())+"€");
+                        txtIdSupermarket.setText("Supermercado: " + supermarket);
+                        txtPrecio.setText(String.valueOf(producto.getPrecio())+"€");
 
                         return convertView;
                     }
@@ -101,6 +144,7 @@ public class ListProductActivity extends AppCompatActivity {
             }
         });
 
+        // Configuración del evento onItemClick para el ListView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -113,6 +157,7 @@ public class ListProductActivity extends AppCompatActivity {
         });
     }
 
+    // Método para mostrar el diálogo de edición o eliminación del producto
     private void mostrarDialogoEdicion(final Producto producto) {
         SweetAlertDialog builder = new SweetAlertDialog(this, SweetAlertDialog.NORMAL_TYPE);
         builder.setTitleText("Editar producto");

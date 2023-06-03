@@ -324,9 +324,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                                         if (supermercado != null) {
                                                             SweetAlertDialog builder = new SweetAlertDialog(MapsActivity.this, SweetAlertDialog.NORMAL_TYPE);
                                                             builder.setTitleText(nombre);
-                                                            builder.setContentText("Dirección: " + direccion + "\n" +
-                                                                    "Teléfono: " + telefono + "\n" +
-                                                                    "Horario de apertura: " + hapertura + "\n" +
+                                                            builder.setContentText("Dirección: " + direccion + "<br>" +
+                                                                    "Teléfono: " + telefono + "<br>" +
+                                                                    "Horario de apertura: " + hapertura + "<br>" +
                                                                     "Horario de cierre: " + hcierre);
                                                             builder.setNeutralButton("Productos", new SweetAlertDialog.OnSweetClickListener() {
                                                                         @Override

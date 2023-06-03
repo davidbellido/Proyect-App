@@ -110,8 +110,8 @@ id imageProteina
 id imageReceta
 id imageUsuario
 id imageVerduras
-id imageView3
 id imgOut
+id imgPerfil
 id imgPerfilHome
 id imgProducto
 id imgProfile
@@ -123,7 +123,7 @@ id imgSupermarket
 id imgUltReceta
 id ivImagen
 id listProducts
-id llLoginPanel
+id llBotones
 id llProductsPanel
 id lvLista
 id lvProducts
@@ -137,10 +137,6 @@ id saludo
 id saludoUsuario
 id tableLayout
 id tableNavigation
-id tvDirector
-id tvDuracion
-id tvPrecio
-id tvTitulo
 id txtApellido
 id txtCereales
 id txtContenidoIngredientes
@@ -150,6 +146,8 @@ id txtEmail
 id txtFrutas
 id txtFsecos
 id txtGranos
+id txtIdSupermarket
+id txtIdUsuario
 id txtIngredientes
 id txtInsertarProducto
 id txtLacteos
@@ -196,7 +194,7 @@ layout activity_register_tablet
 layout activity_supermarket_products
 layout activity_user
 layout dialog_edit_product
-layout element_list
+layout element_list_product
 layout element_list_recipes
 layout item_column
 mipmap ic_launcher

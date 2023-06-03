@@ -3655,8 +3655,8 @@ id imageProteina
 id imageReceta
 id imageUsuario
 id imageVerduras
-id imageView3
 id imgOut
+id imgPerfil
 id imgPerfilHome
 id imgProducto
 id imgProfile
@@ -3689,7 +3689,7 @@ id linear
 id listMode
 id listProducts
 id list_item
-id llLoginPanel
+id llBotones
 id llProductsPanel
 id loading
 id lvLista
@@ -3964,10 +3964,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tvDirector
-id tvDuracion
-id tvPrecio
-id tvTitulo
 id txtApellido
 id txtCereales
 id txtContenidoIngredientes
@@ -3977,6 +3973,8 @@ id txtEmail
 id txtFrutas
 id txtFsecos
 id txtGranos
+id txtIdSupermarket
+id txtIdUsuario
 id txtIngredientes
 id txtInsertarProducto
 id txtLacteos
@@ -4175,7 +4173,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_edit_product
-layout element_list
+layout element_list_product
 layout element_list_recipes
 layout item_column
 layout m3_alert_dialog

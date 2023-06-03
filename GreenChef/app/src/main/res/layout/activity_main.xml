@@ -25,7 +25,7 @@
         android:background="@drawable/shape_left_panel"/>
 
 <LinearLayout
-    android:id="@+id/llLoginPanel"
+    android:id="@+id/llBotones"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -106,7 +106,7 @@
         android:textColor="@color/white"
         android:layout_marginRight="70dp"
         android:text="Login"
-        app:layout_constraintTop_toTopOf="@+id/llLoginPanel"/>
+        app:layout_constraintTop_toTopOf="@+id/llBotones"/>
 
     <TextView
         android:id="@+id/txtRegistro"

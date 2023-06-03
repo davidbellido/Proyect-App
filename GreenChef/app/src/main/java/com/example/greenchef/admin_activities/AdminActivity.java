@@ -42,51 +42,60 @@ public class AdminActivity extends AppCompatActivity {
 
         try {
             this.getSupportActionBar().hide();
-        }catch (Exception e){
-
+        } catch (Exception e) {
+            // Manejar cualquier excepción que ocurra al ocultar la barra de acción
         }
 
+        // Obtener el nombre de usuario de la actividad anterior a través del objeto Bundle
         bundle = getIntent().getExtras();
         nombreUsuario = bundle.getString("nombreUsuario");
 
+        // Crear un nuevo objeto Bundle para pasar datos a la actividad de mapas
         bundleMapa = new Bundle();
         bundleMapa.putString("nombreUsuario", nombreUsuario);
 
+        // Configurar el botón de mapa de administrador
         btnMapAdmin = this.findViewById(R.id.btnMapaAdmin);
         btnMapAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Iniciar la actividad de mapas y pasar el objeto Bundle
                 Intent i = new Intent(AdminActivity.this, MapsActivity.class);
                 i.putExtras(bundleMapa);
                 AdminActivity.this.startActivity(i);
             }
         });
 
+        // Configurar el botón de actualización de administrador
         btnUpdateAdmin = this.findViewById(R.id.btnModificarAdmin);
         btnUpdateAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Iniciar la actividad de lista de productos
                 Intent i = new Intent(AdminActivity.this, ListProductActivity.class);
                 AdminActivity.this.startActivity(i);
             }
         });
 
+        // Configurar el botón de cierre de sesión de administrador
         btnlogOut = this.findViewById(R.id.btnLogOut);
         btnlogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Se realiza la lógica de cierre de sesión y redirección
+                // Realizar la lógica de cierre de sesión y redirección
                 logoutAdmin();
             }
         });
-
     }
 
+    // Método para realizar el cierre de sesión del administrador
     private void logoutAdmin() {
+        // Crear un intento para iniciar la actividad de inicio de sesión
         Intent intent = new Intent(this, MainActivity.class);
+        // Establecer las banderas para borrar la pila de actividades y crear una nueva tarea
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        // Iniciar la actividad de inicio de sesión y finalizar la actividad actual
         startActivity(intent);
         finish();
     }
-
 }

@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 
 
 import com.example.greenchef.R;
+import com.example.greenchef.admin_activities.ListProductActivity;
 import com.example.greenchef.model.Recetas;
 
 import org.bson.Document;
@@ -27,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.realm.Realm;
 import io.realm.mongodb.App;
 import io.realm.mongodb.AppConfiguration;
@@ -46,6 +49,7 @@ public class RecipesActivity extends AppCompatActivity {
     private ArrayAdapter<Recetas> adaptador;
     private Bundle bundle, bundleTipo;
     private String tipo;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +60,47 @@ public class RecipesActivity extends AppCompatActivity {
             this.getSupportActionBar().hide();
         } catch (Exception e) {
         }
+
+        // Mostrar un mensaje de carga
+        final SweetAlertDialog dialogo = new SweetAlertDialog(RecipesActivity.this, SweetAlertDialog.PROGRESS_TYPE)
+                .setTitleText("Cargando")
+                .setContentText("Espere por favor...");
+        dialogo.show();
+        dialogo.setCancelable(false);
+        new CountDownTimer(800 * 2, 800) {
+            public void onTick(long millisUntilFinished) {
+                i++;
+                switch (i) {
+                    case 0:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.blue_btn_bg_color));
+                        break;
+                    case 1:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_50));
+                        break;
+                    case 2:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                        break;
+                    case 3:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_deep_teal_20));
+                        break;
+                    case 4:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.material_blue_grey_80));
+                        break;
+                    case 5:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.warning_stroke_color));
+                        break;
+                    case 6:
+                        dialogo.getProgressHelper().setBarColor(getResources().getColor(cn.pedant.SweetAlert.R.color.success_stroke_color));
+                        break;
+                }
+            }
+
+            @Override
+            public void onFinish() {
+                i = -1;
+                dialogo.dismiss();
+            }
+        }.start();
 
         bundleTipo = getIntent().getExtras();
         tipo = bundleTipo.getString("tipo");

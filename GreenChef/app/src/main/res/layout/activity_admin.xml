@@ -20,7 +20,7 @@
                 android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imgPerfil"
                 android:layout_width="300px"
                 android:layout_height="300px"
                 android:layout_gravity="center"
@@ -41,7 +41,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:id="@+id/llLoginPanel"
+        android:id="@+id/llBotones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
